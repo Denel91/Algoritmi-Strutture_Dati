@@ -26,14 +26,15 @@ public class SelectionSort {
     public static void selectionSort(int[] data) {
         int n = data.length;
         for (int i = 0; i < n - 1; i++) {
-            int posMin = i;
+            int posMin = i; // indice dell'elemento minimo
 
             for (int j = (i + 1); j < n; j++) {
-                if (data[j] < data[posMin]) {
-                    posMin = j;
+                if (data[j] < data[posMin]) { // confronto per trovare un nuovo minimo
+                    posMin = j; // salvo l'indice del nuovo minimo
                 }
             }
 
+            // scambio il minimo trovato con il primo elemento
             if (posMin != i) {
                 int temp = data[i];
                 data[i] = data[posMin];
