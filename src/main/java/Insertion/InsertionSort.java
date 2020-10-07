@@ -8,9 +8,15 @@ import java.util.Arrays;
 public class InsertionSort {
     public static void main(String[] args) {
         int[] value = {5, 2, 4, 6, 1, 3};
+        int[] data = {100, 98, 97, 37, 45, 68, 34, 69, 42, 96, 58, 36, 70, 62, 66, 33, 31, 30, 10, 20, 22, 40, 41};
+
         System.out.println(Arrays.toString(value)); // [5, 2, 4, 6, 1, 3]
         insertionSort(value);
         System.out.println(Arrays.toString(value)); // [1, 2, 3, 4, 5, 6]
+
+        System.out.println(Arrays.toString(data)); // [100, 98, 97, 37, 45, 68, 34, 69, 42, 96, 58, 36, 70, 62, 66, 33, 31, 30, 10, 20, 22, 40, 41]
+        insertionSort(data);
+        System.out.println(Arrays.toString(data)); // [10, 20, 22, 30, 31, 33, 34, 36, 37, 40, 41, 42, 45, 58, 62, 66, 68, 69, 70, 96, 97, 98, 100]
     }
 
     /**
