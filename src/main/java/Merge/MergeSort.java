@@ -17,7 +17,7 @@ public class MergeSort {
         System.out.println("-- Merge test --");
         int[] vector = {1, 5, 7, 9, 11, 23, 45, 67, 2, 3, 4, 6, 8, 10, 12};
         int p1 = 0, r1 = array.length - 1, q = 7;
-        merge(vector,p1,q,r1);
+        merge(vector, p1, q, r1);
         System.out.println(Arrays.toString(vector)); // [1, 2, 3, 5, 7, 9, 11, 23, 45, 67, 4, 6, 8, 10, 12]
     }
 
