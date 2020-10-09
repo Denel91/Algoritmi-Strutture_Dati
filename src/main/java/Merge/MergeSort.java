@@ -7,12 +7,18 @@ import java.util.Arrays;
  */
 public class MergeSort {
     public static void main(String[] args) {
-        System.out.println("MergeSort test");
+        System.out.println("-- MergeSort test --");
         int[] array = {1, 5, 9, 2, 3, 4, 6, 7, 8, 10};
         int p = 0, r = array.length - 1;
         mergeSort(array, p, r);
         System.out.print("Sorted: ");
         System.out.println(Arrays.toString(array)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        System.out.println("-- Merge test --");
+        int[] vector = {1, 5, 7, 9, 11, 23, 45, 67, 2, 3, 4, 6, 8, 10, 12};
+        int p1 = 0, r1 = array.length - 1, q = 7;
+        merge(vector,p1,q,r1);
+        System.out.println(Arrays.toString(vector)); // [1, 2, 3, 5, 7, 9, 11, 23, 45, 67, 4, 6, 8, 10, 12]
     }
 
     /**
