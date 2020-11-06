@@ -23,10 +23,10 @@ public class HeapSort {
         heap.add(6);
         heap.add(2);
         heap.add(1);
-        System.out.println(heap.toString());
+        System.out.println(heap.toString()); // [20, 15, 10, 3, 8, 5, 6, 2, 1]
         MaxHeapInsert(heap, 1);
         MaxHeapInsert(heap, 3);
-        System.out.println(heap.toString());
+        System.out.println(heap.toString()); // [20, 15, 10, 3, 8, 5, 6, 2, 1, 1, 3]
     }
 
     // Metodi per ottenere l'indice del nodo genitore oppure
