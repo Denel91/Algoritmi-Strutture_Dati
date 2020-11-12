@@ -56,8 +56,8 @@ public class HeapSort {
      * Scambia l'elemento in posizione i con l'elemento in posizione j.
      *
      * @param array un vettore
-     * @param i     l'indice del primo elemento da scambiare
-     * @param j     l'indice del secondo elemento da scambiare
+     * @param i l'indice del primo elemento da scambiare
+     * @param j l'indice del secondo elemento da scambiare
      */
     public static void swap(int[] array, int i, int j) {
         int temp = array[i];
