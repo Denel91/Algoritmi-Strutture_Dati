@@ -2,6 +2,7 @@ package Heap;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Arrays;
 
 /**
  * Implementazione di uno Heap tramite un ArrayList di Integer.
@@ -27,6 +28,12 @@ public class HeapSort {
         MaxHeapInsert(heap, 1);
         MaxHeapInsert(heap, 3);
         System.out.println(heap.toString()); // [20, 15, 10, 3, 8, 5, 6, 2, 1, 1, 3]
+
+        System.out.println("HeapSort test:");
+        int[] array = {16, 14, 10, 7, 9, 3, 2, 4, 1};
+        System.out.println(Arrays.toString(array)); // [16, 14, 10, 7, 9, 3, 2, 4, 1]
+        heapSort(array);
+        System.out.println(Arrays.toString(array)); // [1, 2, 3, 4, 7, 9, 10, 14, 16]
     }
 
     // Metodi per ottenere l'indice del nodo genitore oppure
@@ -44,6 +51,14 @@ public class HeapSort {
         return 2 * i + 2;
     }
 
+    /**
+     * Procedura di supporto per scambiare due elementi in un Vettore.
+     * Scambia l'elemento in posizione i con l'elemento in posizione j.
+     *
+     * @param array un vettore
+     * @param i     l'indice del primo elemento da scambiare
+     * @param j     l'indice del secondo elemento da scambiare
+     */
     public static void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
@@ -77,6 +92,47 @@ public class HeapSort {
                 swap(h, i, parentId(i));
                 i = parentId(i);
             }
+        }
+    }
+
+    // ---------- IMPLEMENTAZIONE DI HEAP-SORT ---------- //
+
+    public static void maxHeapify(int[] A, int i, int heapsize) {
+        int l = leftId(i);
+        int r = rightId(i);
+        int massimo;
+
+        if (l <= heapsize && A[l] > A[i]) {
+            massimo = l;
+
+        } else {
+            massimo = i;
+        }
+
+        if (r <= heapsize && A[r] > A[massimo]) {
+            massimo = r;
+        }
+
+        if (massimo != i) {
+            swap(A, i, massimo);
+            maxHeapify(A, massimo, heapsize);
+        }
+    }
+
+    public static void builMaxHeap(int[] A) {
+        int heapsize = A.length - 1;
+        for (int i = heapsize / 2; i >= 0; i--) {
+            maxHeapify(A, i, heapsize);
+        }
+    }
+
+    public static void heapSort(int[] A) {
+        int heapsize = A.length - 1;
+        builMaxHeap(A);
+        for (int i = A.length - 1; i > 0; i--) {
+            swap(A, 0, i);
+            heapsize--;
+            maxHeapify(A, 0, heapsize);
         }
     }
 }
