@@ -28,23 +28,23 @@ public class BucketSort {
         // Creo un array di liste concatenate
         ArrayList<Double>[] bucket = new ArrayList[n];
 
-        // Create empty buckets
+        // 1) Create empty buckets
         for (int i = 0; i < n; i++) {
             bucket[i] = new ArrayList<>();
         }
 
-        // Add elements into the buckets
+        // 2) Add elements into the buckets
         for (int i = 0; i < n; i++) {
             int bucketIndex = (int) A[i] * n;
             bucket[bucketIndex].add(A[i]);
         }
 
-        // Sort the elements of each bucket
+        // 3) Sort the elements of each bucket
         for (int i = 0; i < n; i++) {
             Collections.sort(bucket[i]);
         }
 
-        // Get the sorted array
+        // 4) Concatenate all bucket into A[]
         int index = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < bucket[i].size(); j++) {
