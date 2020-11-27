@@ -17,3 +17,10 @@ All of them are based on descriptions given in T. H. Cormen, C. E. Leiserson, R.
 - Counting Sort (CLRS 8.2)
 - Radix Sort (CLRS 8.3)
 - Bucket Sort (CLRS 8.4)
+
+## Data Structures
+
+- Stack and Queue (CLRS 10.1)
+- Linked List (CLRS 10.2)
+- Hashing (CLRS 11)
+- Binary Search Tree (CLRS 12)
