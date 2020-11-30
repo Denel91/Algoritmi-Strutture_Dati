@@ -1,16 +1,19 @@
 package Laboratorio_ASD;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * Implementare l'algoritmo di ricerca dicotomica su array ordinati di interi.
  */
 public class RicercaDicotomica {
     public static void main(String[] args) {
-        int[] vector = {3, 7, 8, 11, 15, 24};
-        int key = 15;
+        Scanner myObj = new Scanner(System.in);
+        ArrayList<Integer> vector = scanArray(myObj);
+        int key = myObj.nextInt();
         int low = 0;
-        int high = vector.length - 1;
-        System.out.println(key);
-        System.out.println("Searched Key found at index: " + binarySearch(vector, key, low, high)); // 4
+        int high = vector.size() - 1;
+        System.out.println(binarySearch(vector, key, low, high));
     }
 
     /**
@@ -22,17 +25,17 @@ public class RicercaDicotomica {
      * @param high  the last index of lista, is equal to its length – 1.
      * @return index of key if it is present in source, else return -1.
      */
-    public static int binarySearch(int[] lista, int key, int low, int high) {
+    public static int binarySearch(ArrayList<Integer> lista, int key, int low, int high) {
         if (high < low) {
             return -1;
         }
 
         while (low <= high) {
             int middle = (low + high) / 2;
-            if (key == lista[middle]) {
+            if (key == lista.get(middle)) {
                 return middle;
             }
-            if (key < lista[middle]) {
+            if (key < lista.get(middle)) {
                 // If key is smaller than middle, then it can only be present in left sub-array
                 high = middle - 1;
             } else {
@@ -42,5 +45,25 @@ public class RicercaDicotomica {
         }
 
         return -1;
+    }
+
+    // requires an input Scanner object (e.g. in = new Scanner(System.in); )
+    public static ArrayList<Integer> scanArray(Scanner in) {
+        // scan line of text
+        String line = in.nextLine();
+
+        // convert line of text into array of strings (tokens)
+        String[] tokens = line.split(" ");
+
+        // convert array of strings into array of integers
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        for (String token : tokens) {
+            if (!token.isEmpty()) // some tokens may be empty (e.g. with trailing spaces)
+            {
+                arr.add(Integer.parseInt(token));
+            }
+        }
+
+        return arr;
     }
 }
