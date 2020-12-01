@@ -3,6 +3,11 @@ package Laboratorio_ASD;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Scrivere un programma che riceva in input un array (non necessariamente ordinato) di interi di lunghezza
+ * arbitraria n e restituisca in output, se esiste, l'elemento dell'array che occorre almeno ⌊n/2⌋ + 1 volte.
+ * Se tale elemento non esiste, l'algoritmo dovrà stampare la stringa "No Majority".
+ */
 public class ElementoMaggioranza {
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
