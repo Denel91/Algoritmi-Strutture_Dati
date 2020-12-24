@@ -25,4 +25,27 @@ public class Node {
         n.parent = this;
         this.right = n;
     }
+
+    // metodi di accesso
+
+    public Node getParent() {
+        return parent;
+    }
+
+    public Node getLeft() {
+        return left;
+    }
+
+    public Node getRight() {
+        return right;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + key + "]";
+    }
 }
