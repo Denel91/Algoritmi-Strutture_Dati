@@ -41,5 +41,16 @@ public class BinarySearchTreeTest {
         System.out.println(tree1.treeHeight(root1)); // 2
         tree1.delete(root1.right.right);
         tree1.inorderPrint(root1); // 5 25 40 50 55 60
+
+        System.out.println();
+
+        Node root2 = new Node(12);
+        root2.addLeft(new Node(5));
+        root2.addRight(new Node(18));
+        root2.right.addRight(new Node(19));
+
+        BinarySearchTree tree2 = new BinarySearchTree(root2);
+        tree2.delete(root2.right);
+        tree2.inorderPrint(root2); // 5 12 19
     }
 }
