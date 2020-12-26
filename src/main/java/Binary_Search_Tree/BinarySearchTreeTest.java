@@ -15,6 +15,8 @@ public class BinarySearchTreeTest {
         BinarySearchTree tree = new BinarySearchTree(root);
         tree.treeInsert(z);
         tree.preorderPrint(root); // 12 5 2 9 18 15 13 17 19
+        System.out.println();
+        tree.inorderPrint(root); // 2 5 9 12 13 15 17 18 19
 
         System.out.println();
 
