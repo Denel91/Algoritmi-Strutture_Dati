@@ -99,6 +99,20 @@ public class BinarySearchTree {
     }
 
     /**
+     * Versione ricorsiva
+     * Find the Node with max value in a tree
+     *
+     * @param x the root of BST
+     * @return the Node with max value in a tree
+     */
+    public Node maxValue(Node x) {
+        if (x.right == null) {
+            return x;
+        }
+        return maxValue(x.right);
+    }
+
+    /**
      * Find the Node with min value in a tree
      *
      * @param x the root of BST
@@ -109,6 +123,20 @@ public class BinarySearchTree {
             x = x.left;
         }
         return x;
+    }
+
+    /**
+     * Versione ricorsiva
+     * Find the Node with min value in a tree
+     *
+     * @param x the root of BST
+     * @return the Node with min value in a tree
+     */
+    public Node minValue(Node x) {
+        if (x.left == null) {
+            return x;
+        }
+        return minValue(x.left);
     }
 
     /**
@@ -245,6 +273,48 @@ public class BinarySearchTree {
             transplant(z, y);
             y.left = z.left;
             y.left.parent = y;
+        }
+    }
+
+    //-------------------------------- TREE PRINTING ------------------------------------
+
+    public void printTree() {
+        printSubtree(root);
+    }
+
+    public void printSubtree(Node node) {
+        if (node.right != null) {
+            printTree(node.right, true, "");
+        }
+        printNodeValue(node);
+        if (node.left != null) {
+            printTree(node.left, false, "");
+        }
+    }
+
+    private void printNodeValue(Node node) {
+        if (node == null) {
+            System.out.print("<null>");
+        } else {
+            System.out.print(node.getKey());
+        }
+        System.out.println();
+    }
+
+    private void printTree(Node node, boolean isRight, String indent) {
+        if (node.right != null) {
+            printTree(node.right, true, indent + (isRight ? "        " : " |      "));
+        }
+        System.out.print(indent);
+        if (isRight) {
+            System.out.print(" /");
+        } else {
+            System.out.print(" \\");
+        }
+        System.out.print("----- ");
+        printNodeValue(node);
+        if (node.left != null) {
+            printTree(node.left, false, indent + (isRight ? " |      " : "        "));
         }
     }
 }
