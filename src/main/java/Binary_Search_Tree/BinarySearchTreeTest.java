@@ -11,9 +11,14 @@ public class BinarySearchTreeTest {
         root.right.addRight(new Node(19));
         root.right.left.addRight(new Node(17));
 
-        Node z = new Node(13);
         BinarySearchTree tree = new BinarySearchTree(root);
+        Node minimum = tree.minValue(root);
+        Node maximum = tree.maxValue(root);
+        System.out.println(minimum.toString()); // [2]
+        System.out.println(maximum.toString()); // [19]
+        Node z = new Node(13);
         tree.treeInsert(z);
+        tree.printTree();
         tree.preorderPrint(root); // 12 5 2 9 18 15 13 17 19
         System.out.println();
         tree.inorderPrint(root); // 2 5 9 12 13 15 17 18 19
@@ -54,5 +59,20 @@ public class BinarySearchTreeTest {
         BinarySearchTree tree2 = new BinarySearchTree(root2);
         tree2.delete(root2.right);
         tree2.inorderPrint(root2); // 5 12 19
+
+        System.out.println();
+
+        Node root3 = new Node(6);
+        root3.addLeft(new Node(3));
+        root3.addRight(new Node(7));
+        root3.left.addLeft(new Node(2));
+        root3.left.addRight(new Node(5));
+        root3.right.addRight(new Node(8));
+        BinarySearchTree tree3 = new BinarySearchTree(root3);
+        tree3.inorderPrint(root3); // 2 3 5 6 7 8
+        System.out.println();
+        tree3.preorderPrint(root3); // 6 3 2 5 7 8
+        System.out.println();
+        tree3.postorderPrint(root3); // 2 5 3 8 7 6
     }
 }
