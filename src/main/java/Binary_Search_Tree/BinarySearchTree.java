@@ -11,8 +11,11 @@ import java.util.Stack;
  * BinarySearchTree() : Default Constructor
  * getRoot() : Node
  * preorderPrint(Node n) : void
+ * preOrderTraversal(Node node) : void
  * inorderPrint(Node n) : void
+ * inOrderTraversal(Node node) : void
  * postorderPrint(Node n) : void
+ * postOrderTraversal(Node node) : void
  * treeHeight(Node n) : int
  * treeMax(Node x) : Node
  * treeMin(Node x) : Node
@@ -23,8 +26,9 @@ import java.util.Stack;
  * treeInsert(Node z) : void
  * transplant(Node u, Node v) : void
  * delete(Node z) : void
+ * printTree() : void
  *
- * @version 24/12/2020
+ * @version 28/12/2020
  */
 public class BinarySearchTree {
     Node root;
