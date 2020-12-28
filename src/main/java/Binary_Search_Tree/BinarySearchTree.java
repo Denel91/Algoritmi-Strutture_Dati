@@ -1,5 +1,7 @@
 package Binary_Search_Tree;
 
+import java.util.Stack;
+
 /**
  * BinarySearchTree class
  *
@@ -49,6 +51,29 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * Iterative Pre-Order
+     *
+     * @param node the root of BST
+     */
+    public void preOrderTraversal(Node node) {
+        Stack<Node> s = new Stack<>();
+        if (node != null) {
+            s.push(node);
+        }
+
+        while (!s.isEmpty()) {
+            Node c = s.pop();
+            System.out.print(c.getKey() + " ");
+            if (c.getRight() != null) {
+                s.push(c.getRight());
+            }
+            if (c.getLeft() != null) {
+                s.push(c.getLeft());
+            }
+        }
+    }
+
     // In-Order print of a tree
     public void inorderPrint(Node n) {
         if (n != null) {
@@ -58,12 +83,61 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * Iterative In-Order
+     *
+     * @param node the root of BST
+     */
+    public void inOrderTraversal(Node node) {
+        Stack<Node> s = new Stack<>();
+        while (!s.isEmpty() || node != null) {
+            if (node != null) {
+                s.push(node);
+                node = node.getLeft();
+            } else {
+                node = s.pop();
+                System.out.print(node.getKey() + " ");
+                node = node.getRight();
+            }
+        }
+    }
+
     // Post-Order print of a tree
     public void postorderPrint(Node n) {
         if (n != null) {
             postorderPrint(n.left);
             postorderPrint(n.right);
             System.out.print(n.key + " ");
+        }
+    }
+
+    /**
+     * Iterative Post-Order
+     *
+     * @param node the root of BST
+     */
+    public void postOrderTraversal(Node node) {
+        Stack<Node> s = new Stack<>();
+        Stack<Integer> out = new Stack<>();
+        if (node != null) {
+            s.push(node);
+        }
+
+        while (!s.isEmpty()) {
+            Node c = s.pop();
+            out.push(c.getKey());
+
+            if (c.getLeft() != null) {
+                s.push(c.getLeft());
+            }
+
+            if (c.getRight() != null) {
+                s.push(c.getRight());
+            }
+        }
+
+        while (!out.isEmpty()) {
+            System.out.print(out.pop() + " ");
         }
     }
 
@@ -179,7 +253,7 @@ public class BinarySearchTree {
      * @param x a Node in the binary tree
      * @return the successor of a given Node
      */
-    public Node treeSucessor(Node x) {
+    public Node treeSuccessor(Node x) {
         if (x.right != null) {
             return treeMin(x.right);
         } else {
