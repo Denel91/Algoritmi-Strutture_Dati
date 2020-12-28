@@ -41,7 +41,7 @@ public class BinarySearchTreeTest {
         System.out.println(min.toString()); // [5]
         Node k = tree1.findNode(root1, 40);
         System.out.println(k.toString()); // [40]
-        Node successor = tree1.treeSucessor(root1.right);
+        Node successor = tree1.treeSuccessor(root1.right);
         Node predecessor = tree1.treePredecessor(root1.right);
         System.out.println(successor.toString()); // [70]
         System.out.println(predecessor.toString()); // [55]
@@ -74,5 +74,14 @@ public class BinarySearchTreeTest {
         tree3.preorderPrint(root3); // 6 3 2 5 7 8
         System.out.println();
         tree3.postorderPrint(root3); // 2 5 3 8 7 6
+        System.out.println();
+        tree3.inOrderTraversal(root3); // 2 3 5 6 7 8
+        System.out.println();
+        tree3.preOrderTraversal(root3); // 6 3 2 5 7 8
+        System.out.println();
+        tree3.postOrderTraversal(root3); // 2 5 3 8 7 6
+        System.out.println();
+        Node node = tree3.treeSearch(root3, 7);
+        System.out.println(node); // [7]
     }
 }
