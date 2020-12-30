@@ -85,7 +85,7 @@ public class BinaryTree {
     public int esecuzione(int[] A, int k) {
         BinaryTree T = new BinaryTree();
         for (int i = 0; i < A.length; i++) {
-            NodeBST x = new NodeBST(A[i], Integer.toString(A[i]));
+            NodeBST x = new NodeBST(A[i], Integer.toString(A[i])); // NodeBST x -> (chiave: 12, valore: "12") per i = 0;
             T.treeInsert(x);
         }
 
@@ -99,6 +99,8 @@ public class BinaryTree {
         int[] v = {12, 5, 2, 9, 18, 15, 13, 17, 19};
         BinaryTree tree = new BinaryTree();
         int k = 15;
+        int k2 = 20;
         System.out.println(tree.esecuzione(v, k)); // 15
+        System.out.println(tree.esecuzione(v, k2)); // -1 --> la chiave 20 non c'è nel BST.
     }
 }
