@@ -85,6 +85,9 @@ public class BinarySearchTreeTest {
         System.out.println(node); // [7]
         tree3.clear();
         System.out.println(tree3.getRoot());
-
+        Node successor2 = tree3.treeSuccessor(root3.getLeft());
+        System.out.println(successor2.toString()); // [5]
+        Node min2 = tree3.treeMin(root3);
+        System.out.println(min2); // [2]
     }
 }
