@@ -21,14 +21,15 @@ import java.util.Stack;
  * treeMin(Node x) : Node
  * treeSearch(Node n, int k) : Node
  * findNode(Node n, int k) : Node
- * treeSucessor(Node x) : Node
+ * treeSuccessor(Node x) : Node
  * treePredecessor(Node x) : Node
  * treeInsert(Node z) : void
  * transplant(Node u, Node v) : void
  * delete(Node z) : void
+ * clear() : void
  * printTree() : void
  *
- * @version 28/12/2020
+ * @version 29/12/2020
  */
 public class BinarySearchTree {
     Node root;
@@ -49,9 +50,9 @@ public class BinarySearchTree {
     // Pre-Order print of a tree
     public void preorderPrint(Node n) {
         if (n != null) {
-            System.out.print(n.key + " ");
-            preorderPrint(n.left);
-            preorderPrint(n.right);
+            System.out.print(n.getKey() + " ");
+            preorderPrint(n.getLeft());
+            preorderPrint(n.getRight());
         }
     }
 
@@ -81,9 +82,9 @@ public class BinarySearchTree {
     // In-Order print of a tree
     public void inorderPrint(Node n) {
         if (n != null) {
-            inorderPrint(n.left);
-            System.out.print(n.key + " ");
-            inorderPrint(n.right);
+            inorderPrint(n.getLeft());
+            System.out.print(n.getKey() + " ");
+            inorderPrint(n.getRight());
         }
     }
 
@@ -109,9 +110,9 @@ public class BinarySearchTree {
     // Post-Order print of a tree
     public void postorderPrint(Node n) {
         if (n != null) {
-            postorderPrint(n.left);
-            postorderPrint(n.right);
-            System.out.print(n.key + " ");
+            postorderPrint(n.getLeft());
+            postorderPrint(n.getRight());
+            System.out.print(n.getKey() + " ");
         }
     }
 
@@ -152,14 +153,14 @@ public class BinarySearchTree {
      * @return the height of binary tree
      */
     public int treeHeight(Node n) {
-        if (n.left == null && n.right == null) {
+        if (n.getLeft() == null && n.getRight() == null) {
             return 0;
-        } else if (n.left == null) {
-            return 1 + treeHeight(n.right);
-        } else if (n.right == null) {
-            return 1 + treeHeight(n.left);
+        } else if (n.getLeft() == null) {
+            return 1 + treeHeight(n.getRight());
+        } else if (n.getRight() == null) {
+            return 1 + treeHeight(n.getLeft());
         } else {
-            return 1 + Math.max(treeHeight(n.left), treeHeight(n.right));
+            return 1 + Math.max(treeHeight(n.getLeft()), treeHeight(n.getRight()));
         }
     }
 
@@ -170,8 +171,8 @@ public class BinarySearchTree {
      * @return the Node with max value in a tree
      */
     public Node treeMax(Node x) {
-        while (x.right != null) {
-            x = x.right;
+        while (x.getRight() != null) {
+            x = x.getRight();
         }
         return x;
     }
@@ -184,10 +185,10 @@ public class BinarySearchTree {
      * @return the Node with max value in a tree
      */
     public Node maxValue(Node x) {
-        if (x.right == null) {
+        if (x.getRight() == null) {
             return x;
         }
-        return maxValue(x.right);
+        return maxValue(x.getRight());
     }
 
     /**
@@ -197,8 +198,8 @@ public class BinarySearchTree {
      * @return the Node with min value in a tree
      */
     public Node treeMin(Node x) {
-        while (x.left != null) {
-            x = x.left;
+        while (x.getLeft() != null) {
+            x = x.getLeft();
         }
         return x;
     }
@@ -211,10 +212,10 @@ public class BinarySearchTree {
      * @return the Node with min value in a tree
      */
     public Node minValue(Node x) {
-        if (x.left == null) {
+        if (x.getLeft() == null) {
             return x;
         }
-        return minValue(x.left);
+        return minValue(x.getLeft());
     }
 
     /**
@@ -226,10 +227,10 @@ public class BinarySearchTree {
      * @return the Node with key k in a binary tree
      */
     public Node treeSearch(Node n, int k) {
-        if (n == null || n.key == k) {
+        if (n == null || n.getKey() == k) {
             return n;
         }
-        return (n.key > k) ? treeSearch(n.left, k) : treeSearch(n.right, k);
+        return (n.getKey() > k) ? treeSearch(n.getLeft(), k) : treeSearch(n.getRight(), k);
     }
 
     /**
@@ -241,11 +242,11 @@ public class BinarySearchTree {
      * @return the Node with key k in a binary tree
      */
     public Node findNode(Node n, int k) {
-        while (n != null && k != n.key) {
-            if (n.key > k) {
-                n = n.left;
+        while (n != null && k != n.getKey()) {
+            if (n.getKey() > k) {
+                n = n.getLeft();
             } else {
-                n = n.right;
+                n = n.getRight();
             }
         }
         return n;
@@ -258,13 +259,13 @@ public class BinarySearchTree {
      * @return the successor of a given Node
      */
     public Node treeSuccessor(Node x) {
-        if (x.right != null) {
-            return treeMin(x.right);
+        if (x.getRight() != null) {
+            return treeMin(x.getRight());
         } else {
-            Node y = x.parent;
-            while (y != null && x == y.right) {
+            Node y = x.getParent();
+            while (y != null && x == y.getRight()) {
                 x = y;
-                y = y.parent;
+                y = y.getParent();
             }
             return y;
         }
@@ -277,13 +278,13 @@ public class BinarySearchTree {
      * @return the predecessor of a given Node
      */
     public Node treePredecessor(Node x) {
-        if (x.left != null) {
-            return treeMax(x.left);
+        if (x.getLeft() != null) {
+            return treeMax(x.getLeft());
         } else {
-            Node y = x.parent;
-            while (y != null && x == y.left) {
+            Node y = x.getParent();
+            while (y != null && x == y.getLeft()) {
                 x = y;
-                y = y.parent;
+                y = y.getParent();
             }
             return y;
         }
@@ -299,34 +300,34 @@ public class BinarySearchTree {
         Node x = root;
         while (x != null) {
             y = x;
-            if (z.key < x.key) {
-                x = x.left;
+            if (z.getKey() < x.getKey()) {
+                x = x.getLeft();
             } else {
-                x = x.right;
+                x = x.getRight();
             }
         }
 
-        z.parent = y;
+        z.setParent(y);
         if (y == null) {
             root = z;
-        } else if (z.key < y.key) {
-            y.left = z;
+        } else if (z.getKey() < y.getKey()) {
+            y.setLeft(z);
         } else {
-            y.right = z;
+            y.setRight(z);
         }
     }
 
     private void transplant(Node u, Node v) {
-        if (u.parent == null) {
+        if (u.getParent() == null) {
             root = v;
         }
-        if (u == u.parent.left) {
-            u.parent.left = v;
+        if (u == u.getParent().getLeft()) {
+            u.getParent().setLeft(v);
         } else {
-            u.parent.right = v;
+            u.getParent().setRight(v);
         }
         if (v != null) {
-            v.parent = u.parent;
+            v.setParent(u.getParent());
         }
     }
 
@@ -337,21 +338,28 @@ public class BinarySearchTree {
      */
     public void delete(Node z) {
         // 4 cases
-        if (z.left == null) {  // 1: z has only a right child
-            transplant(z, z.right);
-        } else if (z.right == null) {  // 2: z has only a left child
-            transplant(z, z.left);
+        if (z.getLeft() == null) {  // 1: z has only a right child
+            transplant(z, z.getRight());
+        } else if (z.getRight() == null) {  // 2: z has only a left child
+            transplant(z, z.getLeft());
         } else {
-            Node y = treeMin(z.right);
-            if (y.parent != z) {
-                transplant(y, y.right);
-                y.right = z.right;
-                y.right.parent = y;
+            Node y = treeMin(z.getRight());
+            if (y.getParent() != z) {
+                transplant(y, y.getRight());
+                y.setRight(z.getRight());
+                y.getRight().setParent(y);
             }
             transplant(z, y);
-            y.left = z.left;
-            y.left.parent = y;
+            y.setLeft(z.getLeft());
+            y.getLeft().setParent(y);
         }
+    }
+
+    /**
+     * Svuota completamente un BinarySearchTree
+     */
+    public void clear() {
+        this.root = null;
     }
 
     //-------------------------------- TREE PRINTING ------------------------------------
@@ -361,12 +369,12 @@ public class BinarySearchTree {
     }
 
     public void printSubtree(Node node) {
-        if (node.right != null) {
-            printTree(node.right, true, "");
+        if (node.getRight() != null) {
+            printTree(node.getRight(), true, "");
         }
         printNodeValue(node);
-        if (node.left != null) {
-            printTree(node.left, false, "");
+        if (node.getLeft() != null) {
+            printTree(node.getLeft(), false, "");
         }
     }
 
@@ -380,8 +388,8 @@ public class BinarySearchTree {
     }
 
     private void printTree(Node node, boolean isRight, String indent) {
-        if (node.right != null) {
-            printTree(node.right, true, indent + (isRight ? "        " : " |      "));
+        if (node.getRight() != null) {
+            printTree(node.getRight(), true, indent + (isRight ? "        " : " |      "));
         }
         System.out.print(indent);
         if (isRight) {
@@ -391,8 +399,8 @@ public class BinarySearchTree {
         }
         System.out.print("----- ");
         printNodeValue(node);
-        if (node.left != null) {
-            printTree(node.left, false, indent + (isRight ? " |      " : "        "));
+        if (node.getLeft() != null) {
+            printTree(node.getLeft(), false, indent + (isRight ? " |      " : "        "));
         }
     }
 }
