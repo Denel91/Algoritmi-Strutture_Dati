@@ -4,10 +4,10 @@ package Binary_Search_Tree;
  * Node class for Binary Search Tree (BST)
  */
 public class Node {
-    Node parent = null;
-    Node left = null;
-    Node right = null;
-    int key;
+    private Node parent = null;
+    private Node left = null;
+    private Node right = null;
+    private int key;
 
     // Default Constructor
     public Node(int k) {
@@ -42,6 +42,24 @@ public class Node {
 
     public int getKey() {
         return key;
+    }
+
+    // update methods
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+
+    public void setParent(Node parent) {
+        this.parent = parent;
+    }
+
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
+    public void setRight(Node right) {
+        this.right = right;
     }
 
     @Override
