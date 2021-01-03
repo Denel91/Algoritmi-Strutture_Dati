@@ -11,6 +11,7 @@ import java.util.Stack;
  * BinarySearchTree(Node n) : Constructor
  * BinarySearchTree() : Default Constructor
  * getRoot() : Node
+ * isRoot(Node p) : boolean
  * setRoot(Node root) : void
  * getRandomElement(BinarySearchTree T) : int
  * preorderPrint(Node n) : void
@@ -20,6 +21,7 @@ import java.util.Stack;
  * postorderPrint(Node n) : void
  * postOrderTraversal(Node node) : void
  * treeHeight(Node n) : int
+ * depth(Node p) : int
  * treeMax(Node x) : Node
  * treeMin(Node x) : Node
  * treeSearch(Node n, int k) : Node
@@ -32,7 +34,7 @@ import java.util.Stack;
  * clear() : void
  * printTree() : void
  *
- * @version 29/12/2020
+ * @version 03/01/2021
  */
 public class BinarySearchTree {
     Node root;
