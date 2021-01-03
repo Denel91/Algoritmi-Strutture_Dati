@@ -50,6 +50,10 @@ public class BinarySearchTree {
         return root;
     }
 
+    public boolean isRoot(Node p) {
+        return p == getRoot();
+    }
+
     public void setRoot(Node root) {
         this.root = root;
     }
@@ -211,6 +215,19 @@ public class BinarySearchTree {
         } else {
             return 1 + Math.max(treeHeight(n.getLeft()), treeHeight(n.getRight()));
         }
+    }
+
+    /**
+     * Profondità: Numero di spigoli tra la radice e un nodo
+     *
+     * @param p un nodo del BinarySearchTree
+     * @return la profondità di un BinarySearchTree
+     */
+    public int depth(Node p) {
+        if (isRoot(p))
+            return 0;
+        else
+            return 1 + depth(p.getParent());
     }
 
     /**
