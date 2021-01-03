@@ -69,6 +69,8 @@ public class BinarySearchTreeTest {
         root3.getLeft().addRight(new Node(5));
         root3.getRight().addRight(new Node(8));
         BinarySearchTree tree3 = new BinarySearchTree(root3);
+        int depth = tree3.depth(root3.getLeft());
+        System.out.println(depth); // 1
         int element = tree3.getRandomElement(tree3);
         System.out.println("RANDOM: " + element);
         tree3.inorderPrint(root3); // 2 3 5 6 7 8
