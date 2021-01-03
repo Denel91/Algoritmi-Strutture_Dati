@@ -1,5 +1,6 @@
 package Binary_Search_Tree;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 /**
@@ -10,6 +11,8 @@ import java.util.Stack;
  * BinarySearchTree(Node n) : Constructor
  * BinarySearchTree() : Default Constructor
  * getRoot() : Node
+ * setRoot(Node root) : void
+ * getRandomElement(BinarySearchTree T) : int
  * preorderPrint(Node n) : void
  * preOrderTraversal(Node node) : void
  * inorderPrint(Node n) : void
@@ -45,6 +48,52 @@ public class BinarySearchTree {
 
     public Node getRoot() {
         return root;
+    }
+
+    public void setRoot(Node root) {
+        this.root = root;
+    }
+
+    /**
+     * Estrae una chiave Random nel BinarySearchTree tra quelle inserite
+     *
+     * @param T un BinarySearchTree
+     * @return una chiave casuale presente nel BinarySearchTree
+     */
+    public int getRandomElement(BinarySearchTree T) {
+        ArrayList<Integer> A = new ArrayList<>();
+        inOrder(T, A);
+        int index = (int) (Math.random() * A.size());
+        return A.get(index);
+    }
+
+    /**
+     * Visita In-Order che memorizza le chiavi nel Vettore A.
+     *
+     * @param root la radice del BinarySearchTree
+     * @param A un ArrayList<Integer>
+     */
+    private static void inOrderNode(Node root, ArrayList<Integer> A) {
+        if (root.getLeft() != null) {
+            inOrderNode(root.getLeft(), A);
+        }
+
+        A.add(root.getKey());
+
+        if (root.getRight() != null) {
+            inOrderNode(root.getRight(), A);
+        }
+    }
+
+    /**
+     * Procedura che realizza effettivamente la visita In-Order
+     *
+     * @param T un BinarySearchTree
+     * @param A un ArrayList<Integer>
+     */
+    public static void inOrder(BinarySearchTree T, ArrayList<Integer> A) {
+        Node x = T.getRoot();
+        inOrderNode(x, A);
     }
 
     // Pre-Order print of a tree
