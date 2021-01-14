@@ -8,10 +8,16 @@ public class Node {
     private Node left = null;
     private Node right = null;
     private int key;
+    private String value;
 
     // Default Constructor
     public Node(int k) {
         this.key = k;
+    }
+
+    public Node(int k, String value) {
+        this.key = k;
+        this.value = value;
     }
 
     // add children
@@ -44,10 +50,18 @@ public class Node {
         return key;
     }
 
+    public String getValue() {
+        return value;
+    }
+
     // update methods
 
     public void setKey(int key) {
         this.key = key;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public void setParent(Node parent) {
