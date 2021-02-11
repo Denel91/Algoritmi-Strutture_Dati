@@ -70,12 +70,30 @@ public class MinHeap implements PriorityQueue {
         return (i - 1) / 2;
     }
 
+    protected int parent(ArrayList<Entry> heap, int i) {
+        int index = (i - 1) / 2;
+        Entry node = heap.get(index);
+        return node.getK();
+    }
+
     protected int leftId(int i) {
         return 2 * i + 1;
     }
 
+    protected int left(ArrayList<Entry> heap, int i) {
+        int index = 2 * i + 1;
+        Entry node = heap.get(index);
+        return node.getK();
+    }
+
     protected int rightId(int i) {
         return 2 * i + 2;
+    }
+
+    protected int right(ArrayList<Entry> heap, int i) {
+        int index = 2 * i + 2;
+        Entry node = heap.get(index);
+        return node.getK();
     }
 
     protected boolean hasLeft(int j) {
@@ -148,6 +166,13 @@ public class MinHeap implements PriorityQueue {
         }
     }
 
+    private void heapIncreaseKey(ArrayList<Entry> h, int i) {
+        while (i > 0 && heap.get(i).getK() < heap.get(parentId(i)).getK()) {
+            swap(heap, i, parentId(i));
+            i = parentId(i);
+        }
+    }
+
     /**
      * Inserisce un Nodo in una MinHeap
      *
@@ -161,10 +186,7 @@ public class MinHeap implements PriorityQueue {
         Entry newest = new Entry(key, value);
         heap.add(newest);
         int i = heap.size() - 1;
-        while (heap.get(i).getK() < heap.get(parentId(i)).getK()) {
-            swap(heap, i, parentId(i));
-            i = parentId(i);
-        }
+        heapIncreaseKey(heap, i);
         return newest;
     }
 
