@@ -86,7 +86,7 @@ public class HeapSort {
         int heapsize = h.size();
         if (heapsize < initialCapacity) {
             h.add(heapsize, k);
-            int i = heapsize;
+            int i = heapsize - 1;
 
             while (h.get(i) > h.get(parentId(i))) {
                 swap(h, i, parentId(i));
