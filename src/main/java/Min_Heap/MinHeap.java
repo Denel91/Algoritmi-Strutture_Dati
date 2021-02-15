@@ -191,6 +191,19 @@ public class MinHeap implements PriorityQueue {
     }
 
     /**
+     * Inserisce un Nodo in una MinHeap
+     *
+     * @param entry Il Nodo da inserire
+     * @return il Nodo inserito
+     */
+    public Entry insert(Entry entry) {
+        heap.add(entry);
+        int i = heap.size() - 1;
+        heapIncreaseKey(heap, i);
+        return entry;
+    }
+
+    /**
      * @return il Nodo con la chiave minima senza rimuoverlo
      */
     @Override
