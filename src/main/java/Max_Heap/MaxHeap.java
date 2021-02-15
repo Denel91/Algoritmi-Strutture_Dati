@@ -172,6 +172,19 @@ public class MaxHeap implements PriorityQueue {
         return newest;
     }
 
+    /**
+     * Inserisce un Nodo in una MaxHeap
+     *
+     * @param entry Il Nodo da inserire
+     * @return il Nodo inserito
+     */
+    public Entry insert(Entry entry) {
+        heap.add(entry);
+        int i = heap.size() - 1;
+        heapIncreaseKey(heap, i);
+        return entry;
+    }
+
     @Override
     public Entry max() {
         if (heap.isEmpty()) {
