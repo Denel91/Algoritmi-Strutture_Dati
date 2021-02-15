@@ -225,7 +225,7 @@ public class MinHeap implements PriorityQueue {
         Entry answer = heap.get(0);
         swap(heap, 0, heap.size() - 1);
         heap.remove(heap.size() - 1);
-        heapify(heap, 0, size());
+        heapify(heap, 0, heap.size() - 1);
         return answer;
     }
 
@@ -272,5 +272,13 @@ public class MinHeap implements PriorityQueue {
         Entry min = minHeap.removeMin();
         System.out.println("Min: " + min.getK());
         System.out.println(minHeap.toString()); // [(5), (9), (6), (15), (12), (7), (20), (16), (25), (14), (13), (11)]
+
+        Entry min2 = minHeap.removeMin();
+        System.out.println("Min: " + min2.getK());
+        System.out.println(minHeap.toString());
+
+        Entry min3 = minHeap.removeMin();
+        System.out.println("Min: " + min3.getK());
+        System.out.println(minHeap.toString());
     }
 }

@@ -201,7 +201,7 @@ public class MaxHeap implements PriorityQueue {
         Entry answer = heap.get(0);
         swap(heap, 0, heap.size() - 1);
         heap.remove(heap.size() - 1);
-        maxHeapify(heap, 0, size());
+        maxHeapify(heap, 0, heap.size() - 1);
         return answer;
     }
 
