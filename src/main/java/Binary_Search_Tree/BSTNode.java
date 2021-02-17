@@ -1,7 +1,6 @@
 package Binary_Search_Tree;
 
-//---------------- Node class ----------------
-
+//---------------- class BSTNode<E, T> ---------------- //
 public class BSTNode<E, T> {
     private E key;                  // the key stored at this node
     private T value;                // the value of the key stored at this node
@@ -20,6 +19,10 @@ public class BSTNode<E, T> {
     public BSTNode(E k, T v) {
         this.key = k;
         this.value = v;
+    }
+
+    public BSTNode(E k) {
+        this.key = k;
     }
 
     // accessor methods
@@ -70,6 +73,6 @@ public class BSTNode<E, T> {
     public String toString() {
         return '(' + "key: " + key + ',' + " value: " + value + ')';
     }
-} //----------- end of Node class -----------
+} //----------- End of class BSTNode<E, T> ----------- //
 
 
