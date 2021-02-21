@@ -1,5 +1,12 @@
 package Binary_Search_Tree;
 
+import static Binary_Search_Tree.BinarySearchTree.create;
+
+/**
+ * class BinarySearchTreeTest
+ *
+ * @version 21/02/2021
+ */
 public class BinarySearchTreeTest {
     public static void main(String[] args) {
         Node root = new Node(12);
@@ -93,5 +100,7 @@ public class BinarySearchTreeTest {
         System.out.println(successor2.toString()); // [5]
         Node min2 = tree3.treeMin(root3);
         System.out.println(min2); // [2]
+        Node y = create(6, "a");
+        System.out.println(y); // (6,a)
     }
 }

@@ -2,22 +2,31 @@ package Binary_Search_Tree;
 
 /**
  * Node class for Binary Search Tree (BST)
+ *
+ * @version 21/02/2021
  */
 public class Node {
-    private Node parent = null;
-    private Node left = null;
-    private Node right = null;
+    private Node parent;
+    private Node left;
+    private Node right;
     private int key;
     private String value;
 
     // Default Constructor
     public Node(int k) {
         this.key = k;
+        this.value = "";
+        this.left = null;
+        this.right = null;
+        this.parent = null;
     }
 
     public Node(int k, String value) {
         this.key = k;
         this.value = value;
+        this.left = null;
+        this.right = null;
+        this.parent = null;
     }
 
     // add children
@@ -78,6 +87,6 @@ public class Node {
 
     @Override
     public String toString() {
-        return "[" + key + "]";
+        return "(" + key + ")";
     }
 }

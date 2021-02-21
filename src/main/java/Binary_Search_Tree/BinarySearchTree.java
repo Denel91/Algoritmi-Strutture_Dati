@@ -13,6 +13,7 @@ import java.util.Stack;
  * getRoot() : Node
  * isRoot(Node p) : boolean
  * setRoot(Node root) : void
+ * create(int key, String value) : Node
  * getRandomElement(BinarySearchTree T) : int
  * preorderPrint(Node n) : void
  * preOrderTraversal(Node node) : void
@@ -34,7 +35,7 @@ import java.util.Stack;
  * clear() : void
  * printTree() : void
  *
- * @version 03/01/2021
+ * @version 21/02/2021
  */
 public class BinarySearchTree {
     Node root;
@@ -58,6 +59,17 @@ public class BinarySearchTree {
 
     public void setRoot(Node root) {
         this.root = root;
+    }
+
+    /**
+     * Crea un nuovo Nodo
+     *
+     * @param key chiave del Nodo
+     * @param value valore del Nodo
+     * @return un nuovo Nodo con chiave Key e valore value
+     */
+    public static Node create(int key, String value) {
+        return new Node(key, value);
     }
 
     /**
