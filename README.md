@@ -10,17 +10,21 @@ All of them are based on descriptions given in T. H. Cormen, C. E. Leiserson, R.
 ## Sorting Algorithms
 
 - Insertion Sort (CLRS 2.1)
+- Bubble Sort (CLRS 2.4)
 - Merge Sort (CLRS 2.3.1)
 - Selection Sort (CLRS Exercise 2.2-2)
 - Heap Sort (CLRS 6.4)
 - Quicksort (CLRS 7)
+- Quick Select
 - Counting Sort (CLRS 8.2)
 - Radix Sort (CLRS 8.3)
 - Bucket Sort (CLRS 8.4)
 
 ## Data Structures
 
+- Heap (CLRS 6.1)
 - Stack and Queue (CLRS 10.1)
 - Linked List (CLRS 10.2)
 - Hashing (CLRS 11)
 - Binary Search Tree (CLRS 12)
+- Alberi red-black (CLRS 13)
