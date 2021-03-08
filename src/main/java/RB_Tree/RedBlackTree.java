@@ -567,5 +567,13 @@ public class RedBlackTree {
         RBNode z = create(41);
         tree.treeInsert(z);
         tree.printTree();
+
+        System.out.println();
+
+        RedBlackTree T = new RedBlackTree();
+        T.treeInsert(new RBNode(5));
+        T.treeInsert(new RBNode(7));
+        T.treeInsert(new RBNode(9));
+        T.printTree();
     }
 }
