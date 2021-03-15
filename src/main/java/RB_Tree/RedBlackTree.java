@@ -474,37 +474,52 @@ public class RedBlackTree {
 
         int key;
         String value;
-        RBNode parent = null;
-        RBNode left = null;
-        RBNode right = null;
+        RBNode parent;
+        RBNode left;
+        RBNode right;
         RBNode.Color color;
 
         public RBNode(int k, Color c) {
-            this.key   = k;
+            this.key = k;
             this.color = c;
+            this.parent = null;
+            this.left = null;
+            this.right = null;
         }
 
         public RBNode(int k) {
-            this.key   = k;
+            this.key = k;
             this.color = Color.RED;
+            this.parent = null;
+            this.left = null;
+            this.right = null;
         }
 
         public RBNode(int k, String value) {
-            this.key   = k;
+            this.key = k;
             this.value = value;
             this.color = Color.RED;
+            this.parent = null;
+            this.left = null;
+            this.right = null;
         }
 
         public RBNode(int k, String value, Color c) {
-            this.key   = k;
+            this.key = k;
             this.value = value;
             this.color = c;
+            this.parent = null;
+            this.left = null;
+            this.right = null;
         }
 
         // constructor for conversion of existing node
         public RBNode(Node n) {
-            this.key   = n.getKey();
+            this.key = n.getKey();
             this.color = Color.RED;
+            this.parent = null;
+            this.left = null;
+            this.right = null;
         }
 
         public String getColor() {
