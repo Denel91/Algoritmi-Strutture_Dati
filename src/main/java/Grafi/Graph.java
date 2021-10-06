@@ -49,13 +49,13 @@ public class Graph {
 
     public void BFS(int source) {
         for (int i = 0; i < vertexCount; i++) {
+            colour.set(i, "white");
             distance.set(i, Integer.MAX_VALUE);
             parent.set(i, null);
-            colour.set(i, "white");
         }
+        colour.set(source, "gray");
         distance.set(source, 0);
         parent.set(source, null);
-        colour.set(source, "gray");
         Queue<Integer> queue = new LinkedList<>();
         queue.add(source);
         while (!queue.isEmpty()) {
