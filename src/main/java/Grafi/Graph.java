@@ -6,7 +6,7 @@ import java.util.Vector;
 import java.util.Arrays;
 
 /**
- * Breadth-First Search
+ * Breadth-First Search+
  *
  * @version 06/10/2021
  */
@@ -53,9 +53,9 @@ public class Graph {
             parent.set(i, null);
             colour.set(i, "white");
         }
-        colour.set(source, "gray");
         distance.set(source, 0);
         parent.set(source, null);
+        colour.set(source, "gray");
         Queue<Integer> queue = new LinkedList<>();
         queue.add(source);
         while (!queue.isEmpty()) {
