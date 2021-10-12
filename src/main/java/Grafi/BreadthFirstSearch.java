@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  * @version 12/10/2021
  */
-public class Graph {
+public class BreadthFirstSearch {
     private int vertexCount;              // numero di vertici nel Grafo
     private LinkedList<Integer> adj[];    // lista di adiacenza
     private Vector<Integer> distance;     // vettore delle distanze
@@ -20,9 +20,9 @@ public class Graph {
     /**
      * Default Constructor
      *
-     * @param vertexCount numero dei vertici del grafo
+     * @param vertexCount numero di vertici del grafo
      */
-    public Graph(int vertexCount) {
+    public BreadthFirstSearch(int vertexCount) {
         this.vertexCount = vertexCount;
         this.distance = new Vector<>();
         this.parent = new Vector<>();
@@ -92,7 +92,7 @@ public class Graph {
 
     public static void main(String[] args) {
         int vertices = 6;
-        Graph graph = new Graph(vertices);
+        BreadthFirstSearch graph = new BreadthFirstSearch(vertices);
         graph.addEdge(0, 1);
         graph.addEdge(0, 3);
         graph.addEdge(0, 4);
