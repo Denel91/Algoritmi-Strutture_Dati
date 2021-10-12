@@ -6,9 +6,9 @@ import java.util.Vector;
 import java.util.Arrays;
 
 /**
- * Breadth-First Search+
+ * Breadth-First Search
  *
- * @version 06/10/2021
+ * @version 12/10/2021
  */
 public class Graph {
     private int vertexCount;              // numero di vertici nel Grafo
@@ -17,6 +17,11 @@ public class Graph {
     private Vector<Integer> parent;       // vettore dei predecessori
     private Vector<String> colour;        // vettore dei colori
 
+    /**
+     * Default Constructor
+     *
+     * @param vertexCount numero dei vertici del grafo
+     */
     public Graph(int vertexCount) {
         this.vertexCount = vertexCount;
         this.distance = new Vector<>();
@@ -37,6 +42,12 @@ public class Graph {
                 " " + distance + "\n" + "parent: " + parent + "\n" + "colour: " + colour;
     }
 
+    /**
+     * Unisce rispettivamente tra loro due vertici del grafo
+     *
+     * @param v indice di un vertice
+     * @param w indice di un vertice
+     */
     public void addEdge(int v, int w) {
         if (!adj[v].contains(w)) {
             adj[v].add(w);
@@ -47,6 +58,11 @@ public class Graph {
         }
     }
 
+    /**
+     * Breadth-First Search
+     *
+     * @param source vertice di partenza
+     */
     public void BFS(int source) {
         for (int i = 0; i < vertexCount; i++) {
             colour.set(i, "white");
