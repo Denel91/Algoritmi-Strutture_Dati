@@ -50,16 +50,17 @@ public class DepthFirstSearch {
     /**
      * Depth-First Search
      */
-    public void DFS() {
+    public void DFS(int source) {
         for (int i = 0; i < vertexCount; i++) {
             colour.set(i, "white");
             parent.set(i, null);
         }
         time = 0;
-        for (int i = 0; i < vertexCount; i++)
+        for (int i = source; i < vertexCount; i++) {
             if (colour.get(i).equals("white")) {
                 DFS_Visit(i);
             }
+        }
     }
 
     /**
@@ -92,6 +93,6 @@ public class DepthFirstSearch {
         graph.addEdge(2, 4);
         graph.addEdge(2, 5);
         System.out.println("The Depth-First Search of the Graph is:");
-        graph.DFS(); // 0 1 2 4 5 3
+        graph.DFS(1);
     }
 }
