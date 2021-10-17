@@ -47,6 +47,12 @@ public class DepthFirstSearch {
         }
     }
 
+    public void addEdgeDirected(int v, int w) {
+        if (!adj[v].contains(w)) {
+            adj[v].add(w);
+        }
+    }
+
     /**
      * Depth-First Search
      */
@@ -85,6 +91,30 @@ public class DepthFirstSearch {
         completionTime.set(u, time);
     }
 
+    public int getVertexCount() {
+        return vertexCount;
+    }
+
+    public LinkedList<Integer>[] getAdj() {
+        return adj;
+    }
+
+    public Vector<Integer> getParent() {
+        return parent;
+    }
+
+    public Vector<String> getColour() {
+        return colour;
+    }
+
+    public Vector<Integer> getCompletionTime() {
+        return completionTime;
+    }
+
+    public Vector<Integer> getDiscoveredTime() {
+        return discoveredTime;
+    }
+
     public static void main(String[] args) {
         int vertices = 6;
         DepthFirstSearch graph = new DepthFirstSearch(vertices);
@@ -94,5 +124,21 @@ public class DepthFirstSearch {
         graph.addEdge(2, 5);
         System.out.println("The Depth-First Search of the Graph is:");
         graph.DFS(1);
+
+        System.out.println();
+
+        DepthFirstSearch graph_2 = new DepthFirstSearch(6);
+        graph_2.addEdgeDirected(1, 2);
+        graph_2.addEdgeDirected(2, 3);
+        graph_2.addEdgeDirected(3, 1);
+        graph_2.addEdgeDirected(1, 4);
+        graph_2.addEdgeDirected(1, 5);
+        System.out.println("The Depth-First Search of the Graph is:");
+        graph_2.DFS(1);
+        System.out.println();
+        System.out.println(graph_2.getParent().toString());
+        System.out.println(graph_2.getColour().toString());
+        System.out.println(graph_2.discoveredTime.toString());
+        System.out.println(graph_2.getCompletionTime().toString());
     }
 }
