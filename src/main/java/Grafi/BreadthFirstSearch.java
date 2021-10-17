@@ -36,6 +36,26 @@ public class BreadthFirstSearch {
         }
     }
 
+    public int getVertexCount() {
+        return vertexCount;
+    }
+
+    public LinkedList<Integer>[] getAdj() {
+        return adj;
+    }
+
+    public Vector<Integer> getDistance() {
+        return distance;
+    }
+
+    public Vector<Integer> getParent() {
+        return parent;
+    }
+
+    public Vector<String> getColour() {
+        return colour;
+    }
+
     @Override
     public String toString() {
         return "GRAPH \n" + "vertexCount: " + vertexCount + "\n" + "adj: " + Arrays.toString(adj) + "\n" + "distance:" +
@@ -102,6 +122,11 @@ public class BreadthFirstSearch {
         //System.out.println(graph);
         System.out.println("The Breadth-First Search of the Graph is:");
         graph.BFS(0);
+        System.out.println();
+        System.out.println(graph.getVertexCount());
+        System.out.println(graph.getColour().toString());
+        System.out.println(graph.getParent().toString());
+        System.out.println(graph.getDistance().toString());
     }
 }
 
