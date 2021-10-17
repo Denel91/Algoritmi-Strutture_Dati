@@ -138,7 +138,7 @@ public class DepthFirstSearch {
         System.out.println();
         System.out.println(graph_2.getParent().toString());
         System.out.println(graph_2.getColour().toString());
-        System.out.println(graph_2.discoveredTime.toString());
+        System.out.println(graph_2.getDiscoveredTime().toString());
         System.out.println(graph_2.getCompletionTime().toString());
     }
 }
