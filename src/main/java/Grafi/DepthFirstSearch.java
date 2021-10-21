@@ -6,7 +6,7 @@ import java.util.Vector;
 /**
  * Depth-First Search
  *
- * @version 12/10/21
+ * @version 21/10/2021
  */
 public class DepthFirstSearch {
     private int vertexCount;                    // numero di vertici nel Grafo
@@ -37,6 +37,12 @@ public class DepthFirstSearch {
              adj[i] = new LinkedList<>();
     }
 
+    /**
+     * Collega due nodi in un grafo non orientato
+     *
+     * @param v nodo del grafo
+     * @param w nodo del grafo
+     */
     public void addEdge(int v, int w) {
         if (!adj[v].contains(w)) {
             adj[v].add(w);
@@ -47,6 +53,12 @@ public class DepthFirstSearch {
         }
     }
 
+    /**
+     * Collega due nodi in un grafo orientato
+     *
+     * @param v nodo del grafo
+     * @param w nodo del grafo
+     */
     public void addEdgeDirected(int v, int w) {
         if (!adj[v].contains(w)) {
             adj[v].add(w);
@@ -72,7 +84,7 @@ public class DepthFirstSearch {
     /**
      * Procedura di supporto
      *
-     * @param u nodo del grafo scoperto
+     * @param u nodo del grafo visitato in quell'istante
      */
     private void DFS_Visit(int u) {
         System.out.print(u + " ");
@@ -123,7 +135,7 @@ public class DepthFirstSearch {
         graph.addEdge(2, 4);
         graph.addEdge(2, 5);
         System.out.println("The Depth-First Search of the Graph is:");
-        graph.DFS(1);
+        graph.DFS(1); // 1 2 4 5 3
 
         System.out.println();
 
@@ -134,8 +146,10 @@ public class DepthFirstSearch {
         graph_2.addEdgeDirected(1, 4);
         graph_2.addEdgeDirected(1, 5);
         System.out.println("The Depth-First Search of the Graph is:");
-        graph_2.DFS(1);
+        graph_2.DFS(1); // 1 2 3 4 5
+
         System.out.println();
+
         System.out.println(graph_2.getParent().toString());
         System.out.println(graph_2.getColour().toString());
         System.out.println(graph_2.getDiscoveredTime().toString());
@@ -144,12 +158,11 @@ public class DepthFirstSearch {
         System.out.println();
 
         DepthFirstSearch graph_3 = new DepthFirstSearch(6);
-        graph_3.addEdgeDirected(1,2);
-        graph_3.addEdgeDirected(1,3);
-        graph_3.addEdgeDirected(2,4);
-        graph_3.addEdgeDirected(2,5);
+        graph_3.addEdgeDirected(1, 2);
+        graph_3.addEdgeDirected(1, 3);
+        graph_3.addEdgeDirected(2, 4);
+        graph_3.addEdgeDirected(2, 5);
         System.out.println("The Depth-First Search of the Graph is:");
-        graph_3.DFS(1);
-        System.out.println("\n" + graph_3.getCompletionTime().toString());
+        graph_3.DFS(1); // 1 2 4 5 3
     }
 }
