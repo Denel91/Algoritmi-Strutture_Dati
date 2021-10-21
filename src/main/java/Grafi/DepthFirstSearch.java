@@ -140,5 +140,16 @@ public class DepthFirstSearch {
         System.out.println(graph_2.getColour().toString());
         System.out.println(graph_2.getDiscoveredTime().toString());
         System.out.println(graph_2.getCompletionTime().toString());
+
+        System.out.println();
+
+        DepthFirstSearch graph_3 = new DepthFirstSearch(6);
+        graph_3.addEdgeDirected(1,2);
+        graph_3.addEdgeDirected(1,3);
+        graph_3.addEdgeDirected(2,4);
+        graph_3.addEdgeDirected(2,5);
+        System.out.println("The Depth-First Search of the Graph is:");
+        graph_3.DFS(1);
+        System.out.println("\n" + graph_3.getCompletionTime().toString());
     }
 }
