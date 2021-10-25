@@ -28,3 +28,7 @@ All of them are based on descriptions given in T. H. Cormen, C. E. Leiserson, R.
 - Hashing (CLRS 11)
 - Binary Search Tree (CLRS 12)
 - Alberi red-black (CLRS 13)
+- Grafi (CLRS 22)
+- Breadth-first search (CLRS 22.2)
+- Depth-first search (CLRS 22.3)
+- Topological-Sort (CLRS 22.4)
