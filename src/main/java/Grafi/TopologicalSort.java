@@ -29,12 +29,12 @@ public class TopologicalSort {
         this.vertexCount = vertexCount;
         this.parent = new Vector<>();
         this.colour = new Vector<>();
-        this.discoveredTime = new Vector<>();
         this.completionTime = new Vector<>();
+        this.discoveredTime = new Vector<>();
         parent.setSize(vertexCount);
         colour.setSize(vertexCount);
-        discoveredTime.setSize(vertexCount);
         completionTime.setSize(vertexCount);
+        discoveredTime.setSize(vertexCount);
         this.adj = new LinkedList[vertexCount];
         for (int i = 0; i < vertexCount; i++)
              adj[i] = new LinkedList<>();
@@ -53,10 +53,12 @@ public class TopologicalSort {
     }
 
     /**
+
+    /**
      * Ordinamento Topologico:
      * Ordinamento lineare di tutti i vertici di un grafo aciclico diretto
      *
-     * @param source nodo di partenza
+     * @param source source nodo di partenza
      * @return una lista ordinata dei nodi del grafo
      */
     public LinkedList<Integer> topologicalSort(int source) {
@@ -66,7 +68,7 @@ public class TopologicalSort {
         }
         time = 0;
         LinkedList<Integer> list = new LinkedList<>();
-        for (int i = source; i < vertexCount; i++) {
+        for (int i = 1; i < vertexCount; i++) {
             if (colour.get(i).equals("white")) {
                 DFS_VisitTopological(i, list);
             }
@@ -134,21 +136,29 @@ public class TopologicalSort {
         System.out.println("Topological-Sort of the Graph is:");
         LinkedList<Integer> list = graph.topologicalSort(1);
         System.out.println(list); // [1, 3, 2, 5, 4]
-        System.out.println(graph.getDiscoveredTime().toString()); // [1, 2, 8, 3, 5]
-        System.out.println(graph.getCompletionTime().toString()); // [10, 7, 9, 4, 6]
-
-        System.out.println();
 
         TopologicalSort graph_2 = new TopologicalSort(6);
         graph_2.addEdgeDirected(1, 3);
-        graph_2.addEdgeDirected(3, 5);
         graph_2.addEdgeDirected(1, 2);
         graph_2.addEdgeDirected(2, 5);
         graph_2.addEdgeDirected(2, 4);
+        graph_2.addEdgeDirected(3, 5);
         System.out.println("Topological-Sort of the Graph is:");
         LinkedList<Integer> list_2 = graph_2.topologicalSort(1);
         System.out.println(list_2); // [1, 2, 4, 3, 5]
-        System.out.println(graph_2.getDiscoveredTime().toString()); // [1, 6, 2, 7, 3]
-        System.out.println(graph_2.getCompletionTime().toString()); // [10, 9, 5, 8, 4]
+
+        TopologicalSort graph_3 = new TopologicalSort(8);
+        graph_3.addEdgeDirected(7,6);
+        graph_3.addEdgeDirected(7,5);
+        graph_3.addEdgeDirected(6,4);
+        graph_3.addEdgeDirected(6,3);
+        graph_3.addEdgeDirected(5,4);
+        graph_3.addEdgeDirected(5,2);
+        graph_3.addEdgeDirected(3,1);
+        graph_3.addEdgeDirected(2,1);
+        graph_3.addEdgeDirected(1,0);
+        LinkedList<Integer> list_3 = graph_3.topologicalSort(7);
+        System.out.println("Topological-Sort of the Graph is: ");
+        System.out.println(list_3); // [7, 6, 5, 4, 3, 2, 1, 0]
     }
 }
