@@ -57,5 +57,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="alvie4_0_1" level="project" />
   </component>
 </module>

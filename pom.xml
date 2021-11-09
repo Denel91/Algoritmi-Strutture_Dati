@@ -39,6 +39,15 @@
             <optional>true</optional>
             <systemPath>${pom.basedir}/src/lib/1339_sourcecode/1339_sourcecode.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>alvie4_0_1</groupId>
+            <artifactId>alvie4_0_1</artifactId>
+            <scope>system</scope>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+            <optional>true</optional>
+            <systemPath>${pom.basedir}/src/lib/alvie4_0_1/alvie4.jar</systemPath>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
