@@ -79,6 +79,18 @@ public class BreadthFirstSearch {
     }
 
     /**
+     * Collega due nodi in un grafo orientato
+     *
+     * @param v nodo del grafo
+     * @param w nodo del grafo
+     */
+    public void addEdgeDirected(int v, int w) {
+        if (!adj[v].contains(w)) {
+            adj[v].add(w);
+        }
+    }
+
+    /**
      * Breadth-First Search
      *
      * @param source vertice di partenza
