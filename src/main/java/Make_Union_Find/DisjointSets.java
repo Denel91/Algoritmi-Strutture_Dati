@@ -28,7 +28,7 @@ public class DisjointSets {
     }
 
     public void makeSet(UFInformation x) {
-        this.list = new Make_Union_Find.DisjointSets.UFList();
+        this.list = new UFList();
         this.list.head = this.list.tail = x;
         this.list.length = 1;
         x.list = this.list;
@@ -43,7 +43,7 @@ public class DisjointSets {
         return x.list.head;
     }
 
-    public void union(UFInformation x, UFInformation y) {
+    public UFInformation union(UFInformation x, UFInformation y) {
         if (x.list.length <= y.list.length) {
             setShorter(x.list);
             setLonger(y.list);
@@ -54,7 +54,8 @@ public class DisjointSets {
 
         this.longer.tail.next = shorter.getHead();
         this.longer.tail = shorter.getTail();
-        this.longer.length = shorter.length + longer.length;
+        this.longer.length = longer.length + shorter.length;
+        return longer.getHead();
     }
 
     static class UFInformation extends Node {
@@ -104,7 +105,6 @@ public class DisjointSets {
         System.out.println(sets.view()); // {2}
         sets.makeSet(b);
         System.out.println(sets.view()); // {5}
-        sets.union(a, b);
-        System.out.println(sets); // DisjointSets: {5,2}
+        System.out.println(sets.union(a, b)); // DisjointSets: {5}
     }
 }
