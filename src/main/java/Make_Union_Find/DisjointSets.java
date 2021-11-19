@@ -1,110 +1,121 @@
 package Make_Union_Find;
 
 /**
- * DisjointSets
+ * Struttura dati per insiemi disgiunti
+ *
+ * * Class overview:
+ * makeSet(int val) : LinkedList
+ * findSet(Node x) : int
+ * union(LinkedList x, LinkedList y) : LinkedList
+ *
+ * @version 19/11/2021
  */
 public class DisjointSets {
-    private UFList list;
-    private UFList longer;
-    private UFList shorter;
 
-    public DisjointSets() {}
+    static class Node {
+        private int value;
+        private Node next;
+        private LinkedList set;
 
-    @Override
-    public String toString() {
-        return "DisjointSets: " + "{" + longer.getHead() + "," + longer.getTail() + "}";
-    }
-
-    public String view() {
-        return "{" + list.head + "}";
-    }
-
-    public void setLonger(UFList longer) {
-        this.longer = longer;
-    }
-
-    public void setShorter(UFList shorter) {
-        this.shorter = shorter;
-    }
-
-    public void makeSet(UFInformation x) {
-        this.list = new UFList();
-        this.list.head = this.list.tail = x;
-        this.list.length = 1;
-        x.list = this.list;
-        x.next = null;
-    }
-
-    public boolean belong(UFInformation x, UFInformation y) {
-        return (x.list == y.list);
-    }
-
-    public UFInformation find(UFInformation x) {
-        return x.list.head;
-    }
-
-    public UFInformation union(UFInformation x, UFInformation y) {
-        if (x.list.length <= y.list.length) {
-            setShorter(x.list);
-            setLonger(y.list);
-        } else {
-            setShorter(y.list);
-            setLonger(x.list);
+        public Node(int value) {
+            this.value = value;
+            this.set = new LinkedList();
+            this.next = null;
         }
 
-        this.longer.tail.next = shorter.getHead();
-        this.longer.tail = shorter.getTail();
-        this.longer.length = longer.length + shorter.length;
-        return longer.getHead();
-    }
-
-    static class UFInformation extends Node {
-        private UFList list;
-        private UFInformation next;
-
-        public UFInformation(int value) {
-            super(value);
+        public int getValue() {
+            return value;
         }
 
-        @Override
-        public String toString() {
-            return "" + list + "";
+        public LinkedList getSet() {
+            return set;
+        }
+
+        public Node getNext() {
+            return next;
         }
     }
 
-    static class UFList {
-        private UFInformation head;
-        private UFInformation tail;
-        private int length;
+    static class LinkedList {
+        private Node head;
+        private Node tail;
 
-        public UFList() {}
-
-        @Override
-        public String toString() {
-            return "" + head.getValue() + "";
+        public LinkedList() {
+            this.head = null;
+            this.tail = null;
         }
 
-        public UFInformation getHead() {
+        public Node getHead() {
             return head;
         }
 
-        public UFInformation getTail() {
+        public Node getTail() {
             return tail;
         }
 
-        public int getLength() {
-            return length;
+        public void setHead(Node head) {
+            this.head = head;
         }
+
+        public void setTail(Node tail) {
+            this.tail = tail;
+        }
+
+        public void view() {
+            if (this.head == null) {
+                System.out.println("Empty linked list");
+                return;
+            }
+
+            Node temp = this.head;
+            while (temp != null) {
+                System.out.print("" + temp.value + " --> ");
+                temp = temp.next;
+            }
+
+            System.out.print("NULL\n");
+        }
+    }
+
+    public LinkedList makeSet(int val) {
+        Node x = new Node(val);
+        LinkedList list = new LinkedList();
+        list.head = x;
+        list.tail = x;
+        x.set = list;
+        x.next = null;
+        return list;
+    }
+
+    public int findSet(Node x) {
+        return x.set.getHead().getValue();
+    }
+
+    public LinkedList union(LinkedList x, LinkedList y) {
+        LinkedList L1 = x;
+        LinkedList L2 = y;
+        L1.tail.next = L2.getHead();
+
+        Node z = L2.getHead();
+        while (z.getNext() != null) {
+            z.set = L1;
+            z = z.getNext();
+        }
+
+        L1.setTail(L2.getTail());
+        L2.setHead(L1.getHead());
+        return L1;
     }
 
     public static void main(String[] args) {
         DisjointSets sets = new DisjointSets();
-        UFInformation a = new UFInformation(2);
-        UFInformation b = new UFInformation(5);
-        sets.makeSet(a);
-        System.out.println(sets.view()); // {2}
-        sets.makeSet(b);
-        System.out.println(sets.view()); // {5}
-        System.out.println(sets.union(a, b)); // DisjointSets: {5}
+        LinkedList a = sets.makeSet(2);
+        LinkedList b = sets.makeSet(4);
+        LinkedList c = sets.makeSet(6);
+        LinkedList lista = sets.union(a, b);
+        LinkedList lista_2 = sets.union(lista, c);
+        lista_2.view();
+        int W = sets.findSet(lista.head.next.next);
+        System.out.println(W);
     }
 }
