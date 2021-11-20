@@ -12,6 +12,9 @@ package Make_Union_Find;
  */
 public class DisjointSets {
 
+    /**
+     * class Node
+     */
     static class Node {
         private int value;
         private Node next;
@@ -36,6 +39,9 @@ public class DisjointSets {
         }
     }
 
+    /**
+     * class LinkedList
+     */
     static class LinkedList {
         private Node head;
         private Node tail;
@@ -109,13 +115,15 @@ public class DisjointSets {
 
     public static void main(String[] args) {
         DisjointSets sets = new DisjointSets();
-        LinkedList a = sets.makeSet(2);
-        LinkedList b = sets.makeSet(4);
-        LinkedList c = sets.makeSet(6);
-        LinkedList lista = sets.union(a, b);
-        LinkedList lista_2 = sets.union(lista, c);
-        lista_2.view();
-        int W = sets.findSet(lista.head.next.next);
-        System.out.println(W);
+        LinkedList a = sets.makeSet(1);
+        LinkedList b = sets.makeSet(2);
+        LinkedList c = sets.makeSet(3);
+        LinkedList d = sets.makeSet(4);
+        LinkedList e = sets.makeSet(5);
+        LinkedList l = sets.union(a, b);
+        LinkedList m = sets.union(c, d);
+        sets.union(m, e);
+        LinkedList complete = sets.union(l, m);
+        complete.view(); // 1 --> 2 --> 3 --> 4 --> 5 --> NULL
     }
 }
