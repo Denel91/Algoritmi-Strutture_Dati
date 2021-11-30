@@ -125,5 +125,7 @@ public class DisjointSets {
         sets.union(m, e);
         LinkedList complete = sets.union(l, m);
         complete.view(); // 1 --> 2 --> 3 --> 4 --> 5 --> NULL
+        int head = sets.findSet(complete.head.next.next);
+        System.out.println(head); // 1
     }
 }
