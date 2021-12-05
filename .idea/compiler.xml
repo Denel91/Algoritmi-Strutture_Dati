@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Algoritmi-Strutture_Dati" target="11.0.12" />
+      <module name="Algoritmi-Strutture_Dati" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>

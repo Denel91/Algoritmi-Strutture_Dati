@@ -13,6 +13,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="1339_sourcecode" level="project" />
+    <orderEntry type="library" name="alvie4_0_1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-jar-plugin:3.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:3.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.0" level="project" />
@@ -66,6 +67,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="alvie4_0_1" level="project" />
   </component>
 </module>
