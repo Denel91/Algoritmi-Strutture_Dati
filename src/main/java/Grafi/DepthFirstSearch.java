@@ -2,11 +2,13 @@ package Grafi;
 
 import java.util.LinkedList;
 import java.util.Vector;
+import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  * Depth-First Search
  *
- * @version 21/10/2021
+ * @version 15/12/2021
  */
 public class DepthFirstSearch {
     private int vertexCount;                    // numero di vertici nel Grafo
@@ -127,6 +129,23 @@ public class DepthFirstSearch {
         return discoveredTime;
     }
 
+    // Transpose the graph
+    public DepthFirstSearch transpose() {
+        DepthFirstSearch g = new DepthFirstSearch(vertexCount);
+        for (int s = 0; s < vertexCount; s++) {
+            Iterator<Integer> i = adj[s].listIterator();
+            while (i.hasNext()) {
+                g.adj[i.next()].add(s);
+            }
+        }
+        return g;
+    }
+
+    @Override
+    public String toString() {
+        return "" + Arrays.toString(adj) + "";
+    }
+
     public static void main(String[] args) {
         int vertices = 6;
         DepthFirstSearch graph = new DepthFirstSearch(vertices);
@@ -164,5 +183,35 @@ public class DepthFirstSearch {
         graph_3.addEdgeDirected(2, 5);
         System.out.println("The Depth-First Search of the Graph is:");
         graph_3.DFS(1); // 1 2 4 5 3
+        System.out.println(graph_3.getCompletionTime());
+
+        // Strongly Connected Components example
+        DepthFirstSearch g = new DepthFirstSearch(8);
+        g.addEdgeDirected(0, 1);
+        g.addEdgeDirected(1, 2);
+        g.addEdgeDirected(2, 3);
+        g.addEdgeDirected(2, 4);
+        g.addEdgeDirected(3, 0);
+        g.addEdgeDirected(4, 5);
+        g.addEdgeDirected(5, 6);
+        g.addEdgeDirected(6, 4);
+        g.addEdgeDirected(6, 7);
+
+        System.out.println("Graph:");
+        System.out.println(g); // [[1], [2], [3, 4], [0], [5], [6], [4, 7], []]
+        System.out.println("The Depth-First Search of the Graph is:");
+        g.DFS(0); // 0 1 2 3 4 5 6 7
+        System.out.println();
+        System.out.println(g.getDiscoveredTime()); // [1, 2, 3, 4, 6, 7, 8, 9]
+        System.out.println();
+        System.out.println(g.getCompletionTime()); // [16, 15, 14, 5, 13, 12, 11, 10]
+        System.out.println();
+        System.out.println(g.getParent()); // [null, 0, 1, 2, 2, 4, 5, 6]
+        System.out.println("Transpose Graph:");
+        DepthFirstSearch graph_4 = g.transpose();
+        System.out.println(graph_4); // [[3], [0], [1], [2], [2, 6], [4], [5], [6]]
+        graph_4.DFS(0); // 0 3 2 1 4 6 5 7
+        System.out.println();
+        System.out.println(graph_4.getParent()); // [null, 2, 3, 0, null, 6, 4, null]
     }
 }
