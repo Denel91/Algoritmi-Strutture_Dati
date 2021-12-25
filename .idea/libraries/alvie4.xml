@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="alvie4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lib/alvie4_0_1/alvie4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
