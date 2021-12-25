@@ -4,8 +4,6 @@
       <root url="jar://$PROJECT_DIR$/src/lib/1339_sourcecode/1339_sourcecode.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$PROJECT_DIR$/src/lib/1339_sourcecode/1339_sourcecode.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
