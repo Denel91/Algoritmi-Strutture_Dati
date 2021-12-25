@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="">
+    <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="Update workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +102,7 @@
       <updated>1640451759494</updated>
       <workItem from="1640451762360" duration="68000" />
       <workItem from="1640451929776" duration="1816000" />
-      <workItem from="1640454924852" duration="675000" />
+      <workItem from="1640454924852" duration="1115000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -124,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640453698832</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update workspace.xml">
+      <created>1640455836818</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640455836818</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +153,7 @@
     <MESSAGE value="General Update" />
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="General fix to configuration file" />
-    <option name="LAST_COMMIT_MESSAGE" value="General fix to configuration file" />
+    <MESSAGE value="Update workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
   </component>
 </project>
