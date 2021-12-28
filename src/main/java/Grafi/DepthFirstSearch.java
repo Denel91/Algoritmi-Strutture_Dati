@@ -213,5 +213,33 @@ public class DepthFirstSearch {
         graph_4.DFS(0); // 0 3 2 1 4 6 5 7
         System.out.println();
         System.out.println(graph_4.getParent()); // [null, 2, 3, 0, null, 6, 4, null]
+
+        // Strongly Connected Components example
+        DepthFirstSearch G = new DepthFirstSearch(6);
+        G.addEdgeDirected(0,1);
+        G.addEdgeDirected(1, 2);
+        G.addEdgeDirected(1, 3);
+        G.addEdgeDirected(2, 0);
+        G.addEdgeDirected(3, 4);
+        G.addEdgeDirected(4, 3);
+        G.addEdgeDirected(4, 5);
+        System.out.println("Graph:");
+        System.out.println(G);
+        System.out.println("The Depth-First Search of the Graph is:");
+        G.DFS(0); // 0 1 2 3 4 5
+        System.out.println();
+        System.out.println(G.getDiscoveredTime());
+        System.out.println();
+        System.out.println(G.getCompletionTime());
+        System.out.println();
+        System.out.println(G.getParent());
+        System.out.println("Transpose Graph:");
+        DepthFirstSearch graph_5 = G.transpose();
+        System.out.println(graph_5);
+        graph_5.DFS(0); // 0 2 1 3 4 5
+        System.out.println();
+        System.out.println(graph_5.getDiscoveredTime());
+        System.out.println();
+        System.out.println(graph_5.getCompletionTime());
     }
 }
