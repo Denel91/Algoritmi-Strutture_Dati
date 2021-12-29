@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="Update .gitignore">
       <change afterPath="$PROJECT_DIR$/src/main/java/Kosaraju/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Kosaraju/DepthFirstOrder.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Kosaraju/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Kotlin_Koans" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java3D" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -64,7 +62,7 @@
       <recent name="Dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RedBlackTree">
+  <component name="RunManager" selected="Application.Graph">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Kosaraju.App" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -78,12 +76,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Dijkstra.App" />
+    <configuration name="DepthFirstOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kosaraju.DepthFirstOrder" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Dijkstra.*" />
+          <option name="PATTERN" value="Kosaraju.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RedBlackTree" />
-        <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.Graph" />
+        <item itemvalue="Application.DepthFirstOrder" />
+        <item itemvalue="Application.App (1)" />
+        <item itemvalue="Application.RedBlackTree" />
         <item itemvalue="Application.DepthFirstSearch" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +151,10 @@
       <workItem from="1640454924852" duration="1469000" />
       <workItem from="1640515088083" duration="8168000" />
       <workItem from="1640597312855" duration="7475000" />
-      <workItem from="1640632453691" duration="11324000" />
+      <workItem from="1640632453691" duration="11495000" />
+      <workItem from="1640650135369" duration="1289000" />
+      <workItem from="1640687010455" duration="3477000" />
+      <workItem from="1640773729113" duration="19345000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -204,7 +205,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640524966549</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update DepthFirstSearch">
+      <created>1640649964870</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640649964870</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update configuration file">
+      <created>1640650023496</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1640650023496</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +243,8 @@
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Implemented class App" />
     <MESSAGE value="Implemented class Graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented class Graph" />
+    <MESSAGE value="Update DepthFirstSearch" />
+    <MESSAGE value="Update configuration file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update configuration file" />
   </component>
 </project>
