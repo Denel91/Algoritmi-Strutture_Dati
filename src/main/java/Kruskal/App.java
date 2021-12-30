@@ -74,6 +74,39 @@ public class App {
     }
 
     /**
+     * Calcola le componenti connesse di un Grafo
+     *
+     * @param G un Grafo connesso
+     * @return l'insieme delle componenti connesse
+     */
+    public Set<HashSet<Vertex>> connected_Components(Graph G) {
+        for (Vertex v : G.getVertices()) {
+            makeSet(v);
+        }
+
+        for (Edge edge : G.getEdgesNonDecreasing()) {
+            if (findSet(edge.u) != findSet(edge.v)) {
+                union(edge.u, edge.v);
+            }
+        }
+
+        return sets;
+    }
+
+    /**
+     * Determina se due vertici sono nella stessa componente connessa
+     *
+     * @param edge un arco del grafo
+     * @return true se due vertici sono nella stessa componente connessa, false altrimenti
+     */
+    public boolean same_Components(Edge edge) {
+        if (findSet(edge.u) == findSet(edge.v)) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * Kruskal's Minimum Spanning Tree Algorithm
      *
      * @param G a Graph
@@ -128,7 +161,19 @@ public class App {
         G.add(new Edge(b, h, 11));
         G.add(new Edge(d, f, 14));
 
+        Graph graph = new Graph();
+        graph.add(new Edge(a,b, 1));
+        graph.add(new Edge(a,c, 2));
+        graph.add(new Edge(c,b,4));
+        graph.add(new Edge(b,d,3));
+
         Graph A = app.Kruskal(G);
         System.out.println(A); // Graph: [[g,h,1], [i,c,2], [f,g,2], [b,c,8], [c,f,4], [c,d,7], [a,b,4], [d,e,9]]
+
+        Set<HashSet<Vertex>> B = app.connected_Components(graph);
+        System.out.println(B); // [[d, b, c, a]]
+
+
+
     }
 }

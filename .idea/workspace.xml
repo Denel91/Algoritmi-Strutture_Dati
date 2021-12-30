@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="Update .gitignore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Kosaraju/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Kosaraju/DepthFirstOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Kosaraju/Graph.java" afterDir="false" />
+    <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="Implemented class Graph">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kruskal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kruskal/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,7 @@
       <recent name="Dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Graph">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Kosaraju.App" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -76,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kosaraju.DepthFirstOrder" />
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kruskal.App" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Kosaraju.*" />
+          <option name="PATTERN" value="Kruskal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Grafi.DepthFirstSearch" />
+    <configuration name="DepthFirstOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kosaraju.DepthFirstOrder" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Grafi.*" />
+          <option name="PATTERN" value="Kosaraju.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.Graph" />
         <item itemvalue="Application.DepthFirstOrder" />
         <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.RedBlackTree" />
-        <item itemvalue="Application.DepthFirstSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +153,8 @@
       <workItem from="1640632453691" duration="11495000" />
       <workItem from="1640650135369" duration="1289000" />
       <workItem from="1640687010455" duration="3477000" />
-      <workItem from="1640773729113" duration="19345000" />
+      <workItem from="1640773729113" duration="20229000" />
+      <workItem from="1640858610624" duration="2478000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -219,7 +219,28 @@
       <option name="project" value="LOCAL" />
       <updated>1640650023496</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implemented class App">
+      <created>1640797391609</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1640797391609</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Implemented class DepthFirstOrder">
+      <created>1640797422737</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1640797422737</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Implemented class Graph">
+      <created>1640797452879</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1640797452879</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,10 +262,11 @@
     <MESSAGE value="General fix to configuration file" />
     <MESSAGE value="Update workspace.xml" />
     <MESSAGE value="Update .gitignore" />
-    <MESSAGE value="Implemented class App" />
-    <MESSAGE value="Implemented class Graph" />
     <MESSAGE value="Update DepthFirstSearch" />
     <MESSAGE value="Update configuration file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update configuration file" />
+    <MESSAGE value="Implemented class App" />
+    <MESSAGE value="Implemented class DepthFirstOrder" />
+    <MESSAGE value="Implemented class Graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented class Graph" />
   </component>
 </project>
