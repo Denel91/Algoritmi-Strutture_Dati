@@ -1,7 +1,8 @@
 package Prim;
 
-import java.util.PriorityQueue;
 import java.util.Vector;
+import java.util.Queue;
+import java.util.LinkedList;
 
 public class App {
 
@@ -17,7 +18,7 @@ public class App {
         }
 
         key.set(r, 0);
-        PriorityQueue<Integer> Q = new PriorityQueue<>();
+        Queue<Integer> Q = new LinkedList<>();
         for (int i = 0; i < G.getV(); i++) {
             Q.add(i);
         }
