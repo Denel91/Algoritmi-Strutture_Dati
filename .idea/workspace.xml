@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="">
+    <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="Implemented connected_Components() and same_Components() methods">
+      <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prim/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prim/App.java" afterDir="false" />
     </list>
@@ -96,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kosaraju.Graph" />
+    <configuration name="Graph (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kruskal.Graph" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Kosaraju.*" />
+          <option name="PATTERN" value="Kruskal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,10 +126,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Graph (1)" />
         <item itemvalue="Application.BTree" />
         <item itemvalue="Application.BTree (1)" />
         <item itemvalue="Application.RedBlackTree" />
-        <item itemvalue="Application.Graph" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +155,9 @@
       <workItem from="1640947272790" duration="19976000" />
       <workItem from="1641739313103" duration="5062000" />
       <workItem from="1641820185471" duration="945000" />
-      <workItem from="1641830048341" duration="245000" />
+      <workItem from="1641830048341" duration="424000" />
+      <workItem from="1641832468949" duration="2135000" />
+      <workItem from="1642269040324" duration="3422000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -247,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640861194903</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="UPDATE Prim Algorithm">
+      <created>1641830411228</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1641830411229</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +285,7 @@
     <MESSAGE value="Implemented class DepthFirstOrder" />
     <MESSAGE value="Implemented class Graph" />
     <MESSAGE value="Implemented connected_Components() and same_Components() methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented connected_Components() and same_Components() methods" />
+    <MESSAGE value="UPDATE Prim Algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Prim Algorithm" />
   </component>
 </project>

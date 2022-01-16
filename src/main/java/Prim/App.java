@@ -2,7 +2,7 @@ package Prim;
 
 import java.util.Vector;
 import java.util.Queue;
-import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 public class App {
 
@@ -18,10 +18,12 @@ public class App {
         }
 
         key.set(r, 0);
-        Queue<Integer> Q = new LinkedList<>();
+        Queue<Integer> Q = new PriorityQueue<>();
         for (int i = 0; i < G.getV(); i++) {
             Q.add(i);
         }
+
+        System.out.println("QUEUE: " + Q);
 
         while (!Q.isEmpty()) {
             int u = Q.poll();
@@ -53,9 +55,28 @@ public class App {
         G.addEdge(1, 7, 11);
         G.addEdge(3, 5, 14);
 
+        Graph g = new Graph(8);
+        g.addEdge(0, 2, 2);
+        g.addEdge(2, 1, 8);
+        g.addEdge(2, 4, 6);
+        g.addEdge(2, 5, 4);
+        g.addEdge(3, 5, 5);
+        g.addEdge(4, 2, 6);
+        g.addEdge(5, 1, 7);
+        g.addEdge(5, 2, 4);
+        g.addEdge(5, 3, 5);
+        g.addEdge(5, 6, 5);
+        g.addEdge(6,5, 5);
+        g.addEdge(6,7,4);
+        g.addEdge(7,6, 4);
+
         System.out.println(G);
 
         Vector<Integer> A = app.mst_Prim(G, 0);
         System.out.println(A); // [null, 0, 1, 2, 3, 2, 5, 6, 2]
+
+        System.out.println(g);
+        Vector<Integer> B = app.mst_Prim(g, 0);
+        System.out.println(B); // [null, null, 0, null, 2, 2, 5, 6]
     }
 }
