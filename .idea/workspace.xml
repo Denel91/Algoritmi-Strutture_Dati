@@ -158,6 +158,7 @@
       <workItem from="1641830048341" duration="424000" />
       <workItem from="1641832468949" duration="2135000" />
       <workItem from="1642269040324" duration="3422000" />
+      <workItem from="1642338158339" duration="677000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -257,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641830411229</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="UPDATE PriorityQueue">
+      <created>1642338250415</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642338250415</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +294,7 @@
     <MESSAGE value="Implemented class Graph" />
     <MESSAGE value="Implemented connected_Components() and same_Components() methods" />
     <MESSAGE value="UPDATE Prim Algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Prim Algorithm" />
+    <MESSAGE value="UPDATE PriorityQueue" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE PriorityQueue" />
   </component>
 </project>

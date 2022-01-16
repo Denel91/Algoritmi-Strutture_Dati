@@ -23,8 +23,6 @@ public class App {
             Q.add(i);
         }
 
-        System.out.println("QUEUE: " + Q);
-
         while (!Q.isEmpty()) {
             int u = Q.poll();
             for (int v : G.adj(u)){
@@ -57,6 +55,8 @@ public class App {
 
         Graph g = new Graph(8);
         g.addEdge(0, 2, 2);
+        g.addEdge(1, 2, 8);
+        g.addEdge(1, 5, 7);
         g.addEdge(2, 1, 8);
         g.addEdge(2, 4, 6);
         g.addEdge(2, 5, 4);
