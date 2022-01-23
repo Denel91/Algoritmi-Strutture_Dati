@@ -181,7 +181,7 @@
       <workItem from="1642769896736" duration="1192000" />
       <workItem from="1642774722911" duration="708000" />
       <workItem from="1642794395295" duration="10222000" />
-      <workItem from="1642889617125" duration="8464000" />
+      <workItem from="1642889617125" duration="10396000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -295,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642338894171</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Implemented bubble_Sort() method by Cormen book">
+      <created>1642898260867</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642898260867</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,17 +333,7 @@
     <MESSAGE value="UPDATE Prim Algorithm" />
     <MESSAGE value="UPDATE PriorityQueue" />
     <MESSAGE value="INSERT edge" />
-    <option name="LAST_COMMIT_MESSAGE" value="INSERT edge" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Bubble/BubbleSort.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Implemented bubble_Sort() method by Cormen book" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented bubble_Sort() method by Cormen book" />
   </component>
 </project>

@@ -17,20 +17,20 @@ public class BubbleSort {
         bubbleSort(vector);
         System.out.println(Arrays.toString(vector)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
-        int[] data = {5, 2, 4, 6, 1, 3};
+        int[] data = {5, 2, 4, 6, 1, 3, 7};
         System.out.println(Arrays.toString(data));
         bubble_Sort(data);
-        System.out.println(Arrays.toString(data));
+        System.out.println(Arrays.toString(data)); // [1, 2, 3, 4, 5, 6, 7]
 
         int[] A = {6, 4, 1, 2, 5, 3};
         System.out.println(Arrays.toString(A));
         bubble_Sort(A);
-        System.out.println(Arrays.toString(A));
+        System.out.println(Arrays.toString(A)); // [1, 2, 3, 4, 5, 6]
 
         int[] B = {-2, 0, -4, 1, 5, 3, 2, 4, 6, -1, 8};
         System.out.println(Arrays.toString(B));
         bubble_Sort(B);
-        System.out.println(Arrays.toString(B));
+        System.out.println(Arrays.toString(B)); // [-4, -2, -1, 0, 1, 2, 3, 4, 5, 6, 8]
     }
 
     /**
@@ -59,6 +59,7 @@ public class BubbleSort {
 
     /**
      * Ordina un insieme di elementi secondo la strategia di ordinamento “a bolle”
+     * T. H. Cormen implementation
      *
      * @param A un vettore di numeri interi
      */
