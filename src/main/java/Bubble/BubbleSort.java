@@ -16,6 +16,21 @@ public class BubbleSort {
         System.out.println(Arrays.toString(vector)); // [1, 5, 7, 9, 11, 13, 14, 15, 2, 3, 4, 6, 8, 10, 12]
         bubbleSort(vector);
         System.out.println(Arrays.toString(vector)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+        int[] data = {5, 2, 4, 6, 1, 3};
+        System.out.println(Arrays.toString(data));
+        bubble_Sort(data);
+        System.out.println(Arrays.toString(data));
+
+        int[] A = {6, 4, 1, 2, 5, 3};
+        System.out.println(Arrays.toString(A));
+        bubble_Sort(A);
+        System.out.println(Arrays.toString(A));
+
+        int[] B = {-2, 0, -4, 1, 5, 3, 2, 4, 6, -1, 8};
+        System.out.println(Arrays.toString(B));
+        bubble_Sort(B);
+        System.out.println(Arrays.toString(B));
     }
 
     /**
@@ -39,6 +54,30 @@ public class BubbleSort {
             }
 
             stop = stop - 1;
+        }
+    }
+
+    /**
+     * Ordina un insieme di elementi secondo la strategia di ordinamento “a bolle”
+     *
+     * @param A un vettore di numeri interi
+     */
+    public static void bubble_Sort(int[] A) {
+        boolean flag;
+        for (int i = 0; i < A.length - 1; i++) {
+            flag = false; // indica che l'insieme non è ordinato
+            for (int j = A.length - 1; j > i; j--) {
+                int temp;
+                if (A[j] < A[j - 1]) {
+                    temp = A[j];
+                    A[j] = A[j - 1];
+                    A[j - 1] = temp;
+                    flag = true;
+                }
+            }
+
+            if (!flag)
+               break;
         }
     }
 }
