@@ -8,12 +8,21 @@ import java.util.Scanner;
  */
 public class RicercaDicotomica {
     public static void main(String[] args) {
+        /*
         Scanner myObj = new Scanner(System.in);
         ArrayList<Integer> vector = scanArray(myObj);
         int key = myObj.nextInt();
         int low = 0;
         int high = vector.size() - 1;
         System.out.println(binarySearch(vector, key, low, high));
+
+         */
+
+        int[] A = {4, 6, 7, 8, 10, 15, 22, 27, 30};
+        int v = 27;
+        int i = 0;
+        int j = A.length - 1;
+        System.out.println("La chiave cercata ha indice: " + binarySearch(A, v, i, j));
     }
 
     /**
@@ -45,6 +54,33 @@ public class RicercaDicotomica {
         }
 
         return -1;
+    }
+
+    /**
+     * BinarySearch of an element
+     *
+     * @param A a vector of integers
+     * @param v the key to serch
+     * @param i the first index of the array A
+     * @param j the last index of the array A
+     * @return the key searched in the vector
+     */
+    public static int binarySearch(int[] A, int v, int i, int j) {
+        if (i > j) {
+            return 0;
+
+        } else {
+            int m = ((i + j) / 2);
+            if (A[m] == v) {
+                return m;
+
+            } else if (A[m] < v) {
+                return binarySearch(A, v, m + 1, j);
+
+            } else {
+                return binarySearch(A, v, i, m - 1);
+            }
+        }
     }
 
     // requires an input Scanner object (e.g. in = new Scanner(System.in); )
