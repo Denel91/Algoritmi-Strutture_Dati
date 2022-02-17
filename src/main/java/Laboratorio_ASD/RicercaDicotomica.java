@@ -23,6 +23,12 @@ public class RicercaDicotomica {
         int i = 0;
         int j = A.length - 1;
         System.out.println("La chiave cercata ha indice: " + binarySearch(A, v, i, j));
+
+        int[] B = {2, 4, 5, 6, 7, 9, 8, 6, 3, 1, 0};
+        int low = 0;
+        int high = B.length - 1;
+        System.out.println("Il massimo è: " + SearchMaxArray(B, low, high));
+        System.out.println("Il massimo è: " + findMax(B, low, high));
     }
 
     /**
@@ -80,6 +86,48 @@ public class RicercaDicotomica {
             } else {
                 return binarySearch(A, v, i, m - 1);
             }
+        }
+    }
+
+    /**
+     * @param A
+     * @param start
+     * @param end
+     * @return
+     */
+    public static int SearchMaxArray(int[] A, int start, int end) {
+        int max, max1 = 0;
+        if (start == end) {
+            return A[start];
+
+        } else if (A[start] < A[end]) {
+            max = SearchMaxArray(A, start + 1, end);
+        } else {
+            max = SearchMaxArray(A, start, end - 1);
+        }
+
+        if (max >= max1) {
+            max1 = max;
+        }
+
+        return max1;
+    }
+
+    /**
+     *
+     * @param data
+     * @param a
+     * @param b
+     * @return
+     */
+    public static int findMax(int[] data, int a, int b) {
+        if (b - a <= 1) {
+            return Math.max(data[a], data[b]);
+        } else {
+            int mid = (a + b) / 2;
+            int leftMax = findMax(data, a, mid);
+            int rightMax = findMax(data, mid + 1, b);
+            return Math.max(leftMax, rightMax);
         }
     }
 

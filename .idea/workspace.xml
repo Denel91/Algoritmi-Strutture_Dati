@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/RicercaDicotomica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/RicercaDicotomica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +76,7 @@
       <recent name="Dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RicercaDicotomica">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="BinarySearchTreeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Binary_Search_Tree.BinarySearchTreeTest" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -89,12 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Bubble.BubbleSort" />
+    <configuration name="CountingSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Counting.CountingSort" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Bubble.*" />
+          <option name="PATTERN" value="Counting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Bellman.Graph" />
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Merge.MergeSort" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Bellman.*" />
+          <option name="PATTERN" value="Merge.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +116,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quick.QuickSort" />
+    <configuration name="MinHeap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Min_Heap.MinHeap" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quick.*" />
+          <option name="PATTERN" value="Min_Heap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,12 +129,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RicercaDicotomica" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Laboratorio_ASD.RicercaDicotomica" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Prova.Test" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Laboratorio_ASD.*" />
+          <option name="PATTERN" value="Prova.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RicercaDicotomica" />
-        <item itemvalue="Application.QuickSort" />
-        <item itemvalue="Application.Graph" />
-        <item itemvalue="Application.BubbleSort" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.BinarySearchTreeTest" />
+        <item itemvalue="Application.MinHeap" />
+        <item itemvalue="Application.CountingSort" />
+        <item itemvalue="Application.MergeSort" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +195,13 @@
       <workItem from="1643832512523" duration="1000" />
       <workItem from="1644177530305" duration="52000" />
       <workItem from="1644178191372" duration="67000" />
-      <workItem from="1644240443795" duration="1353000" />
+      <workItem from="1644240443795" duration="2012000" />
+      <workItem from="1644327963095" duration="1470000" />
+      <workItem from="1644334704948" duration="3720000" />
+      <workItem from="1644356564820" duration="1520000" />
+      <workItem from="1644414982249" duration="2353000" />
+      <workItem from="1645018976555" duration="11491000" />
+      <workItem from="1645110050955" duration="1460000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -322,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642900377549</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Implemented binarySearch() method">
+      <created>1644241858625</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1644241858625</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +369,8 @@
     <MESSAGE value="INSERT edge" />
     <MESSAGE value="Implemented bubble_Sort() method by Cormen book" />
     <MESSAGE value="UPDATE BubbleSort class" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE BubbleSort class" />
+    <MESSAGE value="Implemented binarySearch() method" />
+    <MESSAGE value="General UPDATE" />
+    <option name="LAST_COMMIT_MESSAGE" value="General UPDATE" />
   </component>
 </project>

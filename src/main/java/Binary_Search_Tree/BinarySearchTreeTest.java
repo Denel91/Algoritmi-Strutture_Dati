@@ -102,5 +102,32 @@ public class BinarySearchTreeTest {
         System.out.println(min2); // [2]
         Node y = create(6, "a");
         System.out.println(y); // (6,a)
+
+        Node root4 = new Node(10);
+        root4.addLeft(new Node(5));
+        root4.addRight(new Node(15));
+        root4.getLeft().addLeft(new Node(2));
+        root4.getLeft().addRight(new Node(8));
+        root4.getRight().addLeft(new Node(12));
+        root4.getRight().addRight(new Node(20));
+        BinarySearchTree tree4 = new BinarySearchTree(root4);
+        tree4.printTree();
+        tree4.inorderPrint(root4);
+
+        System.out.println();
+
+        Node root5 = new Node(8);
+        root5.addLeft(new Node(3));
+        root5.addRight(new Node(10));
+        root5.getRight().addRight(new Node(14));
+        root5.getRight().getRight().addLeft(new Node(12));
+        root5.getLeft().addLeft(new Node(1));
+        root5.getLeft().addRight(new Node(5));
+        root5.getLeft().getRight().addLeft(new Node(4));
+        root5.getLeft().getRight().addRight(new Node(7));
+        BinarySearchTree tree5 = new BinarySearchTree(root5);
+        tree5.printTree();
+        tree5.inorderPrint(root5);
+        System.out.println();
     }
 }
