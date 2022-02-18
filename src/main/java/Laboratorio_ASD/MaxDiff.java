@@ -15,7 +15,7 @@ public class MaxDiff {
         int dimension = vector.size();
         System.out.println(maxDiff(vector, dimension));
 
-        int[] w = {14, 16, 1, 5, 13, 0, 3};
+        int[] w = {16, 14, 1, 5, 13, 0, 3};
         int t = w.length;
         int[] res = maxDiff(w, t);
         System.out.println(Arrays.toString(res));

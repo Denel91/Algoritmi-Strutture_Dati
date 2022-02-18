@@ -9,8 +9,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/RicercaDicotomica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/RicercaDicotomica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/BST_Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/BST_Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/MaxDiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/MaxDiff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,20 @@
       <recent name="Dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.BST_Order">
+    <configuration name="BST_Order" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercises.BST_Order" />
+      <module name="Algoritmi-Strutture_Dati" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BinarySearchTreeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Binary_Search_Tree.BinarySearchTreeTest" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -90,25 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountingSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Counting.CountingSort" />
+    <configuration name="MaxDiff" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Laboratorio_ASD.MaxDiff" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Counting.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Merge.MergeSort" />
-      <module name="Algoritmi-Strutture_Dati" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Merge.*" />
+          <option name="PATTERN" value="Laboratorio_ASD.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BST_Order" />
+        <item itemvalue="Application.MaxDiff" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.BinarySearchTreeTest" />
         <item itemvalue="Application.MinHeap" />
-        <item itemvalue="Application.CountingSort" />
-        <item itemvalue="Application.MergeSort" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +201,9 @@
       <workItem from="1644356564820" duration="1520000" />
       <workItem from="1644414982249" duration="2353000" />
       <workItem from="1645018976555" duration="11491000" />
-      <workItem from="1645110050955" duration="1460000" />
+      <workItem from="1645110050955" duration="1525000" />
+      <workItem from="1645197030424" duration="2384000" />
+      <workItem from="1645199458637" duration="4875000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -336,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644241858625</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="General UPDATE">
+      <created>1645117611591</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1645117611591</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

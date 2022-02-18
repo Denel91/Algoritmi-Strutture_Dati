@@ -2,8 +2,8 @@ package Exercises;
 
 import Binary_Search_Tree.BinarySearchTree;
 import Binary_Search_Tree.Node;
-
 import java.util.Arrays;
+import java.util.ArrayList;
 
 /**
  * Dato un vettore di interi A, ordinarlo sfruttando un Binary Search Tree.
@@ -17,7 +17,22 @@ public class BST_Order {
 
         int[] vector = {6, 3, 2, 5, 7, 8};
         sort(vector);
-        System.out.println(Arrays.toString(vector));
+        System.out.println(Arrays.toString(vector)); // [2, 3, 5, 6, 7, 8]
+
+        Node root5 = new Node(8);
+        root5.addLeft(new Node(3));
+        root5.addRight(new Node(10));
+        root5.getRight().addRight(new Node(14));
+        root5.getRight().getRight().addLeft(new Node(12));
+        root5.getLeft().addLeft(new Node(1));
+        root5.getLeft().addRight(new Node(5));
+        root5.getLeft().getRight().addLeft(new Node(4));
+        root5.getLeft().getRight().addRight(new Node(7));
+        BinarySearchTree tree5 = new BinarySearchTree(root5);
+
+        ArrayList<Integer> A = new ArrayList<>();
+        inOrder(tree5, A);
+        System.out.println(A);
     }
 
     /**
@@ -89,5 +104,37 @@ public class BST_Order {
             pos++;
             min = T.treeSuccessor(min); // calcolo il successore del minimo
         }
+    }
+
+    /**
+     *
+     * @param root
+     * @param A
+     * @return
+     */
+    private static ArrayList<Integer> inOrderNode(Node root, ArrayList<Integer> A) {
+        if (root.getLeft() != null) {
+            inOrderNode(root.getLeft(), A);
+        }
+
+        if ((root.getKey() % 2) == 0) {
+            A.add(root.getKey());
+        }
+
+        if (root.getRight() != null) {
+            inOrderNode(root.getRight(), A);
+        }
+
+        return A;
+    }
+
+    /**
+     *
+     * @param T
+     * @param A
+     */
+    public static void inOrder(BinarySearchTree T, ArrayList<Integer> A) {
+        Node x = T.getRoot();
+        inOrderNode(x, A);
     }
 }
