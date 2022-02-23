@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="Implemented connected_Components() and same_Components() methods">
       <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/ElementiUguali.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/BST_Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/BST_Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/MaxDiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/MaxDiff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <recent name="Dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BST_Order">
+  <component name="RunManager" selected="Application.ElementiUguali">
     <configuration name="BST_Order" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercises.BST_Order" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -103,8 +102,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxDiff" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Laboratorio_ASD.MaxDiff" />
+    <configuration name="ElementiUguali" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Laboratorio_ASD.ElementiUguali" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
@@ -116,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinHeap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Min_Heap.MinHeap" />
+    <configuration name="MaxDiff" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Laboratorio_ASD.MaxDiff" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Min_Heap.*" />
+          <option name="PATTERN" value="Laboratorio_ASD.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BST_Order" />
+        <item itemvalue="Application.ElementiUguali" />
         <item itemvalue="Application.MaxDiff" />
+        <item itemvalue="Application.BST_Order" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.BinarySearchTreeTest" />
-        <item itemvalue="Application.MinHeap" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +202,10 @@
       <workItem from="1645018976555" duration="11491000" />
       <workItem from="1645110050955" duration="1525000" />
       <workItem from="1645197030424" duration="2384000" />
-      <workItem from="1645199458637" duration="4875000" />
+      <workItem from="1645199458637" duration="5010000" />
+      <workItem from="1645281741471" duration="2632000" />
+      <workItem from="1645475855645" duration="15000" />
+      <workItem from="1645618945525" duration="3603000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -345,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645117611591</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="UPDATE Exercises and Laboratorio_ASD">
+      <created>1645204649903</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1645204649903</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,6 +389,7 @@
     <MESSAGE value="UPDATE BubbleSort class" />
     <MESSAGE value="Implemented binarySearch() method" />
     <MESSAGE value="General UPDATE" />
-    <option name="LAST_COMMIT_MESSAGE" value="General UPDATE" />
+    <MESSAGE value="UPDATE Exercises and Laboratorio_ASD" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Exercises and Laboratorio_ASD" />
   </component>
 </project>
