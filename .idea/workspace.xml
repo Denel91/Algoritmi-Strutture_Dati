@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="Implemented connected_Components() and same_Components() methods">
       <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Laboratorio_ASD/ElementiUguali.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,7 @@
       <recent name="Dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ElementiUguali">
+  <component name="RunManager" selected="Application.BinarySearchTreeTest">
     <configuration name="BST_Order" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercises.BST_Order" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -143,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinarySearchTreeTest" />
         <item itemvalue="Application.ElementiUguali" />
         <item itemvalue="Application.MaxDiff" />
         <item itemvalue="Application.BST_Order" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.BinarySearchTreeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +205,8 @@
       <workItem from="1645199458637" duration="5010000" />
       <workItem from="1645281741471" duration="2632000" />
       <workItem from="1645475855645" duration="15000" />
-      <workItem from="1645618945525" duration="3603000" />
+      <workItem from="1645618945525" duration="3738000" />
+      <workItem from="1645691967696" duration="4486000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -354,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645204649903</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Implemented class ElementiUguali">
+      <created>1645632011131</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1645632011131</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,6 +398,7 @@
     <MESSAGE value="Implemented binarySearch() method" />
     <MESSAGE value="General UPDATE" />
     <MESSAGE value="UPDATE Exercises and Laboratorio_ASD" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Exercises and Laboratorio_ASD" />
+    <MESSAGE value="Implemented class ElementiUguali" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented class ElementiUguali" />
   </component>
 </project>

@@ -116,18 +116,15 @@ public class BinarySearchTreeTest {
 
         System.out.println();
 
-        Node root5 = new Node(8);
-        root5.addLeft(new Node(3));
-        root5.addRight(new Node(10));
-        root5.getRight().addRight(new Node(14));
-        root5.getRight().getRight().addLeft(new Node(12));
+        Node root5 = new Node(10);
+        root5.addLeft(new Node(5));
+        root5.addRight(new Node(15));
         root5.getLeft().addLeft(new Node(1));
-        root5.getLeft().addRight(new Node(5));
-        root5.getLeft().getRight().addLeft(new Node(4));
-        root5.getLeft().getRight().addRight(new Node(7));
+        root5.getLeft().addRight(new Node(6));
+        root5.getLeft().getRight().addRight(new Node(8));
+        root5.getLeft().getLeft().addRight(new Node(2));
         BinarySearchTree tree5 = new BinarySearchTree(root5);
-        tree5.printTree();
-        tree5.inorderPrint(root5);
+        tree5.preorderPrint(root5);
         System.out.println();
     }
 }
