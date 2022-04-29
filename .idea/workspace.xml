@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d4c2f8f-a0a9-4610-bab6-dea803d0a2e6" name="Changes" comment="Implemented connected_Components() and same_Components() methods">
       <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,15 +57,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Bellman" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/utente/IdeaProjects/Algoritmi-Strutture_Dati",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Bellman" />
@@ -143,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BinarySearchTreeTest" />
-        <item itemvalue="Application.ElementiUguali" />
-        <item itemvalue="Application.MaxDiff" />
-        <item itemvalue="Application.BST_Order" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.MaxDiff" />
+        <item itemvalue="Application.ElementiUguali" />
+        <item itemvalue="Application.BinarySearchTreeTest" />
+        <item itemvalue="Application.BST_Order" />
       </list>
     </recent_temporary>
   </component>
@@ -207,6 +211,16 @@
       <workItem from="1645475855645" duration="15000" />
       <workItem from="1645618945525" duration="3738000" />
       <workItem from="1645691967696" duration="4486000" />
+      <workItem from="1646317469031" duration="150000" />
+      <workItem from="1650455070822" duration="29000" />
+      <workItem from="1650648411732" duration="158000" />
+      <workItem from="1650648592491" duration="774000" />
+      <workItem from="1650657927205" duration="457000" />
+      <workItem from="1650658405442" duration="64000" />
+      <workItem from="1650985613912" duration="701000" />
+      <workItem from="1651065043372" duration="199000" />
+      <workItem from="1651066207536" duration="46000" />
+      <workItem from="1651263883903" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="General Update">
       <created>1640452333958</created>
@@ -362,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645632011131</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="UPDATE class BinarySearchTreeTest">
+      <created>1646317556085</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1646317556085</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +420,7 @@
     <MESSAGE value="General UPDATE" />
     <MESSAGE value="UPDATE Exercises and Laboratorio_ASD" />
     <MESSAGE value="Implemented class ElementiUguali" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented class ElementiUguali" />
+    <MESSAGE value="UPDATE class BinarySearchTreeTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE class BinarySearchTreeTest" />
   </component>
 </project>
