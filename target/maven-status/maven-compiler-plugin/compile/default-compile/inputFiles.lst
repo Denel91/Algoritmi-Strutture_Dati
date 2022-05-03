@@ -10,7 +10,6 @@ C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Kruskal\Grap
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Binary_Search_Tree\BSTNode.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Min_Heap\PriorityQueue.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Laboratorio_ASD\SumOfK.java
-C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\B_Tree\BNode.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\B_Tree\BTree.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Exercises\MajorityCandidate.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Heap\HeapSort.java
@@ -32,6 +31,7 @@ C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Prim\Graph.j
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Prim\Edge.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Grafi\TopologicalSort.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Laboratorio_ASD\Program.java
+C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\B_Tree\Node.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Exercises\Search_Sum_Of_K.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Laboratorio_ASD\ElementoMaggioranza.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Bubble\BubbleSort.java
@@ -52,6 +52,7 @@ C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Kruskal\App.
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Dijkstra\App.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Selection\SelectionSort.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Min_Heap\MinHeap.java
+C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Laboratorio_ASD\ElementiUguali.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Counting\CountingSort.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\Laboratorio_ASD\Suffissi.java
 C:\Users\utente\IdeaProjects\Algoritmi-Strutture_Dati\src\main\java\RB_Tree\RedBlackTree.java

@@ -126,5 +126,18 @@ public class BinarySearchTreeTest {
         BinarySearchTree tree5 = new BinarySearchTree(root5);
         tree5.preorderPrint(root5);
         System.out.println();
+        tree5.printTree();
+        System.out.println(tree5.is_BST(root5));
+
+        System.out.println();
+
+        Node root6 = new Node(3);
+        root6.addLeft(new Node(2));
+        root6.addRight(new Node(5));
+        root6.getLeft().addLeft(new Node(1));
+        root6.getLeft().addRight(new Node(4));
+        BinarySearchTree tree6 = new BinarySearchTree(root6);
+        tree6.printTree();
+        System.out.println(tree6.is_BST(root6));
     }
 }

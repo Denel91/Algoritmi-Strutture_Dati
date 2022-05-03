@@ -64,7 +64,7 @@ public class BinarySearchTree {
     /**
      * Crea un nuovo Nodo
      *
-     * @param key chiave del Nodo
+     * @param key   chiave del Nodo
      * @param value valore del Nodo
      * @return un nuovo Nodo con chiave Key e valore value
      */
@@ -89,7 +89,7 @@ public class BinarySearchTree {
      * Visita In-Order che memorizza le chiavi nel Vettore A.
      *
      * @param root la radice del BinarySearchTree
-     * @param A un ArrayList<Integer>
+     * @param A    un ArrayList<Integer>
      */
     private static void inOrderNode(Node root, ArrayList<Integer> A) {
         if (root.getLeft() != null) {
@@ -238,10 +238,11 @@ public class BinarySearchTree {
      * @return la profondità di un BinarySearchTree
      */
     public int depth(Node p) {
-        if (isRoot(p))
+        if (isRoot(p)) {
             return 0;
-        else
+        } else {
             return 1 + depth(p.getParent());
+        }
     }
 
     /**
@@ -433,6 +434,34 @@ public class BinarySearchTree {
             y.setLeft(z.getLeft());
             y.getLeft().setParent(y);
         }
+    }
+
+    /**
+     * Check if a tree is a BST
+     *
+     * @param root the root of the BST
+     * @return true if the tree is a BST, false otherwise
+     */
+    public boolean is_BST(Node root) {
+        if (root == null) {
+            return true;
+        }
+
+        // Check values in left subtree
+        if (root.getLeft() != null) {
+            Node maxKeyInLeft = maxValue(root.getLeft());
+            if (maxKeyInLeft.getKey() > root.getKey())
+                return false;
+        }
+
+        // Check values in right subtree
+        if (root.getRight() != null) {
+            Node minKeyInRight = minValue(root.getRight());
+            if (minKeyInRight.getKey() < root.getKey())
+                return false;
+        }
+
+        return is_BST(root.getLeft()) && is_BST(root.getRight());
     }
 
     /**
