@@ -75,6 +75,7 @@ public class BinarySearchTreeTest {
         root3.getLeft().addLeft(new Node(2));
         root3.getLeft().addRight(new Node(5));
         root3.getRight().addRight(new Node(8));
+
         BinarySearchTree tree3 = new BinarySearchTree(root3);
         int depth = tree3.depth(root3.getLeft());
         System.out.println(depth); // 1
@@ -103,6 +104,8 @@ public class BinarySearchTreeTest {
         Node y = create(6, "a");
         System.out.println(y); // (6,a)
 
+        System.out.println();
+
         Node root4 = new Node(10);
         root4.addLeft(new Node(5));
         root4.addRight(new Node(15));
@@ -110,6 +113,7 @@ public class BinarySearchTreeTest {
         root4.getLeft().addRight(new Node(8));
         root4.getRight().addLeft(new Node(12));
         root4.getRight().addRight(new Node(20));
+
         BinarySearchTree tree4 = new BinarySearchTree(root4);
         tree4.printTree();
         tree4.inorderPrint(root4);
@@ -123,11 +127,17 @@ public class BinarySearchTreeTest {
         root5.getLeft().addRight(new Node(6));
         root5.getLeft().getRight().addRight(new Node(8));
         root5.getLeft().getLeft().addRight(new Node(2));
+
         BinarySearchTree tree5 = new BinarySearchTree(root5);
         tree5.preorderPrint(root5);
         System.out.println();
+        tree5.inorderPrint(root5); // 1 2 5 6 8 10 15
+        System.out.println();
         tree5.printTree();
         System.out.println(tree5.is_BST(root5));
+        int minValue = tree5.minValue(root5).getKey();
+        int maxValue = tree5.maxValue(root5).getKey();
+        System.out.println("Check -> " + tree5.verify_BST(root5, minValue, maxValue));
 
         System.out.println();
 
@@ -136,8 +146,12 @@ public class BinarySearchTreeTest {
         root6.addRight(new Node(5));
         root6.getLeft().addLeft(new Node(1));
         root6.getLeft().addRight(new Node(4));
+
         BinarySearchTree tree6 = new BinarySearchTree(root6);
         tree6.printTree();
         System.out.println(tree6.is_BST(root6));
+        int minValue1 = tree6.minValue(root5).getKey();
+        int maxValue1 = tree6.maxValue(root5).getKey();
+        System.out.println("Check -> " + tree6.verify_BST(root6, minValue1, maxValue1));
     }
 }

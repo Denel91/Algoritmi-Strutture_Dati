@@ -11,7 +11,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +33,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/utente/IdeaProjects/Progetto_Algoritmi_2020&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "true",
+    "last_opened_file_path": "C:/Users/utente/IdeaProjects/Progetto_Algoritmi_2020",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.BinarySearchTreeTest">
     <configuration name="BinarySearchTreeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Binary_Search_Tree.BinarySearchTreeTest" />
@@ -87,7 +88,8 @@
       <workItem from="1651264727762" duration="450000" />
       <workItem from="1651499361539" duration="2007000" />
       <workItem from="1651590456789" duration="3621000" />
-      <workItem from="1651599858986" duration="2684000" />
+      <workItem from="1651599858986" duration="2955000" />
+      <workItem from="1651773645306" duration="7433000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -96,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651264869552</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implemented method is_BST()">
+      <created>1651602727435</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651602727435</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,5 +127,20 @@
     <MESSAGE value="IMPLEMENTED method is_BST()" />
     <MESSAGE value="Implemented method is_BST()" />
     <option name="LAST_COMMIT_MESSAGE" value="Implemented method is_BST()" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

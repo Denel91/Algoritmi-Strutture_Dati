@@ -465,6 +465,23 @@ public class BinarySearchTree {
     }
 
     /**
+     * Verify if a tree is a Binary Search Tree
+     *
+     * @param root
+     * @param minKey
+     * @param maxKey
+     * @return
+     */
+    public boolean verify_BST(Node root, int minKey, int maxKey) {
+        if (root == null) {
+            return true;
+        } else if (root.getKey() < minKey || root.getKey() > maxKey) {
+            return false;
+        } else
+            return verify_BST(root.getLeft(), minKey, root.getKey() - 1) && verify_BST(root.getRight(), root.getKey() + 1, maxKey);
+    }
+
+    /**
      * Svuota completamente un BinarySearchTree
      */
     public void clear() {
