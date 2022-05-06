@@ -32,13 +32,17 @@ import java.util.Stack;
  * treeInsert(Node z) : void
  * transplant(Node u, Node v) : void
  * delete(Node z) : void
+ * is_BST(Node root) : boolean
+ * verify_BST(Node root, int minKey, int maxKey) : boolean
+ * check_BST(Node root) : boolean
  * clear() : void
  * printTree() : void
  *
- * @version 21/02/2021
+ * @version 06/05/2022
  */
 public class BinarySearchTree {
     Node root;
+    Node prev_node = null;
 
     public BinarySearchTree(Node n) {
         this.root = n;
@@ -467,10 +471,10 @@ public class BinarySearchTree {
     /**
      * Verify if a tree is a Binary Search Tree
      *
-     * @param root
-     * @param minKey
-     * @param maxKey
-     * @return
+     * @param root the root of the BST
+     * @param minKey the minimum key in the BST
+     * @param maxKey the maximum key in the BST
+     * @return true if the tree is a BST, false otherwise
      */
     public boolean verify_BST(Node root, int minKey, int maxKey) {
         if (root == null) {
@@ -479,6 +483,36 @@ public class BinarySearchTree {
             return false;
         } else
             return verify_BST(root.getLeft(), minKey, root.getKey() - 1) && verify_BST(root.getRight(), root.getKey() + 1, maxKey);
+    }
+
+    /**
+     * - In-Order traversal -
+     * If the value of the currently visited node is less than the
+     * previous value, then tree is not a BST.
+     *
+     * @param root the root of the BST
+     * @return true if the tree is a BST, false otherwise
+     */
+    public boolean check_BST(Node root) {
+        if (root == null) {
+            return true;
+        }
+
+        if (!check_BST(root.getLeft())) {
+            return false;
+        }
+
+        if (prev_node != null && root.getKey() <= prev_node.getKey()) {
+            return false;
+        }
+
+        prev_node = root;
+
+        if (!check_BST(root.getRight())) {
+            return false;
+        }
+
+        return true;
     }
 
     /**

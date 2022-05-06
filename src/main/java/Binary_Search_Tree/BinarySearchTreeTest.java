@@ -5,7 +5,7 @@ import static Binary_Search_Tree.BinarySearchTree.create;
 /**
  * class BinarySearchTreeTest
  *
- * @version 21/02/2021
+ * @version 06/05/2022
  */
 public class BinarySearchTreeTest {
     public static void main(String[] args) {
@@ -134,10 +134,11 @@ public class BinarySearchTreeTest {
         tree5.inorderPrint(root5); // 1 2 5 6 8 10 15
         System.out.println();
         tree5.printTree();
-        System.out.println(tree5.is_BST(root5));
+        System.out.println("Check Binary Tree -> " + tree5.is_BST(root5));
         int minValue = tree5.minValue(root5).getKey();
         int maxValue = tree5.maxValue(root5).getKey();
-        System.out.println("Check -> " + tree5.verify_BST(root5, minValue, maxValue));
+        System.out.println("Verify BST -> " + tree5.verify_BST(root5, minValue, maxValue));
+        System.out.println("Check -> " + tree5.check_BST(root5));
 
         System.out.println();
 
@@ -149,9 +150,10 @@ public class BinarySearchTreeTest {
 
         BinarySearchTree tree6 = new BinarySearchTree(root6);
         tree6.printTree();
-        System.out.println(tree6.is_BST(root6));
+        System.out.println("Check Binary Tree -> " + tree6.is_BST(root6));
         int minValue1 = tree6.minValue(root5).getKey();
         int maxValue1 = tree6.maxValue(root5).getKey();
-        System.out.println("Check -> " + tree6.verify_BST(root6, minValue1, maxValue1));
+        System.out.println("Verify BST -> " + tree6.verify_BST(root6, minValue1, maxValue1));
+        System.out.println("Check -> " + tree6.check_BST(root6));
     }
 }
