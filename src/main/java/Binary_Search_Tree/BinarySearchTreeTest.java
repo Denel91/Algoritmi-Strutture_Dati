@@ -117,6 +117,12 @@ public class BinarySearchTreeTest {
         BinarySearchTree tree4 = new BinarySearchTree(root4);
         tree4.printTree();
         tree4.inorderPrint(root4);
+        System.out.println();
+        System.out.println("Right Nodes: ");
+        tree4.viewAllRightChildren(root4);
+        System.out.println();
+        System.out.println("Left Nodes: ");
+        tree4.viewAllLeftChildren(root4);
 
         System.out.println();
 

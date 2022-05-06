@@ -35,6 +35,8 @@ import java.util.Stack;
  * is_BST(Node root) : boolean
  * verify_BST(Node root, int minKey, int maxKey) : boolean
  * check_BST(Node root) : boolean
+ * viewAllRightChildren(Node root) : void
+ * viewAllLeftChildren(Node root) : void
  * clear() : void
  * printTree() : void
  *
@@ -513,6 +515,32 @@ public class BinarySearchTree {
         }
 
         return true;
+    }
+
+    /**
+     *
+     * @param root
+     */
+    public void viewAllRightChildren(Node root) {
+        if (root != null && root.getRight() != null) {
+            while (root != null) {
+                System.out.print(root.getKey() + " ");
+                root = root.getRight();
+            }
+        }
+    }
+
+    /**
+     *
+     * @param root
+     */
+    public void viewAllLeftChildren(Node root) {
+        if (root != null && root.getLeft() != null) {
+            while (root != null) {
+                System.out.print(root.getKey() + " ");
+                root = root.getLeft();
+            }
+        }
     }
 
     /**
