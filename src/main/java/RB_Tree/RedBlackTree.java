@@ -25,10 +25,12 @@ import Binary_Search_Tree.Node;
  * treeHeight() : int
  * treeInsert(RBNode node) : void
  * delete(RBNode z) : void
+ * isBlack(RBNode node) : boolean
+ * successorOfK(RBNode node, int k) : RBNode
  * clear() : void
  * printTree() : void
  *
- * @version 15/01/2021
+ * @version 09/05/2022
  */
 public class RedBlackTree {
     RBNode nil;
@@ -417,6 +419,28 @@ public class RedBlackTree {
         x.color = Color.BLACK;
     }
 
+    public boolean isBlack(RBNode node) {
+        return node == null || node.color == Color.BLACK;
+    }
+
+    /**
+     *
+     * @param node
+     * @param k un valore intero
+     * @return la più piccola chiave più grande di K (successore di k)
+     */
+    public RBNode successorOfK(RBNode node, int k) {
+        if (node.getKey() == k){
+            return node;
+
+        } else if (node.getKey() > k) {
+            return treeMax(node.getLeft());
+            
+        } else {
+            return treeMax(node.getRight());
+        }
+    }
+
     /**
      * Cancella un RedBlackTree
      */
@@ -554,7 +578,6 @@ public class RedBlackTree {
     //---------- End of class Node for RedBlackTree ----------//
 
     //---------- EXECUTION ----------//
-
     public static void main(String[] args) {
         RedBlackTree tree = new RedBlackTree();
         tree.treeInsert(new RBNode(26));
@@ -564,6 +587,7 @@ public class RedBlackTree {
         tree.treeInsert(new RBNode(21));
         tree.treeInsert(new RBNode(30));
         tree.treeInsert(new RBNode(47));
+
         System.out.println(tree.getRoot()); // [26]
         System.out.println(tree.treeHeight()); // 2
         RBNode min = tree.treeMin(tree.getRoot()); // 26
@@ -590,5 +614,23 @@ public class RedBlackTree {
         T.treeInsert(new RBNode(7));
         T.treeInsert(new RBNode(9));
         T.printTree();
+
+        System.out.println();
+
+        RedBlackTree RB = new RedBlackTree();
+        RB.treeInsert(new RBNode(41));
+        RB.treeInsert(new RBNode(38));
+        RB.treeInsert(new RBNode(31));
+        RB.treeInsert(new RBNode(12));
+        RB.treeInsert(new RBNode(19));
+        RB.treeInsert(new RBNode(8));
+        RB.printTree();
+
+        System.out.println("Height: " + RB.treeHeight()); // 3
+        RBNode successor_1 = RB.treeSuccessor(RB.getRoot().getLeft().getRight());
+        System.out.println(successor_1.getKey()); // 38
+        int k = 30;
+        RBNode smallerKsuccessor = RB.successorOfK(RB.getRoot(), k);
+        System.out.println("Successor of K: " + smallerKsuccessor.getKey());
     }
 }
