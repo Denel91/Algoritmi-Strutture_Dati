@@ -27,6 +27,7 @@ import Binary_Search_Tree.Node;
  * delete(RBNode z) : void
  * isBlack(RBNode node) : boolean
  * successorOfK(RBNode node, int k) : RBNode
+ * minimumDepth(RBNode root, int level) : int
  * clear() : void
  * printTree() : void
  *
@@ -442,6 +443,20 @@ public class RedBlackTree {
     }
 
     /**
+     * Find Minimum Depth of a RedBlack Tree
+     *
+     * @param root the root of the tree
+     * @param level the first level of the tree
+     * @return
+     */
+    public int minimumDepth(RBNode root, int level) {
+        if (root == null)
+            return level;
+        level++;
+        return Math.min(minimumDepth(root.getLeft(), level), minimumDepth(root.getRight(), level));
+    }
+
+    /**
      * Cancella un RedBlackTree
      */
     public void clear() {
@@ -632,5 +647,7 @@ public class RedBlackTree {
         int k = 30;
         RBNode smallerKsuccessor = RB.successorOfK(RB.getRoot(), k);
         System.out.println("Successor of K: " + smallerKsuccessor.getKey());
+        int minimumDepth = RB.minimumDepth(RB.root, 0);
+        System.out.println("The minimum depth is: " + minimumDepth);
     }
 }

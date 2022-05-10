@@ -157,9 +157,13 @@ public class BinarySearchTreeTest {
         BinarySearchTree tree6 = new BinarySearchTree(root6);
         tree6.printTree();
         System.out.println("Check Binary Tree -> " + tree6.is_BST(root6));
-        int minValue1 = tree6.minValue(root5).getKey();
-        int maxValue1 = tree6.maxValue(root5).getKey();
+        int minValue1 = tree6.minValue(root6).getKey();
+        int maxValue1 = tree6.maxValue(root6).getKey();
         System.out.println("Verify BST -> " + tree6.verify_BST(root6, minValue1, maxValue1));
         System.out.println("Check -> " + tree6.check_BST(root6));
+        int depth1 = tree6.depth(root6);
+        System.out.println(depth1);
+        int minimumDepth = tree6.minimumDepth(tree6.getRoot(), 0);
+        System.out.println("The minimum depth is: " + minimumDepth); // 2
     }
 }

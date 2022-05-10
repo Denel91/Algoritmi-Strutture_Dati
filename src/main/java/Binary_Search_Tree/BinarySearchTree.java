@@ -37,6 +37,7 @@ import java.util.Stack;
  * check_BST(Node root) : boolean
  * viewAllRightChildren(Node root) : void
  * viewAllLeftChildren(Node root) : void
+ * minimumDepth(Node root, int level) : int
  * clear() : void
  * printTree() : void
  *
@@ -541,6 +542,20 @@ public class BinarySearchTree {
                 root = root.getLeft();
             }
         }
+    }
+
+    /**
+     * Find Minimum Depth of a Binary Tree
+     *
+     * @param root the root of the tree
+     * @param level the first level of the tree
+     * @return
+     */
+    public int minimumDepth(Node root, int level) {
+        if (root == null)
+            return level;
+        level++;
+        return Math.min(minimumDepth(root.getLeft(), level), minimumDepth(root.getRight(), level));
     }
 
     /**
