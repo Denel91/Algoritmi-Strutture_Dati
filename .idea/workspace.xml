@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED new methods and UPDATE protocol">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED method minimumDepth() for BST and RBT">
       <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RB_Tree/RedBlackTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RB_Tree/RedBlackTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,16 +32,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "true",
-    "last_opened_file_path": "C:/Users/utente/IdeaProjects/Algoritmi-Strutture_Dati",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/utente/IdeaProjects/Algoritmi-Strutture_Dati&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.RedBlackTree">
     <configuration name="BinarySearchTreeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Binary_Search_Tree.BinarySearchTreeTest" />
@@ -115,7 +113,9 @@
       <workItem from="1652119796787" duration="2881000" />
       <workItem from="1652184720188" duration="782000" />
       <workItem from="1652195397085" duration="2978000" />
-      <workItem from="1652208936383" duration="3922000" />
+      <workItem from="1652208936383" duration="4113000" />
+      <workItem from="1652269178935" duration="9421000" />
+      <workItem from="1652290954614" duration="7413000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652124750048</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="IMPLEMENTED method minimumDepth() for BST and RBT">
+      <created>1652212989577</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652212989577</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +191,8 @@
     <MESSAGE value="IMPLEMENTED method check_BST(Node root) and UPDATE protocol" />
     <MESSAGE value="IMPLEMENTED methods viewAllRightChildren(), viewAllLeftChildren and UPDATE protocol" />
     <MESSAGE value="IMPLEMENTED new methods and UPDATE protocol" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED new methods and UPDATE protocol" />
+    <MESSAGE value="IMPLEMENTED method minimumDepth() for BST and RBT" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED method minimumDepth() for BST and RBT" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

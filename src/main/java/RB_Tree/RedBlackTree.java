@@ -26,12 +26,15 @@ import Binary_Search_Tree.Node;
  * treeInsert(RBNode node) : void
  * delete(RBNode z) : void
  * isBlack(RBNode node) : boolean
+ * isRed(RBNode node) : boolean
  * successorOfK(RBNode node, int k) : RBNode
  * minimumDepth(RBNode root, int level) : int
+ * minDist(RedBlackTree T, RBNode root) : int
+ * blackPath(RedBlackTree T, RBNode node) : boolean
  * clear() : void
  * printTree() : void
  *
- * @version 09/05/2022
+ * @version 11/05/2022
  */
 public class RedBlackTree {
     RBNode nil;
@@ -421,7 +424,11 @@ public class RedBlackTree {
     }
 
     public boolean isBlack(RBNode node) {
-        return node == null || node.color == Color.BLACK;
+        return node == nil || node.color == Color.BLACK;
+    }
+
+    public boolean isRed(RBNode node) {
+        return node == nil || node.color == Color.RED;
     }
 
     /**
@@ -450,10 +457,51 @@ public class RedBlackTree {
      * @return
      */
     public int minimumDepth(RBNode root, int level) {
-        if (root == null)
+        if (root == nil)
             return level;
         level++;
         return Math.min(minimumDepth(root.getLeft(), level), minimumDepth(root.getRight(), level));
+    }
+
+    /**
+     * Returns the minimum distance between two nodes
+     *
+     * @param T
+     * @param root
+     * @return
+     */
+    public int minDist(RedBlackTree T, RBNode root) {
+        RBNode u = T.treeMin(root);
+        RBNode prev = nil;
+        int min = Integer.MAX_VALUE;
+        while (u != nil) {
+            if (u.getKey() - prev.getKey() < min) {
+                min = u.getKey() - prev.getKey();
+            }
+
+            prev = u;
+            u = T.treeSuccessor(u);
+        }
+
+        return min;
+    }
+
+    /**
+     *
+     * @param T
+     * @param node
+     * @return
+     */
+    public boolean blackPath(RedBlackTree T, RBNode node) {
+        if (node == nil) {
+            return true;
+        }
+
+        if (node.color == Color.BLACK) {
+            return blackPath(T, node.getLeft()) || blackPath(T, node.getRight());
+        }
+
+        return false;
     }
 
     /**
@@ -649,5 +697,15 @@ public class RedBlackTree {
         System.out.println("Successor of K: " + smallerKsuccessor.getKey());
         int minimumDepth = RB.minimumDepth(RB.root, 0);
         System.out.println("The minimum depth is: " + minimumDepth);
+        System.out.println(RB.blackPath(RB, RB.getRoot()));
+
+        RedBlackTree redBlackTree = new RedBlackTree();
+        redBlackTree.treeInsert(new RBNode(40));
+        redBlackTree.treeInsert(new RBNode(38));
+        redBlackTree.treeInsert(new RBNode(45));
+        redBlackTree.treeInsert(new RBNode(35));
+        redBlackTree.printTree();
+
+        System.out.println(redBlackTree.minDist(redBlackTree, redBlackTree.getRoot()));
     }
 }
