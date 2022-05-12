@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED method minimumDepth() for BST and RBT">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="NEW methods() implemented">
       <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
@@ -115,7 +115,8 @@
       <workItem from="1652195397085" duration="2978000" />
       <workItem from="1652208936383" duration="4113000" />
       <workItem from="1652269178935" duration="9421000" />
-      <workItem from="1652290954614" duration="7413000" />
+      <workItem from="1652290954614" duration="7509000" />
+      <workItem from="1652356805115" duration="8455000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -166,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652212989577</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="NEW methods() implemented">
+      <created>1652299328261</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652299328261</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +200,8 @@
     <MESSAGE value="IMPLEMENTED methods viewAllRightChildren(), viewAllLeftChildren and UPDATE protocol" />
     <MESSAGE value="IMPLEMENTED new methods and UPDATE protocol" />
     <MESSAGE value="IMPLEMENTED method minimumDepth() for BST and RBT" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED method minimumDepth() for BST and RBT" />
+    <MESSAGE value="NEW methods() implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="NEW methods() implemented" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

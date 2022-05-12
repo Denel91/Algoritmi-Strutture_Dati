@@ -3,6 +3,8 @@ package RB_Tree;
 import RB_Tree.RedBlackTree.RBNode.Color;
 import Binary_Search_Tree.Node;
 
+import java.util.Stack;
+
 /**
  * RedBlackTree class
  *
@@ -31,10 +33,12 @@ import Binary_Search_Tree.Node;
  * minimumDepth(RBNode root, int level) : int
  * minDist(RedBlackTree T, RBNode root) : int
  * blackPath(RedBlackTree T, RBNode node) : boolean
+ * minRed(RBNode node) : int
+ * printPositive(RBNode node, Stack<Integer> path) : void
  * clear() : void
  * printTree() : void
  *
- * @version 11/05/2022
+ * @version 12/05/2022
  */
 public class RedBlackTree {
     RBNode nil;
@@ -42,7 +46,7 @@ public class RedBlackTree {
 
     // Default Constructor
     public RedBlackTree() {
-        this.nil  = new RBNode(0, Color.BLACK);
+        this.nil = new RBNode(0, Color.BLACK);
         this.root = nil;
     }
 
@@ -432,18 +436,17 @@ public class RedBlackTree {
     }
 
     /**
-     *
      * @param node
-     * @param k un valore intero
+     * @param k    un valore intero
      * @return la più piccola chiave più grande di K (successore di k)
      */
     public RBNode successorOfK(RBNode node, int k) {
-        if (node.getKey() == k){
+        if (node.getKey() == k) {
             return node;
 
         } else if (node.getKey() > k) {
             return treeMax(node.getLeft());
-            
+
         } else {
             return treeMax(node.getRight());
         }
@@ -452,13 +455,14 @@ public class RedBlackTree {
     /**
      * Find Minimum Depth of a RedBlack Tree
      *
-     * @param root the root of the tree
+     * @param root  the root of the tree
      * @param level the first level of the tree
      * @return
      */
     public int minimumDepth(RBNode root, int level) {
-        if (root == nil)
+        if (root == nil) {
             return level;
+        }
         level++;
         return Math.min(minimumDepth(root.getLeft(), level), minimumDepth(root.getRight(), level));
     }
@@ -487,7 +491,6 @@ public class RedBlackTree {
     }
 
     /**
-     *
      * @param T
      * @param node
      * @return
@@ -502,6 +505,53 @@ public class RedBlackTree {
         }
 
         return false;
+    }
+
+    /**
+     * Return the minimum distance of a red node from root node
+     *
+     * @param node
+     * @return
+     */
+    public int minRed(RBNode node) {
+        if (node == nil) {
+            return 0;
+        }
+
+        if (isRed(node.left) && isRed(node.right)) {
+            return 1;
+        }
+
+        if ((isRed(node.left) && isBlack(node.right)) || (isBlack(node.left) && isRed(node.right))) {
+            return 1;
+        }
+
+        if (isBlack(node.left) && isBlack(node.right)) {
+            return 1 + Math.min(minRed(node.left), minRed(node.right));
+        }
+
+        return 0;
+    }
+
+    /**
+     * Stampa i valori di tutti i percorsi radice-foglia composti da soli
+     * valori positivi.
+     *
+     * @param node
+     * @return
+     */
+    public void printPositive(RBNode node, Stack<Integer> path) {
+        if (node != nil && node.getKey() > 0) {
+            path.push(node.getKey());
+            if (node.getLeft() == nil && node.getRight() == nil) {
+                System.out.println(path);
+            } else {
+                printPositive(node.getLeft(), path);
+                printPositive(node.getRight(), path);
+            }
+
+            path.pop();
+        }
     }
 
     /**
@@ -698,6 +748,7 @@ public class RedBlackTree {
         int minimumDepth = RB.minimumDepth(RB.root, 0);
         System.out.println("The minimum depth is: " + minimumDepth);
         System.out.println(RB.blackPath(RB, RB.getRoot()));
+        System.out.println("MinRed: " + RB.minRed(RB.getRoot()));
 
         RedBlackTree redBlackTree = new RedBlackTree();
         redBlackTree.treeInsert(new RBNode(40));
@@ -706,6 +757,25 @@ public class RedBlackTree {
         redBlackTree.treeInsert(new RBNode(35));
         redBlackTree.printTree();
 
-        System.out.println(redBlackTree.minDist(redBlackTree, redBlackTree.getRoot()));
+        System.out.println("Min Distance: " + redBlackTree.minDist(redBlackTree, redBlackTree.getRoot()));
+        System.out.println("MinRed: " + redBlackTree.minRed(redBlackTree.getRoot()));
+
+        System.out.println();
+
+        RedBlackTree blackTree = new RedBlackTree();
+        blackTree.treeInsert(new RBNode(13));
+        blackTree.treeInsert(new RBNode(-1));
+        blackTree.treeInsert(new RBNode(-2));
+        blackTree.treeInsert(new RBNode(25));
+        blackTree.treeInsert(new RBNode(11));
+        blackTree.treeInsert(new RBNode(19));
+        blackTree.treeInsert(new RBNode(28));
+        blackTree.treeInsert(new RBNode(5));
+        blackTree.treeInsert(new RBNode(21));
+        blackTree.treeInsert(new RBNode(27));
+        blackTree.printTree();
+
+        Stack<Integer> path = new Stack<>();
+        blackTree.printPositive(blackTree.getRoot(), path); // [13, 25, 19, 21] [13, 25, 28, 27]
     }
 }
