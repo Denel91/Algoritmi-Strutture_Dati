@@ -559,6 +559,40 @@ public class BinarySearchTree {
     }
 
     /**
+     *
+     * @param root
+     * @param k
+     * @return
+     */
+    private Node buildTree(Node root, int k) {
+        if (root == null)
+            return null;
+
+        if (root.getKey() == k)
+            return root.getLeft();
+
+        else if (root.getKey() > k)
+            return buildTree(root.getLeft(), k);
+
+        else
+            root.setRight(buildTree(root.getRight(), k));
+
+        return root;
+    }
+
+    /**
+     * Delete nodes greater than or equal to k
+     *
+     * @param root
+     * @param key
+     * @return
+     */
+    public Node deleteNode(Node root, int key) {
+        root = buildTree(root,key);
+        return root;
+    }
+
+    /**
      * Svuota completamente un BinarySearchTree
      */
     public void clear() {

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="NEW methods() implemented">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED methods &#10;- minRed() &#10;- printPositive()">
       <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RB_Tree/RedBlackTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RB_Tree/RedBlackTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/utente/IdeaProjects/Algoritmi-Strutture_Dati&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.RedBlackTree">
@@ -116,7 +118,12 @@
       <workItem from="1652208936383" duration="4113000" />
       <workItem from="1652269178935" duration="9421000" />
       <workItem from="1652290954614" duration="7509000" />
-      <workItem from="1652356805115" duration="8455000" />
+      <workItem from="1652356805115" duration="9755000" />
+      <workItem from="1652388071828" duration="122000" />
+      <workItem from="1652388694370" duration="362000" />
+      <workItem from="1652444250975" duration="10299000" />
+      <workItem from="1652477990560" duration="6610000" />
+      <workItem from="1652537445486" duration="9299000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -174,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652299328261</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="IMPLEMENTED methods &#10;- minRed() &#10;- printPositive()">
+      <created>1652369602507</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652369602507</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +215,19 @@
     <MESSAGE value="IMPLEMENTED new methods and UPDATE protocol" />
     <MESSAGE value="IMPLEMENTED method minimumDepth() for BST and RBT" />
     <MESSAGE value="NEW methods() implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="NEW methods() implemented" />
+    <MESSAGE value="IMPLEMENTED methods &#10;- minRed() &#10;- printPositive()" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED methods &#10;- minRed() &#10;- printPositive()" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

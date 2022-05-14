@@ -43,11 +43,13 @@ import java.util.Stack;
 public class RedBlackTree {
     RBNode nil;
     RBNode root;
+    int bh;
 
     // Default Constructor
     public RedBlackTree() {
         this.nil = new RBNode(0, Color.BLACK);
         this.root = nil;
+        this.bh = 0;
     }
 
     // Constructor
@@ -61,6 +63,10 @@ public class RedBlackTree {
 
     public boolean isRoot(RBNode p) {
         return p == getRoot();
+    }
+
+    public int getBh() {
+        return bh;
     }
 
     public static RBNode create(int key) {
@@ -268,7 +274,7 @@ public class RedBlackTree {
             }
         }
         node.parent = y;  // this covers all cases
-        if (y == nil) {  // tree was empty
+        if (y == nil) {   // tree was empty
             root = node;
         } else if (node.key < y.key) {
             y.left = node;
@@ -289,23 +295,23 @@ public class RedBlackTree {
     private void insertFixup(RBNode z) {
         while (z.parent.color == Color.RED) {
             if (z.parent == z.parent.parent.left) {
-                RBNode y = z.parent.parent.right;  // the "uncle" in CLRS
+                RBNode y = z.parent.parent.right;       // the "uncle" in CLRS
                 if (y.color == Color.RED) {
-                    z.parent.color = Color.BLACK;
-                    y.color = Color.BLACK;
-                    z.parent.parent.color = Color.RED;
-                    z = z.parent.parent;
+                    z.parent.color = Color.BLACK;       // CASO 1
+                    y.color = Color.BLACK;              // CASO 1
+                    z.parent.parent.color = Color.RED;  // CASO 1
+                    z = z.parent.parent;                // CASO 1
                 } else {
                     if (z == z.parent.right) {
-                        z = z.parent;
-                        leftRotate(z);
+                        z = z.parent;                   // CASO 2
+                        leftRotate(z);                  // CASO 2
                     }
-                    z.parent.color = Color.BLACK;
-                    z.parent.parent.color = Color.RED;
-                    rightRotate(z.parent.parent);
+                    z.parent.color = Color.BLACK;       // CASO 3
+                    z.parent.parent.color = Color.RED;  // CASO 3
+                    rightRotate(z.parent.parent);       // CASO 3
                 }
             } else {
-                RBNode y = z.parent.parent.left;  // the "uncle" in CLRS
+                RBNode y = z.parent.parent.left;        // the "uncle" in CLRS
                 if (y.color == Color.RED) {
                     z.parent.color = Color.BLACK;
                     y.color = Color.BLACK;
@@ -555,6 +561,25 @@ public class RedBlackTree {
     }
 
     /**
+     * Delete nodes greater than k
+     *
+     * @param node
+     * @param k
+     */
+    public void removeFromK(RBNode node,  int k) {
+        if (node != nil){
+            RBNode u = findNode(node, k);
+            while (u.getKey() >= k) {
+                RBNode maxNode = treeMax(u);
+                u = maxNode.getParent();
+                delete(maxNode);
+            }
+        }
+    }
+
+
+
+    /**
      * Cancella un RedBlackTree
      */
     public void clear() {
@@ -614,7 +639,7 @@ public class RedBlackTree {
         RBNode parent;
         RBNode left;
         RBNode right;
-        RBNode.Color color;
+        Color color;
 
         public RBNode(int k, Color c) {
             this.key = k;
@@ -774,8 +799,27 @@ public class RedBlackTree {
         blackTree.treeInsert(new RBNode(21));
         blackTree.treeInsert(new RBNode(27));
         blackTree.printTree();
+        System.out.println();
+        blackTree.removeFromK(blackTree.getRoot(), 25);
+        blackTree.printTree();
 
         Stack<Integer> path = new Stack<>();
         blackTree.printPositive(blackTree.getRoot(), path); // [13, 25, 19, 21] [13, 25, 28, 27]
+
+        System.out.println();
+
+        RedBlackTree tree1 = new RedBlackTree();
+        tree1.treeInsert(new RBNode(8));
+        tree1.treeInsert(new RBNode(4));
+        tree1.treeInsert(new RBNode(10));
+        tree1.treeInsert(new RBNode(11));
+        tree1.treeInsert(new RBNode(9));
+        tree1.treeInsert(new RBNode(3));
+        tree1.treeInsert(new RBNode(5));
+        tree1.printTree();
+        System.out.println();
+        //tree1.removeFromK(tree1.getRoot(), 10);
+        tree1.printTree();
+        tree1.delete(tree1.getRoot().getRight());
     }
 }

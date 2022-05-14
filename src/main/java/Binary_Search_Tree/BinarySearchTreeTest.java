@@ -165,5 +165,21 @@ public class BinarySearchTreeTest {
         System.out.println(depth1);
         int minimumDepth = tree6.minimumDepth(tree6.getRoot(), 0);
         System.out.println("The minimum depth is: " + minimumDepth); // 2
+
+        System.out.println();
+
+        Node root7 = new Node(8);
+        root7.addLeft(new Node(4));
+        root7.addRight(new Node(10));
+        root7.getLeft().addLeft(new Node(3));
+        root7.getLeft().addRight(new Node(5));
+        root7.addRight(new Node(10));
+        root7.getRight().addLeft(new Node(9));
+        root7.getRight().addRight(new Node(11));
+
+        BinarySearchTree tree7 = new BinarySearchTree(root7);
+        tree7.printTree();
+        tree7.deleteNode(root7, 10);
+        tree7.printTree();
     }
 }
