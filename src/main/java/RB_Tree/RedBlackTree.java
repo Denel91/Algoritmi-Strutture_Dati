@@ -577,8 +577,6 @@ public class RedBlackTree {
         }
     }
 
-
-
     /**
      * Cancella un RedBlackTree
      */
@@ -819,7 +817,7 @@ public class RedBlackTree {
         tree1.printTree();
         System.out.println();
         //tree1.removeFromK(tree1.getRoot(), 10);
-        tree1.printTree();
-        tree1.delete(tree1.getRoot().getRight());
+        //tree1.printTree();
+        //tree1.delete(tree1.getRoot().getRight());
     }
 }
