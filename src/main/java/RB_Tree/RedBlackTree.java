@@ -33,23 +33,22 @@ import java.util.Stack;
  * minimumDepth(RBNode root, int level) : int
  * minDist(RedBlackTree T, RBNode root) : int
  * blackPath(RedBlackTree T, RBNode node) : boolean
+ * int blackHeight(RBNode node) : int
  * minRed(RBNode node) : int
  * printPositive(RBNode node, Stack<Integer> path) : void
  * clear() : void
  * printTree() : void
  *
- * @version 12/05/2022
+ * @version 18/05/2022
  */
 public class RedBlackTree {
     RBNode nil;
     RBNode root;
-    int bh;
 
     // Default Constructor
     public RedBlackTree() {
         this.nil = new RBNode(0, Color.BLACK);
         this.root = nil;
-        this.bh = 0;
     }
 
     // Constructor
@@ -63,10 +62,6 @@ public class RedBlackTree {
 
     public boolean isRoot(RBNode p) {
         return p == getRoot();
-    }
-
-    public int getBh() {
-        return bh;
     }
 
     public static RBNode create(int key) {
@@ -514,6 +509,23 @@ public class RedBlackTree {
     }
 
     /**
+     *
+     * @param node
+     * @return
+     */
+    public int blackHeight(RBNode node) {
+        if (node == nil) {
+            return 0;
+        }
+
+        if (node.color == Color.BLACK) {
+            return  1 + blackHeight(node.getLeft());
+        }
+
+        return 0;
+    }
+
+    /**
      * Return the minimum distance of a red node from root node
      *
      * @param node
@@ -816,6 +828,7 @@ public class RedBlackTree {
         tree1.treeInsert(new RBNode(5));
         tree1.printTree();
         System.out.println();
+        System.out.println(tree1.blackHeight(tree1.getRoot())); // 2
         //tree1.removeFromK(tree1.getRoot(), 10);
         //tree1.printTree();
         //tree1.delete(tree1.getRoot().getRight());

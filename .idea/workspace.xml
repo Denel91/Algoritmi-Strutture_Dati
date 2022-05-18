@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED methods in BinarySearchTree and RedBlackTree">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="UPDATE">
       <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
@@ -32,16 +32,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/utente/IdeaProjects/Algoritmi-Strutture_Dati&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "true",
+    "last_opened_file_path": "C:/Users/utente/IdeaProjects/Algoritmi-Strutture_Dati/src/main/java/RB_Tree",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.RedBlackTree">
     <configuration name="BinarySearchTreeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Binary_Search_Tree.BinarySearchTreeTest" />
@@ -123,7 +123,8 @@
       <workItem from="1652477990560" duration="6610000" />
       <workItem from="1652537445486" duration="9409000" />
       <workItem from="1652791187913" duration="39000" />
-      <workItem from="1652791257109" duration="1456000" />
+      <workItem from="1652791257109" duration="2214000" />
+      <workItem from="1652876915691" duration="1224000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -195,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652549986811</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="UPDATE">
+      <created>1652792879831</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652792879831</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +232,8 @@
     <MESSAGE value="NEW methods() implemented" />
     <MESSAGE value="IMPLEMENTED methods &#10;- minRed() &#10;- printPositive()" />
     <MESSAGE value="IMPLEMENTED methods in BinarySearchTree and RedBlackTree" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED methods in BinarySearchTree and RedBlackTree" />
+    <MESSAGE value="UPDATE" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
