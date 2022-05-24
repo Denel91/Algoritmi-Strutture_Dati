@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="ADD method BlackHeight()">
-      <change afterPath="$PROJECT_DIR$/src/main/java/B_Tree/Node.java" afterDir="false" />
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED classes BTree.java and Node.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/B_Tree/BTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +158,9 @@
       <workItem from="1652791257109" duration="2214000" />
       <workItem from="1652876915691" duration="5226000" />
       <workItem from="1652963714712" duration="3689000" />
-      <workItem from="1652972169752" duration="2516000" />
+      <workItem from="1652972169752" duration="3309000" />
+      <workItem from="1653160838276" duration="201000" />
+      <workItem from="1653312879930" duration="5580000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -246,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652878378021</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="IMPLEMENTED classes BTree.java and Node.java">
+      <created>1652974800465</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652974800466</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +267,36 @@
             <State />
           </value>
         </entry>
+        <entry key="c4b58d49-bdcc-4570-b682-4e5d8d1f058a">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/utente/IdeaProjects/Algoritmi-Strutture_Dati/src/main/java" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="c4b58d49-bdcc-4570-b682-4e5d8d1f058a" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -277,7 +314,8 @@
     <MESSAGE value="IMPLEMENTED methods in BinarySearchTree and RedBlackTree" />
     <MESSAGE value="UPDATE" />
     <MESSAGE value="ADD method BlackHeight()" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD method BlackHeight()" />
+    <MESSAGE value="IMPLEMENTED classes BTree.java and Node.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED classes BTree.java and Node.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

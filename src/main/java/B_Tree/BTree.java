@@ -47,7 +47,7 @@ public class BTree {
 
         y.n = t - 1; // new size of y
 
-        for (int j = x.n; j >= i + 1; j--) {
+        for (int j = x.n + 1; j >= i + 1; j--) {
             x.child[j + 1] = x.child[j];
         }
 
@@ -57,7 +57,7 @@ public class BTree {
             x.key[j + 1] = x.key[j];
         }
 
-        x.key[i] = y.key[t];
+        x.key[i] = y.key[t - 1];
         x.n++;
     }
 
@@ -116,6 +116,9 @@ public class BTree {
         for (int i = 0; i < x.getN(); i++) {
             System.out.print(x.key[i] + " ");
         }
+
+        System.out.println();
+
         if (!x.leaf) {
             for (int i = 0; i < x.getN() + 1; i++) {
                 display(x.child[i]);
@@ -124,23 +127,27 @@ public class BTree {
     }
 
     public static void main(String[] args) {
-        /*
-        BTree tree = new BTree(3);
-        tree.tree_Insert(8);
-        tree.tree_Insert(9);
-        tree.tree_Insert(10);
-        tree.tree_Insert(11);
-        tree.tree_Insert(15);
-        tree.tree_Insert(20);
-        tree.tree_Insert(17);
-        tree.display();
-        */
 
+        BTree tree = new BTree(3);
+        tree.B_Tree_Create(tree);
+        tree.tree_Insert(tree,8);
+        tree.tree_Insert(tree,9);
+        tree.tree_Insert(tree,10);
+        tree.tree_Insert(tree,11);
+        tree.tree_Insert(tree,15);
+        tree.tree_Insert(tree,20);
+        tree.tree_Insert(tree,17);
+        tree.display();
+
+        /*
         BTree tree1 = new BTree(2); // Massimo 3 elementi
         tree1.B_Tree_Create(tree1);
         tree1.tree_Insert(tree1, 5);
         tree1.tree_Insert(tree1, 3);
         tree1.tree_Insert(tree1, 2);
         tree1.tree_Insert(tree1, 6);
+        tree1.display();
+
+         */
     }
 }
