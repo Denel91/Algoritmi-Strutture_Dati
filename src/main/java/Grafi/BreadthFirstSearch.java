@@ -91,6 +91,60 @@ public class BreadthFirstSearch {
     }
 
     /**
+     * Stampa i vertici di un cammino minimo da s a v.
+     *
+     * @param G un Grafo
+     * @param s vertice sorgente
+     * @param v vertici destinazione
+     */
+    public void print_Path(BreadthFirstSearch G, int s, int v) {
+        if (v == s) {
+            System.out.print(s);
+        } else if (parent.get(v) == null){
+            System.out.print("Non ci sono cammini da " + s + " a " + v);
+        } else {
+            print_Path(G, s, parent.get(v));
+            System.out.print("--" + v + "");
+        }
+    }
+
+    /**
+     * Diametro di un Grafo
+     *
+     * @param G un grafo non orientato
+     * @return
+     */
+    public int diameter(BreadthFirstSearch G) {
+        int max = 0;
+        for (int r = 0; r < G.getVertexCount(); r++) {
+            Queue<Integer> Q = new LinkedList<>();
+            Q.add(r);
+            distance.setSize(G.getVertexCount());
+            for (int u = 0;  u < G.getVertexCount(); u++) {
+                distance.set(u, -1);
+            }
+
+            distance.set(r, 0);
+
+            while (!Q.isEmpty()) {
+                int u = Q.poll();
+                for (int v : G.adj[u]) {
+                    if (distance.get(v) < 0){
+                        distance.set(v, distance.get(u) + 1);
+                        if (distance.get(v) > max){
+                            max = distance.get(v);
+                        }
+
+                        Q.add(v);
+                    }
+                }
+            }
+        }
+
+        return max;
+    }
+
+    /**
      * Breadth-First Search
      *
      * @param source vertice di partenza
@@ -123,14 +177,17 @@ public class BreadthFirstSearch {
     }
 
     public static void main(String[] args) {
-        int vertices = 6;
+        int vertices = 7;
         BreadthFirstSearch graph = new BreadthFirstSearch(vertices);
         graph.addEdge(0, 1);
         graph.addEdge(0, 3);
         graph.addEdge(0, 4);
         graph.addEdge(1, 2);
+        graph.addEdge(2, 6);
         graph.addEdge(3, 5);
+        graph.addEdge(3, 2);
         graph.addEdge(4, 5);
+
         //System.out.println(graph);
         System.out.println("The Breadth-First Search of the Graph is:");
         graph.BFS(0);
@@ -139,6 +196,9 @@ public class BreadthFirstSearch {
         System.out.println(graph.getColour().toString());
         System.out.println(graph.getParent().toString());
         System.out.println(graph.getDistance().toString());
+        graph.print_Path(graph, 0, 5);
+        System.out.println();
+        System.out.println(graph.diameter(graph));
     }
 }
 
