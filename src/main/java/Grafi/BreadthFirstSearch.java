@@ -6,9 +6,9 @@ import java.util.Vector;
 import java.util.Arrays;
 
 /**
- * Breadth-First Search
+ * Breadth-First Search class implementation
  *
- * @version 12/10/2021
+ * @version 27/05/2022
  */
 public class BreadthFirstSearch {
     private int vertexCount;              // numero di vertici nel Grafo
@@ -123,9 +123,7 @@ public class BreadthFirstSearch {
             for (int u = 0;  u < G.getVertexCount(); u++) {
                 distance.set(u, -1);
             }
-
             distance.set(r, 0);
-
             while (!Q.isEmpty()) {
                 int u = Q.poll();
                 for (int v : G.adj[u]) {
@@ -147,7 +145,7 @@ public class BreadthFirstSearch {
     /**
      * Breadth-First Search
      *
-     * @param source vertice di partenza
+     * @param source sorgente del Grafo
      */
     public void BFS(int source) {
         for (int i = 0; i < vertexCount; i++) {
@@ -176,6 +174,88 @@ public class BreadthFirstSearch {
         }
     }
 
+    /**
+     * Determina tutti i nodi di G che si trovano alla stessa
+     * distanza da tutti gli elementi di S.
+     * S è un insieme che contiene solo due elementi S = {a, b}
+     *
+     * @param source sorgente del Grafo
+     */
+    public void sameDistanceFromSet(int source) {
+        for (int i = 0; i < vertexCount; i++) {
+            colour.set(i, "white");
+            distance.set(i, Integer.MAX_VALUE);
+            parent.set(i, null);
+        }
+        colour.set(source, "gray");
+        distance.set(source, 0);
+        parent.set(source, null);
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(source);
+        while (!queue.isEmpty()) {
+            var u = queue.poll();
+            for (var j : adj[u]) {
+                if (colour.get(j).equals("white")) {
+                    colour.set(j, "grey");
+                    distance.set(j, distance.get(u) + 1);
+
+                    if (!queue.isEmpty()) { // in queue ci sono i vertici scoperti
+                        if (distance.get(4).equals(distance.get(5))) {
+                            System.out.print(u + " ");
+                        }
+                    }
+
+                    parent.set(j, u);
+                    queue.add(j);
+                }
+            }
+
+            colour.set(u, "black");
+        }
+    }
+
+    /**
+     * Massima distanza
+     *
+     * Restituire il numero dei nodi V raggiungibili da s che si
+     * trovano alla massima distanza da s.
+     *
+     * @param G un Grafo orientato
+     * @param s sorgente del Grafo
+     * @return il numero di vertici alla massima distanza da s
+     */
+    public int maxDist(BreadthFirstSearch G, int s) {
+        boolean[] marked = new boolean[G.getVertexCount()];
+        distance.setSize(G.getVertexCount());
+        for (int i = 0; i < G.getVertexCount(); i++) {
+            marked[i] = false;
+            distance.set(i, Integer.MAX_VALUE);
+        }
+        marked[s] = true;
+        distance.set(s, 0);
+        Queue<Integer> Q = new LinkedList<>();
+        Q.add(s);
+        int current = 0;
+        int count = 0;
+        while (!Q.isEmpty()) {
+            int v = Q.poll();
+            for (var u : G.adj[v]) {
+                if (!marked[u]) {
+                    marked[u] = true;
+                    distance.set(u, distance.get(v) + 1);
+                    if (distance.get(u) > current) {
+                        current = distance.get(u);
+                        count = 0;
+                    }
+                    count++;
+                    Q.add(u);
+                }
+            }
+        }
+
+        return count;
+    }
+
     public static void main(String[] args) {
         int vertices = 7;
         BreadthFirstSearch graph = new BreadthFirstSearch(vertices);
@@ -199,6 +279,25 @@ public class BreadthFirstSearch {
         graph.print_Path(graph, 0, 5);
         System.out.println();
         System.out.println(graph.diameter(graph));
+
+        System.out.println("--------------------------------------------------");
+
+        int vert = 6;
+        BreadthFirstSearch graph_1 = new BreadthFirstSearch(vert);
+        graph_1.addEdgeDirected(0,1);
+        graph_1.addEdgeDirected(0,2);
+        graph_1.addEdgeDirected(1,4);
+        graph_1.addEdgeDirected(2,3);
+        graph_1.addEdgeDirected(2,5);
+        graph_1.addEdgeDirected(3,4);
+        System.out.println(graph_1);
+        graph_1.BFS(0);
+        System.out.println();
+        System.out.println(graph_1.getDistance());
+        graph_1.sameDistanceFromSet(0);
+        System.out.println();
+        System.out.println(graph_1.getDistance());
+        System.out.println(graph_1.maxDist(graph_1, 0));
     }
 }
 

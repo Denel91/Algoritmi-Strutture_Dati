@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="UPDATE class BTree">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="UPDATE class BreadthFirstSearch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +166,12 @@
       <workItem from="1653405120392" duration="3571000" />
       <workItem from="1653417634502" duration="4751000" />
       <workItem from="1653480957181" duration="13564000" />
+      <workItem from="1653506889278" duration="2353000" />
+      <workItem from="1653565506702" duration="14582000" />
+      <workItem from="1653598446119" duration="5215000" />
+      <workItem from="1653653887436" duration="2459000" />
+      <workItem from="1653656509213" duration="11297000" />
+      <workItem from="1653673750565" duration="10999000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -264,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653405033546</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="UPDATE class BreadthFirstSearch">
+      <created>1653507150491</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1653507150491</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +341,8 @@
     <MESSAGE value="ADD method BlackHeight()" />
     <MESSAGE value="IMPLEMENTED classes BTree.java and Node.java" />
     <MESSAGE value="UPDATE class BTree" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE class BTree" />
+    <MESSAGE value="UPDATE class BreadthFirstSearch" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE class BreadthFirstSearch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

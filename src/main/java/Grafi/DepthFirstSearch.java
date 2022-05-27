@@ -4,11 +4,12 @@ import java.util.LinkedList;
 import java.util.Vector;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.Stack;
 
 /**
- * Depth-First Search
+ * Depth-First Search implementation class
  *
- * @version 15/12/2021
+ * @version 27/05/2022
  */
 public class DepthFirstSearch {
     private int vertexCount;                    // numero di vertici nel Grafo
@@ -105,6 +106,152 @@ public class DepthFirstSearch {
         completionTime.set(u, time);
     }
 
+    /**
+     * Depth-First Search iterativa
+     *
+     * @param G un Grafo orientato
+     * @param r sorgente del grafo
+     */
+    public void DFS_Iterative(DepthFirstSearch G, int r) {
+        Stack<Integer> S = new Stack<>();
+        S.push(r);
+        boolean[] visitato = new boolean[G.getVertexCount()];
+        for (int u = 0; u < G.getVertexCount(); u++) {
+            visitato[u] = false;
+            parent.set(u, null);
+        }
+
+        visitato[r] = true;
+
+        while (!S.isEmpty()) {
+            int u = S.pop();
+            System.out.print(u + " ");
+            for (int v : G.adj[u]) {
+                if (!visitato[v]){
+                    visitato[v] = true;
+                    parent.set(v, u);
+                    S.push(v);
+                }
+            }
+        }
+    }
+
+    /**
+     * Verifica la presenza di cicli in grafi orientati
+     *
+     * @param G un grafo orientato
+     * @return
+     */
+    public boolean hasCycles(DepthFirstSearch G) {
+        colour.setSize(G.getVertexCount());
+        for (int i = 0; i < G.getVertexCount(); i++) {
+            colour.set(i, "white");
+        }
+
+        for (int i = 0; i < G.getVertexCount(); i++) {
+            if (colour.get(i).equals("white")) {
+                if (hasCyclesRec(G, i, colour))
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Procedura di supporto per i grafi orientati
+     *
+     * @param G
+     * @param u
+     * @param colour
+     * @return
+     */
+    private boolean hasCyclesRec(DepthFirstSearch G, int u, Vector<String> colour) {
+        colour.set(u, "gray");
+        for (Integer v : G.adj[u]) {
+            if (colour.get(v).equals("gray")) {
+                return true;
+            }
+
+            if (colour.get(v).equals("white") && hasCyclesRec(G, v, colour)) {
+                return true;
+            }
+        }
+
+        colour.set(u, "black");
+        return false;
+    }
+
+    /**
+     * Verifica di cicli nei grafi non orientati.
+     *
+     * During DFS, for any current vertex ‘x’ (currently visiting vertex) if there is an adjacent vertex ‘y’ is present
+     * which is already visited and ‘y’ is not a direct parent of ‘x’ then there is a cycle in graph.
+     * * Why not parent:
+     * Let’s assume, vertex ‘x’ and ‘y’ and we have edge between them: x--y.
+     * Now do DFS from ‘x’, once you reach to ‘y’, will do the DFS from ‘y’ and adjacent vertex is ‘x’ and since
+     * its already visited so there should be cycle but actually there is no cycle since ‘x’ is a parent of ‘y’.
+     * That is why we will ignore visited vertex if it is parent of current vertex.
+     *
+     * @param G
+     * @return
+     */
+    public boolean isCyclic(DepthFirstSearch G) {
+        boolean[] visited = new boolean[G.getVertexCount()];
+        for (int i = 0; i < G.getVertexCount(); i++) {
+            visited[i] = false;
+        }
+
+        for (int u = 0; u < G.getVertexCount(); u++) {
+            if (!visited[u]) {
+                if (isCyclicRec(G, u, visited, -1)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Procedura di supporto per i grafi non orientati
+     *
+     * @param G
+     * @param u
+     * @param visited
+     * @param parent
+     * @return
+     */
+    private boolean isCyclicRec(DepthFirstSearch G, int u, boolean[] visited, int parent) {
+        visited[u] = true;
+        for (Integer v : G.adj[u]) {
+            if (!visited[v]) {
+                if (isCyclicRec(G, v, visited, u))
+                    return true;
+            } else if (v != parent) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Transpose the graph
+     *
+     * @return il grafo trasposto
+     */
+    public DepthFirstSearch transpose() {
+        DepthFirstSearch g = new DepthFirstSearch(vertexCount);
+        for (int s = 0; s < vertexCount; s++) {
+            Iterator<Integer> i = adj[s].listIterator();
+            while (i.hasNext()) {
+                g.adj[i.next()].add(s);
+            }
+        }
+        return g;
+    }
+
     public int getVertexCount() {
         return vertexCount;
     }
@@ -129,18 +276,6 @@ public class DepthFirstSearch {
         return discoveredTime;
     }
 
-    // Transpose the graph
-    public DepthFirstSearch transpose() {
-        DepthFirstSearch g = new DepthFirstSearch(vertexCount);
-        for (int s = 0; s < vertexCount; s++) {
-            Iterator<Integer> i = adj[s].listIterator();
-            while (i.hasNext()) {
-                g.adj[i.next()].add(s);
-            }
-        }
-        return g;
-    }
-
     @Override
     public String toString() {
         return "" + Arrays.toString(adj) + "";
@@ -153,8 +288,16 @@ public class DepthFirstSearch {
         graph.addEdge(1, 3);
         graph.addEdge(2, 4);
         graph.addEdge(2, 5);
+        graph.addEdge(4, 5);
         System.out.println("The Depth-First Search of the Graph is:");
         graph.DFS(1); // 1 2 4 5 3
+        System.out.println();
+        System.out.println(graph.isCyclic(graph));
+        System.out.println("The Depth-First Search of the Graph is:");
+        graph.DFS_Iterative(graph, 1);
+        System.out.println();
+        System.out.println(graph.getParent());
+        System.out.println(graph.getVertexCount());
 
         System.out.println();
 
@@ -241,5 +384,15 @@ public class DepthFirstSearch {
         System.out.println(graph_5.getDiscoveredTime());
         System.out.println();
         System.out.println(graph_5.getCompletionTime());
+
+        System.out.println();
+
+        DepthFirstSearch graph_6 = new DepthFirstSearch(3);
+        graph_6.addEdgeDirected(0, 1);
+        graph_6.addEdgeDirected(1, 2);
+        graph_6.addEdgeDirected(2, 0);
+        System.out.println(graph_6);
+        System.out.println(graph_6.isCyclic(graph_6));
+        System.out.println(graph_6.hasCycles(graph_6));
     }
 }
