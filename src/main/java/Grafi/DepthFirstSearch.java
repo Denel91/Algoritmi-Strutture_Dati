@@ -237,6 +237,29 @@ public class DepthFirstSearch {
     }
 
     /**
+     * Conta il numero di percorsi semplici che ci sono da u a v
+     *
+     * @param G
+     * @param u
+     * @param v
+     * @return
+     */
+    public int simplePaths(DepthFirstSearch G, int u, int v) {
+        int paths = 0;
+        if (u == v) {
+            return 1;
+        } else if (parent.get(u) != null) {
+            return paths;
+        } else {
+            for (var w : G.adj[u]) {
+                paths = paths + simplePaths(G, w, v);
+            }
+        }
+
+        return paths;
+    }
+
+    /**
      * Transpose the graph
      *
      * @return il grafo trasposto
@@ -394,5 +417,16 @@ public class DepthFirstSearch {
         System.out.println(graph_6);
         System.out.println(graph_6.isCyclic(graph_6));
         System.out.println(graph_6.hasCycles(graph_6));
+
+        System.out.println();
+
+        DepthFirstSearch graph_7 = new DepthFirstSearch(6);
+        graph_7.addEdgeDirected(0,1);
+        graph_7.addEdgeDirected(0,5);
+        graph_7.addEdgeDirected(1,2);
+        graph_7.addEdgeDirected(5,2);
+        graph_7.addEdgeDirected(2,3);
+        graph_7.addEdgeDirected(3,4);
+        System.out.println(graph_7.simplePaths(graph_7, 0, 4));
     }
 }

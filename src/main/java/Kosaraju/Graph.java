@@ -42,6 +42,22 @@ public class Graph {
         }
     }
 
+    /**
+     * Collega due nodi in un grafo non orientato
+     *
+     * @param v nodo del grafo
+     * @param w nodo del grafo
+     */
+    public void addEdge(int v, int w) {
+        if (!adj[v].contains(w)) {
+            adj[v].add(w);
+        }
+
+        if (!adj[w].contains(v)) {
+            adj[w].add(v);
+        }
+    }
+
     public int getVertexCount() {
         return vertexCount;
     }
@@ -124,6 +140,48 @@ public class Graph {
         }
     }
 
+    /**
+     * Identifica la componente connessa a cui il nodo u appartiene
+     *
+     * @param G
+     * @param stack
+     * @return
+     */
+    public int[] connected_Components(Graph G, Stack<Integer> stack) {
+        int[] id = new int[G.getVertexCount()];
+        for (int u = 0; u < G.getVertexCount(); u++) {
+            id[u] = 0;
+            stack.push(id[u]);
+        }
+        int count = 0;
+        while (!stack.isEmpty()) {
+            int u = stack.pop();
+            if (id[u] == 0) {
+                count = count + 1;
+                cc_DFS(G, count, u, id);
+            }
+        }
+
+        return id;
+    }
+
+    /**
+     * Procedura di supporto
+     *
+     * @param G
+     * @param count
+     * @param u
+     * @param id
+     */
+    private void cc_DFS(Graph G, int count, int u, int[] id) {
+        id[u] = count;
+        for (var v : G.adj(u)) {
+            if (id[v] == 0) {
+                cc_DFS(G, count, v, id);
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "" + Arrays.toString(adj) + "";
@@ -144,7 +202,13 @@ public class Graph {
         // 0 3 2 1 --> Strongly Connected Components
         // 4 6 5 --> Strongly Connected Components
         // 7 --> Strongly Connected Components
-
         G.iterativeDFS(G, 0); // 0 1 2 4 5 6 7 3
+
+        Graph G_1 = new Graph(3);
+        G_1.addEdge(0, 1);
+        G_1.addEdge(1, 2);
+        G_1.addEdge(2, 0);
+        Stack<Integer> stack = new Stack<>();
+        System.out.println(Arrays.toString(G_1.connected_Components(G_1, stack)));
     }
 }
