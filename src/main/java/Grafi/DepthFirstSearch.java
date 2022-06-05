@@ -5,6 +5,8 @@ import java.util.Vector;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Depth-First Search implementation class
@@ -275,6 +277,82 @@ public class DepthFirstSearch {
         return g;
     }
 
+    /**
+     *
+     * @param G
+     * @param s
+     * @param d
+     * @return
+     */
+    public boolean isReachable(DepthFirstSearch G, int s, int d) {
+        if (s == d) {
+            return true;
+        }
+        Stack<Integer> S = new Stack<>();
+        boolean[] visitato = new boolean[G.getVertexCount()];
+        for (int u = 0; u < G.getVertexCount(); u++) {
+            visitato[u] = false;
+            parent.set(u, null);
+        }
+        S.push(s);
+        visitato[s] = true;
+        while (!S.isEmpty()) {
+            int u = S.pop();
+            for (int v : G.adj[u]) {
+                if (v == d)
+                    return true;
+                if (!visitato[v]){
+                    visitato[v] = true;
+                    parent.set(v, u);
+                    S.push(v);
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Find All Simple Paths Between Two Vertices in a Graph
+     *
+     * @param G
+     * @param source
+     * @param destination
+     */
+    public void printAllPaths(DepthFirstSearch G, int source, int destination) {
+        boolean[] visited = new boolean[G.getVertexCount()];
+        ArrayList<Integer> paths = new ArrayList<>();
+        paths.add(source);
+        DFS_All_Simple_Paths(G, source, destination, visited, paths);
+    }
+
+    /**
+     * Procedura di supporto
+     *
+     * @param G
+     * @param u
+     * @param v
+     * @param visited
+     * @param localPaths
+     */
+    private void DFS_All_Simple_Paths(DepthFirstSearch G, int u, int v, boolean[] visited, List<Integer> localPaths) {
+        if (u == v) {
+            System.out.println(localPaths);
+            return;
+        }
+
+        visited[u] = true;
+        for (var i : G.adj[u]) {
+            if (!visited[i]) {
+                localPaths.add(i);
+                DFS_All_Simple_Paths(G, i, v, visited, localPaths);
+                localPaths.remove(i);
+            }
+        }
+
+        visited[u] = false;
+    }
+
     public int getVertexCount() {
         return vertexCount;
     }
@@ -428,5 +506,15 @@ public class DepthFirstSearch {
         graph_7.addEdgeDirected(2,3);
         graph_7.addEdgeDirected(3,4);
         System.out.println(graph_7.simplePaths(graph_7, 0, 4));
+        System.out.println(graph_7.isReachable(graph_7, 0, 4)); // true
+
+        DepthFirstSearch graph_8 = new DepthFirstSearch(4);
+        graph_8.addEdgeDirected(0,1);
+        graph_8.addEdgeDirected(0,2);
+        graph_8.addEdgeDirected(0,3);
+        graph_8.addEdgeDirected(2,0);
+        graph_8.addEdgeDirected(2,1);
+        graph_8.addEdgeDirected(1,3);
+        graph_8.printAllPaths(graph_8, 2, 3); // [2, 0, 1, 3] [2, 0, 3] [2, 1, 3]
     }
 }
