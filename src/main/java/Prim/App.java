@@ -3,6 +3,7 @@ package Prim;
 import java.util.Vector;
 import java.util.Queue;
 import java.util.PriorityQueue;
+import java.util.Arrays;
 
 public class App {
 
@@ -71,7 +72,7 @@ public class App {
         g.addEdge(7,6, 4);
 
         System.out.println(G);
-
+        System.out.println(Arrays.toString(G.getAdj()));
         Vector<Integer> A = app.mst_Prim(G, 0);
         System.out.println(A); // [null, 0, 1, 2, 3, 2, 5, 6, 2]
 
