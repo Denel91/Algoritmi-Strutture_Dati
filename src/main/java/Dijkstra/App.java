@@ -90,6 +90,20 @@ public class App {
         System.out.println(G.getE()); // 10
 
         Vector<Integer> A = app.Dijkstra(G, 0);
-        System.out.println(A); // [null, 4, 1, 4, 0]
+        System.out.println(A); // [null, 0, 1, 2, 0]
+
+        Graph G_1 = new Graph(5);
+        G_1.addEdge(0, 1, 10);
+        G_1.addEdge(0, 4, 5);
+        G_1.addEdge(1, 2, 1);
+        G_1.addEdge(1, 4, 2);
+        G_1.addEdge(2, 3, 4);
+        G_1.addEdge(3, 0, 7);
+        G_1.addEdge(3, 2, 6);
+        G_1.addEdge(4, 1, 3);
+        G_1.addEdge(4, 2, 9);
+        G_1.addEdge(4, 3, 2);
+        Vector<Integer> B = app.Dijkstra(G_1, 0);
+        System.out.println(B); // [null, 4, 1, 4, 0]
     }
 }

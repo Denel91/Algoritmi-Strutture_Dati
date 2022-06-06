@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED new methods">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED new methods in DepthFirstSearch class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prim/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prim/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.DepthFirstSearch">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dijkstra.App" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -116,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DepthFirstSearch" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.DepthFirstSearch" />
         <item itemvalue="Application.Prim.Graph" />
         <item itemvalue="Application.Prim.App" />
         <item itemvalue="Application.Graph" />
@@ -179,7 +178,8 @@
       <workItem from="1654259054114" duration="9952000" />
       <workItem from="1654283027829" duration="2165000" />
       <workItem from="1654349247355" duration="9892000" />
-      <workItem from="1654422050569" duration="3668000" />
+      <workItem from="1654422050569" duration="4080000" />
+      <workItem from="1654518798236" duration="10875000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -300,7 +300,28 @@
       <option name="project" value="LOCAL" />
       <updated>1654107736856</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="UPDATE Dijkstra">
+      <created>1654426034152</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1654426034152</updated>
+    </task>
+    <task id="LOCAL-00019" summary="UPDATE Prim">
+      <created>1654426056039</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1654426056039</updated>
+    </task>
+    <task id="LOCAL-00020" summary="IMPLEMENTED new methods in DepthFirstSearch class">
+      <created>1654426099067</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654426099067</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +387,10 @@
     <MESSAGE value="UPDATE class BreadthFirstSearch" />
     <MESSAGE value="UPDATE classes BreadthFirstSearch and DepthFirstSearch" />
     <MESSAGE value="IMPLEMENTED new methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED new methods" />
+    <MESSAGE value="UPDATE Dijkstra" />
+    <MESSAGE value="UPDATE Prim" />
+    <MESSAGE value="IMPLEMENTED new methods in DepthFirstSearch class" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED new methods in DepthFirstSearch class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
