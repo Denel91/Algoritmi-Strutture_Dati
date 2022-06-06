@@ -313,6 +313,52 @@ public class DepthFirstSearch {
     }
 
     /**
+     * Verifica se esiste un cammino che parte da s e termina in d
+     *
+     * @param s
+     * @param d
+     * @return
+     */
+    public boolean dfs(DepthFirstSearch G, int s, int d, boolean[] visited) {
+        if (s == d)
+            return true;
+        visited[s] = true;
+        for (var v : G.adj[s]) {
+            if (!visited[v]) {
+                if (dfs(G, v, d, visited))
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Verifica se tutti i cammini che partono da s passano per v
+     *
+     * @param G
+     * @param s
+     * @param v
+     * @param visited
+     * @return
+     */
+    public boolean dfs_all_paths(DepthFirstSearch G, int s, int v, boolean[] visited) {
+        if (s == v)
+            return true;
+        visited[s] = true;
+        for (var u : G.adj[s]) {
+            if (u == v)
+                return true;
+            if (!visited[u]) {
+                if (dfs_all_paths(G, u, v, visited))
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Find All Simple Paths Between Two Vertices in a Graph
      *
      * @param G
@@ -508,6 +554,8 @@ public class DepthFirstSearch {
         System.out.println(graph_7.simplePaths(graph_7, 0, 4));
         System.out.println(graph_7.isReachable(graph_7, 0, 4)); // true
 
+        System.out.println();
+
         DepthFirstSearch graph_8 = new DepthFirstSearch(4);
         graph_8.addEdgeDirected(0,1);
         graph_8.addEdgeDirected(0,2);
@@ -516,5 +564,29 @@ public class DepthFirstSearch {
         graph_8.addEdgeDirected(2,1);
         graph_8.addEdgeDirected(1,3);
         graph_8.printAllPaths(graph_8, 2, 3); // [2, 0, 1, 3] [2, 0, 3] [2, 1, 3]
+
+        System.out.println();
+
+        DepthFirstSearch graph_9 = new DepthFirstSearch(6);
+        graph_9.addEdgeDirected(0, 1);
+        graph_9.addEdgeDirected(0, 3);
+        graph_9.addEdgeDirected(1, 2);
+        graph_9.addEdgeDirected(3, 2);
+        graph_9.addEdgeDirected(3, 4);
+        graph_9.addEdgeDirected(5, 2);
+        graph_9.addEdgeDirected(5, 4);
+        boolean[] visited = new boolean[graph_9.vertexCount];
+        System.out.print(graph_9.dfs(graph_9, 0, 5, visited));
+
+        System.out.println();
+
+        DepthFirstSearch graph_10 = new DepthFirstSearch(5);
+        graph_10.addEdgeDirected(0, 1);
+        graph_10.addEdgeDirected(1, 3);
+        graph_10.addEdgeDirected(3, 4);
+        graph_10.addEdgeDirected(0, 2);
+        graph_10.addEdgeDirected(2, 3);
+        boolean[] isVisited = new boolean[graph_10.vertexCount];
+        System.out.println(graph_10.dfs_all_paths(graph_10, 0, 3, isVisited));
     }
 }
