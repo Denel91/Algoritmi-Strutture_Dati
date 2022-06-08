@@ -2,7 +2,7 @@ package Dijkstra;
 
 import java.util.TreeMap;
 import java.util.Arrays;
-
+import java.util.*;
 /**
  * class Graph
  */
@@ -35,6 +35,14 @@ public class Graph {
         validateVertex(v);
         if(u == v) throw new IllegalArgumentException("Self Loop is Detected!");
         adj[u].put(v, w);
+        this.E++;
+    }
+
+    public void addEdgeReverse(int u, int v, int w){
+        validateVertex(u);
+        validateVertex(v);
+        if(u == v) throw new IllegalArgumentException("Self Loop is Detected!");
+        adj[v].put(u, w);
         this.E++;
     }
 

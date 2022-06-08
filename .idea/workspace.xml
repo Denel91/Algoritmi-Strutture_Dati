@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED new methods in DepthFirstSearch class">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="IMPLEMENTED methods dfs() and dfs_all_paths()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dijkstra/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dijkstra/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/utente/IdeaProjects/Algoritmi-Strutture_Dati/src/main/java/RB_Tree&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -116,10 +117,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.DepthFirstSearch" />
         <item itemvalue="Application.Prim.Graph" />
         <item itemvalue="Application.Prim.App" />
         <item itemvalue="Application.Graph" />
+        <item itemvalue="Application.DepthFirstSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +180,11 @@
       <workItem from="1654283027829" duration="2165000" />
       <workItem from="1654349247355" duration="9892000" />
       <workItem from="1654422050569" duration="4080000" />
-      <workItem from="1654518798236" duration="10875000" />
+      <workItem from="1654518798236" duration="11054000" />
+      <workItem from="1654687782767" duration="28000" />
+      <workItem from="1654687833660" duration="5169000" />
+      <workItem from="1654703360195" duration="6606000" />
+      <workItem from="1654711882566" duration="5388000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -321,7 +326,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654426099067</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="UPDATE class App">
+      <created>1654533639749</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1654533639749</updated>
+    </task>
+    <task id="LOCAL-00022" summary="IMPLEMENTED methods dfs() and dfs_all_paths()">
+      <created>1654533687425</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1654533687425</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +409,9 @@
     <MESSAGE value="UPDATE Dijkstra" />
     <MESSAGE value="UPDATE Prim" />
     <MESSAGE value="IMPLEMENTED new methods in DepthFirstSearch class" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED new methods in DepthFirstSearch class" />
+    <MESSAGE value="UPDATE class App" />
+    <MESSAGE value="IMPLEMENTED methods dfs() and dfs_all_paths()" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTED methods dfs() and dfs_all_paths()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
