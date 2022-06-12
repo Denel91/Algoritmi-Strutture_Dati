@@ -4,6 +4,7 @@ import java.util.Vector;
 import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.Arrays;
 
 /**
  * class App
@@ -72,6 +73,40 @@ public class App {
         return pi_greco;
     }
 
+    /**
+     * Shortest paths from all vertices to a destination
+     *
+     * @param G
+     * @param s
+     * @return
+     */
+    public int[] minimumPaths_SingleDestination(Graph G, int s) {
+        int[] distance = new int[G.getV()];
+        int[] pi_greco = new int[G.getV()];
+
+        for (int i = 0; i < G.getV(); i++)  {
+            distance[i] = Integer.MAX_VALUE;
+            pi_greco[i] = -1;
+        }
+
+        distance[s] = 0;
+
+        PriorityQueue<Integer> Q = new PriorityQueue<>();
+        Q.add(s);
+        while (!Q.isEmpty()) {
+            int u = Q.poll();
+            for (int v : G.adj(u)) {
+                if (distance[v] > (distance[u] + G.getWeight(u, v))) {
+                    distance[v] = distance[u] + G.getWeight(u, v);
+                    pi_greco[v] = u;
+                    Q.add(v);
+                }
+            }
+        }
+
+        return distance;
+    }
+
     public static void main(String[] args) {
         App app = new App();
 
@@ -119,5 +154,8 @@ public class App {
         G_2.addEdgeReverse(4, 2, 9);
         G_2.addEdgeReverse(4, 3, 2);
         System.out.println(G_2);
+
+        int[] C = app.minimumPaths_SingleDestination(G_2, 0);
+        System.out.println(Arrays.toString(C));
     }
 }

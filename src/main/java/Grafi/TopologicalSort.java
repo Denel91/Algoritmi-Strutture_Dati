@@ -68,7 +68,7 @@ public class TopologicalSort {
         }
         time = 0;
         LinkedList<Integer> list = new LinkedList<>();
-        for (int i = 1; i < vertexCount; i++) {
+        for (int i = 0; i < vertexCount; i++) {
             if (colour.get(i).equals("white")) {
                 DFS_VisitTopological(i, list);
             }
@@ -160,5 +160,19 @@ public class TopologicalSort {
         LinkedList<Integer> list_3 = graph_3.topologicalSort(7);
         System.out.println("Topological-Sort of the Graph is: ");
         System.out.println(list_3); // [7, 6, 5, 4, 3, 2, 1, 0]
+
+        System.out.println();
+        TopologicalSort graph_4 = new TopologicalSort(7);
+        graph_4.addEdgeDirected(0, 1);
+        graph_4.addEdgeDirected(0, 2);
+        graph_4.addEdgeDirected(0, 3);
+        graph_4.addEdgeDirected(1, 4);
+        graph_4.addEdgeDirected(2, 1);
+        graph_4.addEdgeDirected(2, 4);
+        graph_4.addEdgeDirected(3, 5);
+        graph_4.addEdgeDirected(3, 6);
+        graph_4.addEdgeDirected(5, 6);
+        LinkedList<Integer> list_4 = graph_4.topologicalSort(0);
+        System.out.println(list_4);
     }
 }

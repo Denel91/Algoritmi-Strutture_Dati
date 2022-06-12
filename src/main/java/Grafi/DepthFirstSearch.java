@@ -588,5 +588,23 @@ public class DepthFirstSearch {
         graph_10.addEdgeDirected(2, 3);
         boolean[] isVisited = new boolean[graph_10.vertexCount];
         System.out.println(graph_10.dfs_all_paths(graph_10, 0, 3, isVisited));
+
+        System.out.println();
+
+        DepthFirstSearch graph_11 = new DepthFirstSearch(7);
+        graph_11.addEdgeDirected(0, 1);
+        graph_11.addEdgeDirected(0, 2);
+        graph_11.addEdgeDirected(0, 3);
+        graph_11.addEdgeDirected(1, 4);
+        graph_11.addEdgeDirected(2, 1);
+        graph_11.addEdgeDirected(2, 4);
+        graph_11.addEdgeDirected(3, 5);
+        graph_11.addEdgeDirected(3, 6);
+        graph_11.addEdgeDirected(5, 6);
+        graph_11.DFS(0);
+        System.out.println();
+        System.out.println(graph_11.getParent());
+        System.out.println(graph_11.getDiscoveredTime());
+        System.out.println(graph_11.getCompletionTime());
     }
 }
