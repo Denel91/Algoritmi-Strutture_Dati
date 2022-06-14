@@ -399,6 +399,36 @@ public class DepthFirstSearch {
         visited[u] = false;
     }
 
+    /**
+     * Classificazione degli archi
+     *
+     * @param G
+     * @param u
+     * @param time
+     */
+    public void dfs_schema(DepthFirstSearch G, int u, int time, Vector<Integer> dt, Vector<Integer> ft) {
+        time = time + 1;
+        dt.set(u, time);
+        for (var v : G.adj[u]) {
+            if (dt.get(v) == 0) {
+                System.out.println(u + "-->" + v + " Arco d'albero");
+                dfs_schema(G, v, time, dt, ft);
+
+            } else if (dt.get(u) > dt.get(v) && ft.get(v) == 0) {
+                System.out.println(u + "-->" + v + " Arco all'indietro");
+
+            } else if (dt.get(u) < dt.get(v) && ft.get(v) == 0) {
+                System.out.println(u + "-->" + v + " Arco in avanti");
+
+            } else {
+                System.out.println(u + "-->" + v + " Arco trasversale");
+            }
+        }
+
+        time = time + 1;
+        ft.set(u, time);
+    }
+
     public int getVertexCount() {
         return vertexCount;
     }
@@ -606,5 +636,40 @@ public class DepthFirstSearch {
         System.out.println(graph_11.getParent());
         System.out.println(graph_11.getDiscoveredTime());
         System.out.println(graph_11.getCompletionTime());
+        System.out.println();
+        Vector<Integer> discoverytime = new Vector<>();
+        Vector<Integer> finishtime = new Vector<>();
+        discoverytime.setSize(graph_11.getVertexCount());
+        finishtime.setSize(graph_11.getVertexCount());
+        for (int i = 0; i < discoverytime.size(); i++) {
+            discoverytime.set(i, 0);
+            finishtime.set(i, 0);
+        }
+        graph_11.dfs_schema(graph_11, 0, 0, discoverytime, finishtime );
+
+        System.out.println();
+
+        DepthFirstSearch graph_12 = new DepthFirstSearch(6);
+        graph_12.addEdgeDirected(1,2);
+        graph_12.addEdgeDirected(1,3);
+        graph_12.addEdgeDirected(1,4);
+        graph_12.addEdgeDirected(2,3);
+        graph_12.addEdgeDirected(2,4);
+        graph_12.addEdgeDirected(3,4);
+        graph_12.addEdgeDirected(4,5);
+        graph_12.addEdgeDirected(5,3);
+        //graph_12.DFS(5);
+        //System.out.println(graph_12.getDiscoveredTime());
+        //System.out.println(graph_12.getCompletionTime());
+        //System.out.println(graph_12.getParent());
+        Vector<Integer> dt = new Vector<>();
+        Vector<Integer> ft = new Vector<>();
+        dt.setSize(graph_12.getVertexCount());
+        ft.setSize(graph_12.getVertexCount());
+        for (int i = 0; i < dt.size(); i++) {
+            dt.set(i, 0);
+            ft.set(i, 0);
+        }
+        graph_12.dfs_schema(graph_12, 1, 0, dt, ft);
     }
 }
