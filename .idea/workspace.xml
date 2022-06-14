@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="UPDATE Dijkstra">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="Update DepthFirstSearch and TopologicalSort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/BreadthFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/TopologicalSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/TopologicalSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TopologicalSort">
+  <component name="RunManager" selected="Application.DepthFirstSearch">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dijkstra.App" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -63,8 +62,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Grafi.DepthFirstSearch" />
+    <configuration name="BreadthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Grafi.BreadthFirstSearch" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
@@ -76,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Prim.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Prim.App" />
+    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Grafi.DepthFirstSearch" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Prim.*" />
+          <option name="PATTERN" value="Grafi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TopologicalSort" />
         <item itemvalue="Application.DepthFirstSearch" />
+        <item itemvalue="Application.BreadthFirstSearch" />
+        <item itemvalue="Application.TopologicalSort" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.Prim.Graph" />
-        <item itemvalue="Application.Prim.App" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +186,10 @@
       <workItem from="1654703360195" duration="6606000" />
       <workItem from="1654711882566" duration="5564000" />
       <workItem from="1654936196831" duration="2861000" />
-      <workItem from="1655030792682" duration="12997000" />
+      <workItem from="1655030792682" duration="14243000" />
+      <workItem from="1655102657345" duration="6802000" />
+      <workItem from="1655221864917" duration="2518000" />
+      <workItem from="1655224429127" duration="3102000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -350,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654719159890</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Update DepthFirstSearch and TopologicalSort">
+      <created>1655054537632</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1655054537632</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +430,8 @@
     <MESSAGE value="UPDATE class App" />
     <MESSAGE value="IMPLEMENTED methods dfs() and dfs_all_paths()" />
     <MESSAGE value="UPDATE Dijkstra" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Dijkstra" />
+    <MESSAGE value="Update DepthFirstSearch and TopologicalSort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update DepthFirstSearch and TopologicalSort" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

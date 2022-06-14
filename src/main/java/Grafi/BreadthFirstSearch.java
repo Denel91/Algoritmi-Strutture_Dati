@@ -267,8 +267,7 @@ public class BreadthFirstSearch {
         graph.addEdge(3, 5);
         graph.addEdge(3, 2);
         graph.addEdge(4, 5);
-
-        //System.out.println(graph);
+        System.out.println(graph);
         System.out.println("The Breadth-First Search of the Graph is:");
         graph.BFS(0);
         System.out.println();
@@ -298,6 +297,22 @@ public class BreadthFirstSearch {
         System.out.println();
         System.out.println(graph_1.getDistance());
         System.out.println(graph_1.maxDist(graph_1, 0));
+
+        System.out.println("--------------------------------------------------------");
+
+        BreadthFirstSearch graph_2 = new BreadthFirstSearch(6);
+        graph_2.addEdgeDirected(1,2);
+        graph_2.addEdgeDirected(1,3);
+        graph_2.addEdgeDirected(1,4);
+        graph_2.addEdgeDirected(2,3);
+        graph_2.addEdgeDirected(2,4);
+        graph_2.addEdgeDirected(3,4);
+        graph_2.addEdgeDirected(4,5);
+        graph_2.addEdgeDirected(5,3);
+        graph_2.BFS(2);
+        System.out.println();
+        System.out.println(graph_2.getDistance());
+        System.out.println(graph_2.getParent());
     }
 }
 
