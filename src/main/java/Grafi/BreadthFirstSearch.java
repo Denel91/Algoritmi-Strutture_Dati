@@ -257,6 +257,28 @@ public class BreadthFirstSearch {
         return count;
     }
 
+    /**
+     * Restituisce un cammino minimo dal nodo s al nodo v
+     *
+     * @param G
+     * @param s
+     * @param v
+     * @return
+     */
+    public LinkedList<Integer> cammino_minimo(BreadthFirstSearch G, int s, int v) {
+        G.BFS(s);
+        Vector<Integer> PI_greco = G.getParent();
+        int u = v;
+        LinkedList<Integer> list = new LinkedList<>();
+        while (u != 0) { // u != null se u è un oggetto
+            list.addFirst(u);
+            u = PI_greco.get(u);
+        }
+
+        list.addFirst(s);
+        return list;
+    }
+
     public static void main(String[] args) {
         int vertices = 7;
         BreadthFirstSearch graph = new BreadthFirstSearch(vertices);
@@ -271,6 +293,9 @@ public class BreadthFirstSearch {
         System.out.println(graph);
         System.out.println("The Breadth-First Search of the Graph is:");
         graph.BFS(0);
+        System.out.println();
+        LinkedList<Integer> list = graph.cammino_minimo(graph, 0, 6);
+        System.out.println("\nCammino minimo da s a v: " + list);
         System.out.println();
         System.out.println(graph.getVertexCount());
         System.out.println(graph.getColour().toString());
