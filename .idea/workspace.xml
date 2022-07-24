@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="Update DepthFirstSearch and TopologicalSort">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="Implemented method dfs_schema">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/BitonicVector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/IntervalliDisgiunti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/MinimumDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/ViewVectorKTimes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Counting/CountingSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Counting/CountingSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dijkstra/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dijkstra/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/TopologicalSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/TopologicalSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Merge/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Merge/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RB_Tree/RedBlackTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RB_Tree/RedBlackTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +45,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28UIQD0eJuJgHvFPyWcAKHK5G35" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,13 +63,26 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.DepthFirstSearch">
+  <component name="RunManager" selected="Application.TopologicalSort">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dijkstra.App" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Dijkstra.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTreeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Binary_Search_Tree.BinarySearchTreeTest" />
+      <module name="Algoritmi-Strutture_Dati" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Binary_Search_Tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,25 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Grafi.DepthFirstSearch" />
+    <configuration name="RedBlackTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RB_Tree.RedBlackTree" />
       <module name="Algoritmi-Strutture_Dati" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Grafi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Prim.Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Prim.Graph" />
-      <module name="Algoritmi-Strutture_Dati" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Prim.*" />
+          <option name="PATTERN" value="RB_Tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DepthFirstSearch" />
-        <item itemvalue="Application.BreadthFirstSearch" />
         <item itemvalue="Application.TopologicalSort" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.Prim.Graph" />
+        <item itemvalue="Application.BreadthFirstSearch" />
+        <item itemvalue="Application.BinarySearchTreeTest" />
+        <item itemvalue="Application.RedBlackTree" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +204,26 @@
       <workItem from="1655030792682" duration="14243000" />
       <workItem from="1655102657345" duration="6802000" />
       <workItem from="1655221864917" duration="2518000" />
-      <workItem from="1655224429127" duration="3102000" />
+      <workItem from="1655224429127" duration="3239000" />
+      <workItem from="1655230220884" duration="304000" />
+      <workItem from="1655319575895" duration="56000" />
+      <workItem from="1657272841122" duration="19000" />
+      <workItem from="1657273335610" duration="58000" />
+      <workItem from="1657273432132" duration="41000" />
+      <workItem from="1658048556840" duration="52000" />
+      <workItem from="1658048640699" duration="7720000" />
+      <workItem from="1658063541667" duration="10372000" />
+      <workItem from="1658129588279" duration="15225000" />
+      <workItem from="1658218191374" duration="5910000" />
+      <workItem from="1658230800041" duration="19446000" />
+      <workItem from="1658306036255" duration="1456000" />
+      <workItem from="1658308787675" duration="39000" />
+      <workItem from="1658391666336" duration="18706000" />
+      <workItem from="1658416464061" duration="1293000" />
+      <workItem from="1658426669691" duration="14289000" />
+      <workItem from="1658488287038" duration="14116000" />
+      <workItem from="1658572842330" duration="25271000" />
+      <workItem from="1658668892360" duration="579000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -359,7 +393,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655054537632</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Update DepthFirstSearch class">
+      <created>1655227625503</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1655227625503</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Implemented method dfs_schema">
+      <created>1655227670051</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1655227670051</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +455,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add workspace.xml" />
     <MESSAGE value="IMPLEMENTED method is_BST()" />
     <MESSAGE value="Implemented method is_BST()" />
     <MESSAGE value="Implemented method verify_BST()" />
@@ -431,7 +478,9 @@
     <MESSAGE value="IMPLEMENTED methods dfs() and dfs_all_paths()" />
     <MESSAGE value="UPDATE Dijkstra" />
     <MESSAGE value="Update DepthFirstSearch and TopologicalSort" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update DepthFirstSearch and TopologicalSort" />
+    <MESSAGE value="Update DepthFirstSearch class" />
+    <MESSAGE value="Implemented method dfs_schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented method dfs_schema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

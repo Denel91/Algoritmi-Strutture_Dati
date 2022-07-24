@@ -1,6 +1,8 @@
 package Binary_Search_Tree;
 
-import static Binary_Search_Tree.BinarySearchTree.create;
+import java.util.ArrayList;
+
+import static Binary_Search_Tree.BinarySearchTree.*;
 
 /**
  * class BinarySearchTreeTest
@@ -156,6 +158,7 @@ public class BinarySearchTreeTest {
 
         BinarySearchTree tree6 = new BinarySearchTree(root6);
         tree6.printTree();
+        tree6.preorderPrint(root6);
         System.out.println("Check Binary Tree -> " + tree6.is_BST(root6));
         int minValue1 = tree6.minValue(root6).getKey();
         int maxValue1 = tree6.maxValue(root6).getKey();
@@ -181,5 +184,40 @@ public class BinarySearchTreeTest {
         tree7.printTree();
         tree7.deleteNode(root7, 10);
         tree7.printTree();
+
+        System.out.println();
+
+        Node root8 = new Node(27);
+        root8.addLeft(new Node(14));
+        root8.getLeft().addLeft(new Node(10));
+        root8.getLeft().addRight(new Node(15));
+        root8.addRight(new Node(35));
+        root8.getRight().addLeft(new Node(31));
+        root8.getRight().addRight(new Node(42));
+
+        BinarySearchTree tree10 = new BinarySearchTree(root8);
+        tree10.printTree();
+
+        ArrayList<Node> A = new ArrayList<>();
+        tree10.buildEvenTree(tree10.getRoot(), A);
+        System.out.println(A);
+
+        System.out.println();
+
+        BinarySearchTree B = new BinarySearchTree();
+        tree10.EvenTree(tree10.getRoot(), B);
+        B.printTree();
+
+        System.out.println();
+
+        BinarySearchTree C = new BinarySearchTree();
+        tree10.OddTree(tree10.getRoot(), C);
+        C.printTree();
+
+        // input keys
+        int[] keys = { 15, 10, 20, 8, 12, 16, 25 };
+        // construct a balanced binary search tree
+        Node radice = partition(keys);
+
     }
 }

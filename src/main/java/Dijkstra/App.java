@@ -92,7 +92,10 @@ public class App {
         distance[s] = 0;
 
         PriorityQueue<Integer> Q = new PriorityQueue<>();
-        Q.add(s);
+        for (int i = 0; i < G.getV(); i++) {
+            Q.add(i);
+        }
+
         while (!Q.isEmpty()) {
             int u = Q.poll();
             for (int v : G.adj(u)) {
@@ -104,7 +107,7 @@ public class App {
             }
         }
 
-        return distance;
+        return pi_greco;
     }
 
     public static void main(String[] args) {
@@ -155,7 +158,32 @@ public class App {
         G_2.addEdgeReverse(4, 3, 2);
         System.out.println(G_2);
 
+        Vector<Integer> D = app.Dijkstra(G_2, 0);
+        System.out.println("D: " + D);
+
         int[] C = app.minimumPaths_SingleDestination(G_2, 0);
+        System.out.println(app.pi_greco);
         System.out.println(Arrays.toString(C));
+
+        System.out.println("- - - G_3 - - -");
+        Graph G_3 = new Graph(6);
+        G_3.addEdgeReverse(0,1, 8);
+        G_3.addEdgeReverse(0, 5, 5);
+        G_3.addEdgeReverse(1, 2, 7);
+        G_3.addEdgeReverse(1, 4, 4);
+        G_3.addEdgeReverse(2, 3, 5);
+        G_3.addEdgeReverse(4,2,2);
+        G_3.addEdgeReverse(4,3,3);
+        G_3.addEdgeReverse(5,1, 1);
+        G_3.addEdgeReverse(5,4,7);
+        System.out.println("- - - G_3 - - -");
+        System.out.println(G_3);
+        Vector<Integer> V = app.Dijkstra(G_3, 0);
+        System.out.println("V: " + V);
+
+        int[] vector = app.minimumPaths_SingleDestination(G_3, 0);
+        System.out.println(Arrays.toString(vector));
+
+
     }
 }

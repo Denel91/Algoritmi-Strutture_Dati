@@ -11,6 +11,11 @@ public class CountingSort {
         int[] B = new int[array.length];
         int k = 5;
         System.out.println(Arrays.toString(countingSort(array, B, k))); // [0, 0, 2, 2, 3, 3, 3, 5]
+
+        int[] vector = {5, 2, 4, 6, 1, 3};
+        int[] B1 = new int[vector.length];
+        int k1 = 6;
+        System.out.println(Arrays.toString(countingSort(vector, B1, k1)));
     }
 
     /**

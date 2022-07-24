@@ -437,20 +437,29 @@ public class RedBlackTree {
     }
 
     /**
-     * @param node
-     * @param k    un valore intero
+     * @param root
+     * @param k un valore intero
      * @return la più piccola chiave più grande di K (successore di k)
      */
-    public RBNode successorOfK(RBNode node, int k) {
-        if (node.getKey() == k) {
-            return node;
+    public RBNode successorOfK(RBNode root, int k) {
+        while (root != nil) {
+            if (root.getKey() == k) {
+                return root;
+            }
+            if (root.getKey() < k) {
+                root = root.getRight();
+                if (root.getKey() > k) {
+                    return root;
+                }
+            } else if (root.getKey() > k) {
+                root = root.getLeft();
+                if (root.getKey() > k) {
+                    return root;
 
-        } else if (node.getKey() > k) {
-            return treeMax(node.getLeft());
-
-        } else {
-            return treeMax(node.getRight());
+                }
+            }
         }
+        return root;
     }
 
     /**
@@ -832,5 +841,17 @@ public class RedBlackTree {
         //tree1.removeFromK(tree1.getRoot(), 10);
         //tree1.printTree();
         //tree1.delete(tree1.getRoot().getRight());
+
+        RedBlackTree A = new RedBlackTree();
+        A.treeInsert(new RBNode(13));
+        A.treeInsert(new RBNode(8));
+        A.treeInsert(new RBNode(17));
+        A.treeInsert(new RBNode(1));
+        A.treeInsert(new RBNode(11));
+        A.treeInsert(new RBNode(15));
+        A.treeInsert(new RBNode(25));
+        int k_1 = 24;
+        RBNode smallerSuccessor = A.successorOfK(A.getRoot(), k_1);
+        System.out.println(smallerSuccessor);
     }
 }

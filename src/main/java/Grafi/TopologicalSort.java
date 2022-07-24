@@ -2,6 +2,10 @@ package Grafi;
 
 import java.util.LinkedList;
 import java.util.Vector;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Queue;
+import java.util.PriorityQueue;
 
 /**
  * Topological-Sort:
@@ -19,6 +23,8 @@ public class TopologicalSort {
     private Vector<Integer> discoveredTime;     // tempo di scoperta
     private Vector<Integer> completionTime;     // tempo di completamento
     private int time;                           // registra le informazioni temporali
+    private int[] in_Degree;
+    private int[] out_Degree;
 
     /**
      * Default Constructor
@@ -31,6 +37,8 @@ public class TopologicalSort {
         this.colour = new Vector<>();
         this.completionTime = new Vector<>();
         this.discoveredTime = new Vector<>();
+        this.in_Degree = new int[vertexCount];
+        this.out_Degree = new int[vertexCount];
         parent.setSize(vertexCount);
         colour.setSize(vertexCount);
         completionTime.setSize(vertexCount);
@@ -49,10 +57,49 @@ public class TopologicalSort {
     public void addEdgeDirected(int v, int w) {
         if (!adj[v].contains(w)) {
             adj[v].add(w);
+            in_Degree[w]++;
+            out_Degree[v]++;
         }
     }
 
+    public int outDegree(int v) {
+        return adj[v].size();
+    }
+
+    public Iterable<Integer> adj(int v) {
+        return adj[v];
+    }
+
     /**
+     *
+     * @param G
+     * @return
+     */
+    public ArrayList<Integer> topologicalSortByInDegree(TopologicalSort G) {
+        ArrayList<Integer> sorted = new ArrayList<>();
+        Queue<Integer> Q = new PriorityQueue<>();
+
+        for (int v = 0; v < G.getVertexCount(); v++) {
+            if (in_Degree[v] == 0) {
+                Q.add(v);
+            }
+        }
+
+        while (!Q.isEmpty()) {
+            int v = Q.poll();
+            sorted.add(v);
+
+            for (int w : G.adj(v)) {
+                in_Degree[w]--;
+
+                if (in_Degree[w] == 0) {
+                    Q.add(w);
+                }
+            }
+        }
+
+        return sorted;
+    }
 
     /**
      * Ordinamento Topologico:
@@ -127,15 +174,28 @@ public class TopologicalSort {
         return discoveredTime;
     }
 
+    public int[] getIn_Degree() {
+        return in_Degree;
+    }
+
+    public int[] getOut_Degree() {
+        return out_Degree;
+    }
+
     public static void main(String[] args) {
         TopologicalSort graph = new TopologicalSort(6);
         graph.addEdgeDirected(1, 2);
         graph.addEdgeDirected(1, 3);
         graph.addEdgeDirected(2, 4);
         graph.addEdgeDirected(2, 5);
+        System.out.println("In-Degree: " + Arrays.toString(graph.getIn_Degree()));
+        System.out.println("Out_Degree: " + Arrays.toString(graph.getOut_Degree()));
         System.out.println("Topological-Sort of the Graph is:");
         LinkedList<Integer> list = graph.topologicalSort(1);
+        ArrayList<Integer> list2 = graph.topologicalSortByInDegree(graph); // [0, 1, 2, 3, 4, 5]
+        System.out.println("Topological-Sort with In-Degree: " + list2.toString());
         System.out.println(list); // [1, 3, 2, 5, 4]
+        System.out.println("outDegree: " + graph.outDegree(2));
 
         TopologicalSort graph_2 = new TopologicalSort(6);
         graph_2.addEdgeDirected(1, 3);

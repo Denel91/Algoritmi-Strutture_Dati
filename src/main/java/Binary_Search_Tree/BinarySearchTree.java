@@ -2,6 +2,7 @@ package Binary_Search_Tree;
 
 import java.util.ArrayList;
 import java.util.Stack;
+import java.util.Arrays;
 
 /**
  * BinarySearchTree class
@@ -593,6 +594,113 @@ public class BinarySearchTree {
     }
 
     /**
+     * Build a BST with only even nodes
+     *
+     * @param root
+     * @param A
+     */
+    public ArrayList<Node> buildEvenTree(Node root, ArrayList<Node> A) {
+        if (root != null) {
+            // if node is even then print it
+            if ((root.getKey() % 2) == 0) {
+                A.add(root);
+                buildEvenTree(root.getLeft(), A);
+                buildEvenTree(root.getRight(), A);
+            } else {
+                buildEvenTree(root.getLeft(), A);
+                buildEvenTree(root.getRight(), A);
+            }
+        }
+
+        return A;
+    }
+
+    /**
+     * Build a BST with only even nodes
+     *
+     * @param root
+     * @param A
+     * @return
+     */
+    public BinarySearchTree EvenTree(Node root, BinarySearchTree A) {
+        if (root != null) {
+            // if node is even then print it
+            if ((root.getKey() % 2) == 0) {
+                A.treeInsert(new Node(root.getKey()));
+                EvenTree(root.getLeft(), A);
+                EvenTree(root.getRight(), A);
+            } else {
+                EvenTree(root.getLeft(), A);
+                EvenTree(root.getRight(), A);
+            }
+        }
+
+        return A;
+    }
+
+    /**
+     * Build a BST with only odd nodes
+     *
+     * @param root
+     * @param A
+     * @return
+     */
+    public BinarySearchTree OddTree(Node root, BinarySearchTree A) {
+        if (root != null) {
+            // if node is even then print it
+            if ((root.getKey() % 2) != 0) {
+                A.treeInsert(new Node(root.getKey()));
+                OddTree(root.getLeft(), A);
+                OddTree(root.getRight(), A);
+            } else {
+                OddTree(root.getLeft(), A);
+                OddTree(root.getRight(), A);
+            }
+        }
+
+        return A;
+    }
+
+    /**
+     * Function to construct Balanced BST from the given sorted array
+     *
+     * @param keys
+     * @param low
+     * @param high
+     * @param root
+     * @return
+     */
+    private static Node partition(int[] keys, int low, int high, Node root) {
+        // base case
+        if (low > high) {
+            return root;
+        }
+
+        // find the middle element of the current range
+        int mid = (low + high) / 2;
+        // construct a new node from the middle element and assign it to the root
+        root = new Node(keys[mid]);
+
+        // left subtree of the root will be formed by keys less than middle element
+        root.setLeft(partition(keys, low, mid - 1, root.getLeft()));
+
+        // right subtree of the root will be formed by keys more than the middle element
+        root.setRight(partition(keys, mid + 1, high, root.getRight()));
+
+        return root;
+    }
+
+    /**
+     *
+     * @param keys
+     * @return
+     */
+    public static Node partition(int[] keys) {
+        Arrays.sort(keys);
+        return partition(keys, 0, keys.length - 1, null);
+    }
+
+    /**
      * Svuota completamente un BinarySearchTree
      */
     public void clear() {
@@ -609,7 +717,9 @@ public class BinarySearchTree {
         if (node.getRight() != null) {
             printTree(node.getRight(), true, "");
         }
+
         printNodeValue(node);
+
         if (node.getLeft() != null) {
             printTree(node.getLeft(), false, "");
         }

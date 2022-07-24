@@ -23,6 +23,13 @@ public class MergeSort {
         mergeSort(vector, p1, r1);
         System.out.print("Sorted: ");
         System.out.println(Arrays.toString(vector)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+        System.out.println("- Merge test -");
+        int[] A = {5, 2, 4, 6, 1, 3};
+        int p2 = 0, r2 = A.length - 1;
+        mergeSort(A, p2, r2);
+        System.out.print("Sorted: ");
+        System.out.println(Arrays.toString(A));
     }
 
     /**

@@ -110,6 +110,7 @@ public class BreadthFirstSearch {
 
     /**
      * Diametro di un Grafo
+     * Complessità O(n^2 + m * n)
      *
      * @param G un grafo non orientato
      * @return
@@ -293,6 +294,8 @@ public class BreadthFirstSearch {
         graph_1.BFS(0);
         System.out.println();
         System.out.println(graph_1.getDistance());
+        System.out.println(graph_1.getParent());
+        System.out.println("-- Same Distance From Set --");
         graph_1.sameDistanceFromSet(0);
         System.out.println();
         System.out.println(graph_1.getDistance());
