@@ -35,6 +35,8 @@ public class MergeSort {
     /**
      * Unisce due sottoarray in un unico array
      *
+     * Complessità: Θ(n)
+     *
      * @param A un array contenente due sottoarray ordinati
      * @param p indice di inizio del primo array
      * @param q indice finale del primo array
@@ -75,6 +77,11 @@ public class MergeSort {
 
     /**
      * Ordina un array in ordine crescente
+     *
+     * Complessità:
+     * Caso ottimo: Θ(n lg n)
+     * Caso medio: Θ(n lg n)
+     * Caso peggiore: Θ(n lg n)
      *
      * @param A l'array da ordinare
      * @param p indice di inizio dell'array da ordinare

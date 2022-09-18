@@ -105,6 +105,8 @@ public class TopologicalSort {
      * Ordinamento Topologico:
      * Ordinamento lineare di tutti i vertici di un grafo aciclico diretto
      *
+     * Complessità: Θ(V + E)
+     *
      * @param source source nodo di partenza
      * @return una lista ordinata dei nodi del grafo
      */

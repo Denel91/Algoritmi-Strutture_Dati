@@ -17,6 +17,8 @@ public class BucketSort {
     /**
      * Ordina un vettore che ha una distribuzione uniforme degli elementi.
      *
+     * Complessità: Θ(n)
+     *
      * @param A un array di double da ordinare
      */
     public static void bucketSort(double[] A) {

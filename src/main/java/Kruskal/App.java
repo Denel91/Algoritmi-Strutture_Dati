@@ -109,6 +109,8 @@ public class App {
     /**
      * Kruskal's Minimum Spanning Tree Algorithm
      *
+     * Complessità: O(E lg V)
+     *
      * @param G a Graph
      * @return a Minimum Spanning Tree
      */

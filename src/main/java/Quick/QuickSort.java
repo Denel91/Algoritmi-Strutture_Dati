@@ -34,6 +34,14 @@ public class QuickSort {
         array[j] = temp;
     }
 
+    /**
+     * Complessità: Θ(n)
+     *
+     * @param A
+     * @param p
+     * @param q
+     * @return
+     */
     public static int partition(int[] A, int p, int q) {
         // choose a pivot
         int pivVal = A[q];
@@ -48,6 +56,16 @@ public class QuickSort {
         return i;
     }
 
+    /**
+     * Complessità:
+     * Caso ottimo: O(n lg n)
+     * Caso medio: O(n lg n)
+     * Caso peggiore: O(n^2)
+     *
+     * @param A
+     * @param p
+     * @param q
+     */
     public static void quickSort(int[] A, int p, int q) {
         if (p < q) {
             int pivot = partition(A, p, q);

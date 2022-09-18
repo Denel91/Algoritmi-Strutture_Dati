@@ -21,6 +21,8 @@ public class CountingSort {
     /**
      * Ordina gli elementi del vettore A
      *
+     * Complessità: Θ(n)
+     *
      * @param A l'array da ordinare
      * @param B l'array di output ordinato
      * @param k il massimo elemento nel vettore A

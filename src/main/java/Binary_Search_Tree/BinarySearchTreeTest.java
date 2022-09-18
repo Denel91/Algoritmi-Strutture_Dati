@@ -157,6 +157,10 @@ public class BinarySearchTreeTest {
         root6.getLeft().addRight(new Node(4));
 
         BinarySearchTree tree6 = new BinarySearchTree(root6);
+        System.out.print("Print K distance: ");
+        printKDistant(root6, 2);
+        System.out.println();
+        System.out.println();
         tree6.printTree();
         tree6.preorderPrint(root6);
         System.out.println("Check Binary Tree -> " + tree6.is_BST(root6));
@@ -197,6 +201,9 @@ public class BinarySearchTreeTest {
 
         BinarySearchTree tree10 = new BinarySearchTree(root8);
         tree10.printTree();
+
+        System.out.print("Number of nodes: ");
+        System.out.println(countNodes(tree10.getRoot(), 10, 35));
 
         ArrayList<Node> A = new ArrayList<>();
         tree10.buildEvenTree(tree10.getRoot(), A);

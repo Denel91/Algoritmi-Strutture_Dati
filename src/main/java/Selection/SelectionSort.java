@@ -32,6 +32,11 @@ public class SelectionSort {
     /**
      * Ordinamento crescente di un array di interi per selezione
      *
+     * Complessità:
+     * Caso ottimo: O(n^2)
+     * Caso medio: O(n^2)
+     * Caso peggiore: O(n^2)
+     *
      * @param data the array of Integers
      */
     public static void selectionSort(int[] data) {

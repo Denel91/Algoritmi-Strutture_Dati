@@ -20,7 +20,11 @@ public class InsertionSort {
     }
 
     /**
-     * Ordinamento crescente di un array di interi per inserimento
+     * Ordinamento crescente di un array d' interi per inserimento
+     * Complessità:
+     * Caso ottimo: O(n)
+     * Caso medio: O(n^2)
+     * Caso peggiore: O(n^2)
      *
      * @param data the array of Integers
      */

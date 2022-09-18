@@ -48,6 +48,8 @@ public class App {
     /**
      * L'algoritmo di Dijkstra
      *
+     * Complessità: O(E lg V)
+     *
      * @param G un Grafo orientato
      * @param s la sorgente del Grafo
      * @return il vettore dei predecessori

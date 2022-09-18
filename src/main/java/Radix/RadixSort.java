@@ -39,6 +39,13 @@ public class RadixSort {
         return ret;
     }
 
+    /**
+     * Complessità: Θ(n)
+     *
+     * @param arr
+     * @param d
+     * @return
+     */
     public static int[] radixSort(int[] arr, int d) {
         for (int i = 1; i <= d; i++) {
             arr = countingSortOnDigit(arr, i);

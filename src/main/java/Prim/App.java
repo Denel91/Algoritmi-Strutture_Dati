@@ -7,6 +7,13 @@ import java.util.Arrays;
 
 public class App {
 
+    /**
+     * Complessità: O(E lg V)
+     *
+     * @param G
+     * @param r
+     * @return
+     */
     public Vector<Integer> mst_Prim(Graph G, int r) {
         Vector<Integer> key = new Vector<>();
         Vector<Integer> pi_greco = new Vector<>();

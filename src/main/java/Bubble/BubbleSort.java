@@ -36,6 +36,11 @@ public class BubbleSort {
     /**
      * Ordina un insieme di elementi secondo la strategia di ordinamento “a bolle”
      *
+     * Complessità:
+     * Caso ottimo: O(n^2)
+     * Caso medio: O(n^2)
+     * Caso peggiore: O(n^2)
+     *
      * @param A array di Integers
      */
     public static void bubbleSort(int[] A) {
@@ -60,6 +65,11 @@ public class BubbleSort {
     /**
      * Ordina un insieme di elementi secondo la strategia di ordinamento “a bolle”
      * T. H. Cormen implementation
+     *
+     * Complessità:
+     * Caso ottimo: O(n^2)
+     * Caso medio: O(n^2)
+     * Caso peggiore: O(n^2)
      *
      * @param A un vettore di numeri interi
      */

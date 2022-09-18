@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="Implemented class BitonicVector&#10;Implemented class IntervalliDisgiunti&#10;Implemented class MinimumDistance&#10;Implemented class Pair&#10;Implemented class ViewVectorKTimes&#10;General UPDATE of classes: &#10;BinarySearchTree&#10;BreadthFirstSearch&#10;CountingSort&#10;Graph&#10;MergeSort&#10;RedBlackTree&#10;TopologicalSort">
+    <list default="true" id="dec6adcf-10c3-4eaa-8c6f-8dffb8b84b16" name="Changes" comment="Implemented method cammino_minimo()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Binary_Search_Tree/BinarySearchTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bubble/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bubble/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bucket/BucketSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bucket/BucketSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Counting/CountingSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Counting/CountingSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dijkstra/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Grafi/TopologicalSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grafi/TopologicalSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Heap/HeapSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Heap/HeapSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Insertion/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insertion/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kruskal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kruskal/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Merge/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Merge/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prim/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prim/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Quick/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Quick/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Radix/RadixSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Radix/RadixSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Selection/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Selection/SelectionSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +66,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.BreadthFirstSearch">
+  <component name="RunManager" selected="Application.BinarySearchTreeTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dijkstra.App" />
       <module name="Algoritmi-Strutture_Dati" />
@@ -118,10 +134,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinarySearchTreeTest" />
         <item itemvalue="Application.BreadthFirstSearch" />
         <item itemvalue="Application.TopologicalSort" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.BinarySearchTreeTest" />
         <item itemvalue="Application.RedBlackTree" />
       </list>
     </recent_temporary>
@@ -211,7 +227,15 @@
       <workItem from="1658488287038" duration="14116000" />
       <workItem from="1658572842330" duration="25271000" />
       <workItem from="1658668892360" duration="862000" />
-      <workItem from="1658697056648" duration="1565000" />
+      <workItem from="1658697056648" duration="1670000" />
+      <workItem from="1661714014615" duration="5000" />
+      <workItem from="1663159033020" duration="39000" />
+      <workItem from="1663159721352" duration="111000" />
+      <workItem from="1663159845561" duration="9089000" />
+      <workItem from="1663429651969" duration="222000" />
+      <workItem from="1663429895245" duration="709000" />
+      <workItem from="1663487675548" duration="17000" />
+      <workItem from="1663487710078" duration="4768000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace.xml">
       <created>1651264869552</created>
@@ -402,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658669688317</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Implemented method cammino_minimo()">
+      <created>1658698710989</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1658698710989</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented method is_BST()" />
     <MESSAGE value="Implemented method verify_BST()" />
     <MESSAGE value="IMPLEMENTED method check_BST(Node root) and UPDATE protocol" />
     <MESSAGE value="IMPLEMENTED methods viewAllRightChildren(), viewAllLeftChildren and UPDATE protocol" />
@@ -475,7 +505,8 @@
     <MESSAGE value="Update DepthFirstSearch class" />
     <MESSAGE value="Implemented method dfs_schema" />
     <MESSAGE value="Implemented class BitonicVector&#10;Implemented class IntervalliDisgiunti&#10;Implemented class MinimumDistance&#10;Implemented class Pair&#10;Implemented class ViewVectorKTimes&#10;General UPDATE of classes: &#10;BinarySearchTree&#10;BreadthFirstSearch&#10;CountingSort&#10;Graph&#10;MergeSort&#10;RedBlackTree&#10;TopologicalSort" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented class BitonicVector&#10;Implemented class IntervalliDisgiunti&#10;Implemented class MinimumDistance&#10;Implemented class Pair&#10;Implemented class ViewVectorKTimes&#10;General UPDATE of classes: &#10;BinarySearchTree&#10;BreadthFirstSearch&#10;CountingSort&#10;Graph&#10;MergeSort&#10;RedBlackTree&#10;TopologicalSort" />
+    <MESSAGE value="Implemented method cammino_minimo()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented method cammino_minimo()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

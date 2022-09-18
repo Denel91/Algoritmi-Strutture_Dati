@@ -79,6 +79,8 @@ public class HeapSort {
     /**
      * Inserisce l'elemento k in ultima posizione
      *
+     * Complessità: O(lg n)
+     *
      * @param h un ArrayList
      * @param k l'elemento da inserire nello Heap
      */
@@ -97,6 +99,13 @@ public class HeapSort {
 
     // ---------- IMPLEMENTAZIONE DI HEAP-SORT ---------- //
 
+    /**
+     * Complessità: O(lg n)
+     *
+     * @param A
+     * @param i
+     * @param heapsize
+     */
     public static void maxHeapify(int[] A, int i, int heapsize) {
         int l = leftId(i);
         int r = rightId(i);
@@ -119,6 +128,11 @@ public class HeapSort {
         }
     }
 
+    /**
+     * Complessità: O(n)
+     *
+     * @param A
+     */
     public static void builMaxHeap(int[] A) {
         int heapsize = A.length - 1;
         for (int i = heapsize / 2; i >= 0; i--) {
@@ -126,6 +140,11 @@ public class HeapSort {
         }
     }
 
+    /**
+     * Complessità: O(n lg n)
+     *
+     * @param A
+     */
     public static void heapSort(int[] A) {
         int heapsize = A.length - 1;
         builMaxHeap(A);

@@ -146,6 +146,8 @@ public class BreadthFirstSearch {
     /**
      * Breadth-First Search
      *
+     * Complessità: O(V + E)
+     *
      * @param source sorgente del Grafo
      */
     public void BFS(int source) {

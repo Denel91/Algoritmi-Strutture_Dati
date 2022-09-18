@@ -701,6 +701,49 @@ public class BinarySearchTree {
     }
 
     /**
+     *
+     * @param root
+     * @param low
+     * @param high
+     * @return
+     */
+    public static int countNodes(Node root, int low, int high) {
+        // caso base
+        if (root == null) {
+            return 0;
+        }
+
+        int count = 0;
+        // incrementa il conteggio se il nodo corrente si trova all'interno dell'intervallo corrente
+        if (root.getKey() >= low && root.getKey() <= high) {
+            count += 1;
+        }
+        // ricorre per il sottoalbero sinistro
+        count += countNodes(root.getLeft(), low, high);
+        // ricorre per il sottoalbero corretto e restituisce il conteggio totale
+        return count + countNodes(root.getRight(), low, high);
+    }
+
+    /**
+     *
+     * @param node
+     * @param k
+     */
+    public static void printKDistant(Node node, int k) {
+        //Base case
+        if (node == null || k < 0 )
+            return;
+
+        if (k == 0) {
+            System.out.print(node.getKey() + " ");
+            return;
+        }
+
+        printKDistant(node.getLeft(), k - 1);
+        printKDistant(node.getRight(), k - 1);
+    }
+
+    /**
      * Svuota completamente un BinarySearchTree
      */
     public void clear() {

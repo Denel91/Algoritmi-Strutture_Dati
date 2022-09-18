@@ -72,6 +72,8 @@ public class DepthFirstSearch {
 
     /**
      * Depth-First Search
+     *
+     * Complessità: Θ(V + E)
      */
     public void DFS(int source) {
         for (int i = 0; i < vertexCount; i++) {
@@ -88,6 +90,8 @@ public class DepthFirstSearch {
 
     /**
      * Procedura di supporto
+     *
+     * Complessità: Θ(E)
      *
      * @param u nodo del grafo visitato in quell'istante
      */
