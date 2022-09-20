@@ -10,9 +10,9 @@ All of them are based on descriptions given in T. H. Cormen, C. E. Leiserson, R.
 ## Sorting Algorithms
 
 - Insertion Sort (CLRS 2.1)
+- Selection Sort (CLRS Exercise 2.2-2)
 - Bubble Sort (CLRS 2.4)
 - Merge Sort (CLRS 2.3.1)
-- Selection Sort (CLRS Exercise 2.2-2)
 - Heap Sort (CLRS 6.4)
 - Quicksort (CLRS 7)
 - Quick Select
@@ -25,9 +25,8 @@ All of them are based on descriptions given in T. H. Cormen, C. E. Leiserson, R.
 - Heap (CLRS 6.1)
 - Stack and Queue (CLRS 10.1)
 - Linked List (CLRS 10.2)
-- Hashing (CLRS 11)
 - Binary Search Tree (CLRS 12)
-- Alberi red-black (CLRS 13)
+- Red-black Tree (CLRS 13)
 - Insiemi disgiunti (CLRS 21)
 - Grafi (CLRS 22)
 - Breadth-first search (CLRS 22.2)
@@ -35,3 +34,4 @@ All of them are based on descriptions given in T. H. Cormen, C. E. Leiserson, R.
 - Topological-Sort (CLRS 22.4)
 - Kruskal's algorithm (CLRS 23.2)
 - Prim's algorithm (CLRS 23.2)
+- Dijkstra's algorithm (CLRS 24.4)
